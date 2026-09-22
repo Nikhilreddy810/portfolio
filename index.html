@@ -75,12 +75,18 @@
       </div>
 
       <div class="sidebar-footer">
-        <a href="resume.pdf" class="btn-resume-side" download="Nikhil_Reddy_Levaku_Resume.pdf">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span>Download Resume</span>
-        </a>
-        <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); text-align: center;">
-          v2.5.0 • PostgreSQL / Spring 3.x
+        <div style="display: flex; gap: 0.5rem; flex-direction: column;">
+          <button class="btn-resume-side" id="openResumeModalBtn" style="cursor: pointer; width: 100%;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span>Preview Resume</span>
+          </button>
+          <a href="resume.pdf" class="btn-resume-side" download="Nikhil_Reddy_Levaku_Resume.pdf" style="font-size: 0.74rem; padding: 0.55rem 0.8rem; opacity: 0.85;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Direct PDF Download</span>
+          </a>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); text-align: center; margin-top: 0.4rem;">
+          v2.6.0 • PostgreSQL / Spring 3.x
         </div>
       </div>
     </aside>
@@ -108,7 +114,7 @@
             </div>
             <div class="hero-cta-group">
               <a href="#experience" class="btn-primary">Explore Production Work</a>
-              <a href="#offers" class="btn-secondary">View Offer Letters</a>
+              <button class="btn-secondary" id="heroPreviewResumeBtn" style="cursor: pointer;">View Resume (Interactive)</button>
             </div>
           </div>
 
@@ -120,7 +126,7 @@
                 <span class="dot"></span>
                 <span class="dot"></span>
               </div>
-              <span class="terminal-title">system_runtime.json</span>
+              <span class="terminal-title">live_pipeline_flow.sim</span>
             </div>
             <div class="hero-visual-content">
               <!-- Professional Photo Slot -->
@@ -138,26 +144,31 @@
                 </div>
               </div>
 
-              <!-- Live Architecture Flow Schema -->
+              <!-- Animated Request Simulation Nodes -->
               <div class="architecture-snippet">
-                <div class="flow-row">
-                  <span>[Client / Mobile / Web]</span>
-                  <span class="badge-sys">REST / WebSocket</span>
+                <div class="flow-row arch-node" id="node-client">
+                  <span>[01. Client Request]</span>
+                  <span class="badge-sys" id="badge-client">REST / WebSocket</span>
                 </div>
-                <div class="flow-row" style="color: #64748B;">&nbsp;&nbsp;│ (JWT Token + RBAC Verification)</div>
-                <div class="flow-row">
-                  <span>[Spring Security Gateway]</span>
-                  <span class="badge-sys">Rate Limit & Auth</span>
+                <div class="flow-divider" id="flow-link-1">│ (JWT Bearer Token + RBAC Verification)</div>
+                <div class="flow-row arch-node" id="node-gateway">
+                  <span>[02. Spring Security Gateway]</span>
+                  <span class="badge-sys" id="badge-gateway">Auth Passed</span>
                 </div>
-                <div class="flow-row" style="color: #64748B;">&nbsp;&nbsp;│ (Async Workers / Idempotency Key)</div>
-                <div class="flow-row">
-                  <span>[Spring Boot Services]</span>
-                  <span class="badge-sys">Transactional Rollback</span>
+                <div class="flow-divider" id="flow-link-2">│ (Idempotency Key Validation)</div>
+                <div class="flow-row arch-node" id="node-service">
+                  <span>[03. Spring Boot Service Layer]</span>
+                  <span class="badge-sys" id="badge-service">@Transactional</span>
                 </div>
-                <div class="flow-row" style="color: #64748B;">&nbsp;&nbsp;├── [Redis Caching] (40% DB offload)</div>
-                <div class="flow-row">
-                  <span>└── [PostgreSQL / Flyway]</span>
-                  <span class="badge-sys">Pessimistic Locks</span>
+                <div class="flow-divider" id="flow-link-3">├── (Cache Layer Check)</div>
+                <div class="flow-row arch-node" id="node-redis">
+                  <span>[04. Redis Distributed Cache]</span>
+                  <span class="badge-sys" id="badge-redis">HIT: ~40% Offload</span>
+                </div>
+                <div class="flow-divider" id="flow-link-4">└── (Pessimistic Lock & Persistence)</div>
+                <div class="flow-row arch-node" id="node-postgres">
+                  <span>[05. PostgreSQL / HikariCP]</span>
+                  <span class="badge-sys" id="badge-postgres">Row Locked</span>
                 </div>
               </div>
             </div>
@@ -302,7 +313,7 @@
             <div style="display: flex; align-items: center; gap: 1rem;">
               <span id="apiStatusCode" style="font-family: var(--font-mono); font-size: 0.75rem; color: #34D399;">HTTP 200 OK</span>
               <span id="apiLatency" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">12ms</span>
-              <button class="btn-run-api" id="runApiBtn">Send Request</button>
+              <button class="btn-run-api" id="runApiBtn">Send Request & Run Pipeline</button>
             </div>
           </div>
           <div class="api-output-view" id="apiOutput">{
@@ -415,7 +426,7 @@
       <section id="projects">
         <div class="section-header">
           <span class="section-label">// 04. engineering implementations</span>
-          <h2 class="section-title">Selected Projects</h2>
+          <h2 class="section-title">Selected Projects & Architecture Deep Dive</h2>
         </div>
 
         <div class="projects-grid">
@@ -428,7 +439,7 @@
                 <div class="proj-dates">Aug 2025 – Jan 2026 • Distributed Booking Engine</div>
               </div>
               <div class="proj-links">
-                <a href="https://github.com/Nikhilreddy810" target="_blank" rel="noopener noreferrer" class="icon-btn">
+                <a href="https://github.com/Nikhilreddy810/Flight_Booking" target="_blank" rel="noopener noreferrer" class="icon-btn">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                   <span>Repository</span>
                 </a>
@@ -449,6 +460,32 @@
               <li>Implemented <strong>concurrency-safe seat allocation with transactional rollback</strong> on cancellation, eliminating overbooking and inventory drift under parallel requests.</li>
               <li>Added <strong>Redis caching</strong> for search results, containerized the service using Docker, documented all endpoints via Swagger UI, and applied centralized exception handling across the entire API suite.</li>
             </ul>
+
+            <!-- Architecture Code Deep Dive Tab -->
+            <div class="code-tab-container">
+              <div class="code-tab-bar">
+                <span class="code-tab-btn active" data-target="code-flight">ConcurrencyLockService.java</span>
+                <span class="code-tab-label">Spring @Transactional & Lock Primitives</span>
+              </div>
+              <pre class="code-tab-content" id="code-flight"><code>@Service
+public class BookingService {
+    @Transactional(isolation = Isolation.SERIALIZABLE)
+    public BookingResponse reserveSeatWithLock(Long flightId, String seatNumber, String idempotencyKey) {
+        // 1. Verify Idempotency in Redis
+        if (redisTemplate.hasKey("idem:" + idempotencyKey)) {
+            return (BookingResponse) redisTemplate.opsForValue().get("idem:" + idempotencyKey);
+        }
+        // 2. Pessimistic Write Lock on Seat Inventory
+        Seat seat = seatRepository.findWithPessimisticLock(flightId, seatNumber)
+            .orElseThrow(() -> new SeatUnavailableException("Seat already booked"));
+        seat.setStatus(SeatStatus.LOCKED);
+        // 3. Persist & cache with TTL
+        Booking saved = bookingRepository.save(new Booking(seat));
+        redisTemplate.opsForValue().set("idem:" + idempotencyKey, saved, Duration.ofMinutes(15));
+        return new BookingResponse("SUCCESS", saved.getId());
+    }
+}</code></pre>
+            </div>
           </div>
 
           <!-- Project 2: User Management System -->
@@ -459,7 +496,7 @@
                 <div class="proj-dates">Oct 2024 – Dec 2024 • Enterprise Identity Service</div>
               </div>
               <div class="proj-links">
-                <a href="https://github.com/Nikhilreddy810" target="_blank" rel="noopener noreferrer" class="icon-btn">
+                <a href="https://github.com/Nikhilreddy810/User_Management" target="_blank" rel="noopener noreferrer" class="icon-btn">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                   <span>Repository</span>
                 </a>
@@ -698,6 +735,26 @@
       </footer>
 
     </main>
+  </div>
+
+  <!-- In-Browser Resume Modal Viewer -->
+  <div class="resume-modal" id="resumeModal" aria-hidden="true">
+    <div class="resume-modal-backdrop" id="resumeModalBackdrop"></div>
+    <div class="resume-modal-content">
+      <div class="resume-modal-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="font-weight: 700; font-size: 0.95rem;">Nikhil_Reddy_Levaku_Resume.pdf</span>
+          <span class="mono-tag">// LIVE PREVIEW</span>
+        </div>
+        <div style="display: flex; gap: 0.6rem;">
+          <a href="resume.pdf" download="Nikhil_Reddy_Levaku_Resume.pdf" class="btn-primary" style="padding: 0.35rem 0.8rem; font-size: 0.78rem;">Download PDF</a>
+          <button class="icon-btn" id="closeResumeModalBtn" style="cursor: pointer;">[Close ✕]</button>
+        </div>
+      </div>
+      <div class="resume-modal-body">
+        <iframe src="resume.pdf" width="100%" height="100%" style="border: none;" title="Resume PDF Viewer"></iframe>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>

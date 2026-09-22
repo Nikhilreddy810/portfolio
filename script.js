@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function animateSpotlight() {
-      // Smooth lerp follow
       currentX += (mouseX - currentX) * 0.12;
       currentY += (mouseY - currentY) * 0.12;
       cursorGlow.style.left = currentX + 'px';
@@ -36,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
-      // Calculate tilt degree (subtle and high-tech: max 4.5deg)
       const rotateX = ((y - centerY) / centerY) * -4.5;
       const rotateY = ((x - centerX) / centerX) * 4.5;
 
@@ -57,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
       menuBtn.textContent = sidebar.classList.contains('open') ? '[close]' : '[menu]';
     });
 
-    // Close when clicking any nav link
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         if (window.innerWidth <= 768) {
@@ -106,7 +103,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // 6. Interactive Mock API Sandbox
+  // 6. Interactive Architecture Pipeline Sequencer
+  function triggerPipelineAnimation() {
+    const nodes = [
+      { node: 'node-client', link: 'flow-link-1', badge: 'badge-client' },
+      { node: 'node-gateway', link: 'flow-link-2', badge: 'badge-gateway' },
+      { node: 'node-service', link: 'flow-link-3', badge: 'badge-service' },
+      { node: 'node-redis', link: 'flow-link-4', badge: 'badge-redis' },
+      { node: 'node-postgres', link: null, badge: 'badge-postgres' }
+    ];
+
+    // Reset previous pulses
+    nodes.forEach(item => {
+      const el = document.getElementById(item.node);
+      const b = document.getElementById(item.badge);
+      if (el) el.classList.remove('active-pulse');
+      if (b) b.classList.remove('active-badge');
+      if (item.link) {
+        const l = document.getElementById(item.link);
+        if (l) l.classList.remove('active-pulse');
+      }
+    });
+
+    // Step through each layer sequentially
+    nodes.forEach((item, index) => {
+      setTimeout(() => {
+        const el = document.getElementById(item.node);
+        const b = document.getElementById(item.badge);
+        if (el) el.classList.add('active-pulse');
+        if (b) b.classList.add('active-badge');
+        if (item.link) {
+          const l = document.getElementById(item.link);
+          if (l) l.classList.add('active-pulse');
+        }
+      }, index * 200);
+    });
+  }
+
+  // 7. Interactive Mock API Sandbox
   const mockEndpoints = {
     "GET /api/v1/health": {
       status: 200,
@@ -198,7 +232,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectedKey = endpointSelect.value;
     const data = mockEndpoints[selectedKey];
 
-    apiOutput.textContent = "// Executing REST request...\n// Querying HikariCP pool & Redis cache...";
+    triggerPipelineAnimation();
+
+    apiOutput.textContent = "// Executing REST request...\n// [Layer 1] Spring Security Gateway -> JWT Authenticated\n// [Layer 2] Querying Redis cache -> HIT\n// [Layer 3] HikariCP PostgreSQL Transaction -> Committed";
     if (runApiBtn) runApiBtn.disabled = true;
 
     setTimeout(() => {
@@ -211,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       apiOutput.textContent = JSON.stringify(data.response, null, 2);
       if (runApiBtn) runApiBtn.disabled = false;
-    }, 280);
+    }, 450);
   }
 
   if (runApiBtn) {
@@ -220,4 +256,33 @@ document.addEventListener('DOMContentLoaded', () => {
   if (endpointSelect) {
     endpointSelect.addEventListener('change', executeMockApi);
   }
+
+  // 8. In-Browser Resume Modal
+  const resumeModal = document.getElementById('resumeModal');
+  const openModalBtn = document.getElementById('openResumeModalBtn');
+  const heroModalBtn = document.getElementById('heroPreviewResumeBtn');
+  const closeModalBtn = document.getElementById('closeResumeModalBtn');
+  const modalBackdrop = document.getElementById('resumeModalBackdrop');
+
+  function openResume() {
+    if (resumeModal) {
+      resumeModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeResume() {
+    if (resumeModal) {
+      resumeModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (openModalBtn) openModalBtn.addEventListener('click', openResume);
+  if (heroModalBtn) heroModalBtn.addEventListener('click', openResume);
+  if (closeModalBtn) closeModalBtn.addEventListener('click', closeResume);
+  if (modalBackdrop) modalBackdrop.addEventListener('click', closeResume);
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeResume();
+  });
 });
