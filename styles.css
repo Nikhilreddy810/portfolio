@@ -38,19 +38,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Background blueprint grid with subtle crimson tint on pure white */
+/* Background blueprint grid removed for clean pure white aesthetic */
 .blueprint-grid {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: 
-    linear-gradient(to right, rgba(220, 38, 38, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-  background-size: 48px 48px;
-  pointer-events: none;
-  z-index: -1;
+  display: none;
 }
 
 /* Cursor Glow Spotlight (Follows cursor smoothly with red ambient energy on white) */
