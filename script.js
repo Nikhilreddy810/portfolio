@@ -353,4 +353,92 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeDocument();
   });
+
+  // 10. Project Category Filter
+  const filterPills = document.querySelectorAll('.filter-pill');
+  const projectPanels = document.querySelectorAll('.project-panel');
+
+  if (filterPills.length > 0 && projectPanels.length > 0) {
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const filter = pill.getAttribute('data-filter');
+        filterPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+
+        projectPanels.forEach(panel => {
+          const categories = panel.getAttribute('data-category') || '';
+          if (filter === 'all' || categories.split(' ').includes(filter)) {
+            panel.classList.remove('hidden-filter');
+            panel.style.opacity = '0';
+            panel.style.transform = 'translateY(8px)';
+            setTimeout(() => {
+              panel.style.opacity = '1';
+              panel.style.transform = 'translateY(0)';
+            }, 30);
+          } else {
+            panel.classList.add('hidden-filter');
+          }
+        });
+      });
+    });
+  }
+
+  // 11. Visual Architecture Topology Drawer Toggle
+  const toggleArchBtn = document.getElementById('toggleArchTopologyBtn');
+  const flightArchDrawer = document.getElementById('flightArchDrawer');
+  const topologyBtnText = document.getElementById('topologyBtnText');
+
+  if (toggleArchBtn && flightArchDrawer) {
+    toggleArchBtn.addEventListener('click', () => {
+      const isOpen = flightArchDrawer.classList.toggle('open');
+      if (topologyBtnText) {
+        topologyBtnText.textContent = isOpen 
+          ? 'Hide Architecture Topology Flow ▴' 
+          : 'Explore Visual Architecture Topology Flow ▾';
+      }
+    });
+  }
+
+  // 12. Animated Numbers Counter on Scroll
+  const counterElements = document.querySelectorAll('.metric-val[data-target], .edu-cgpa[data-target]');
+  if ('IntersectionObserver' in window && counterElements.length > 0) {
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          observer.unobserve(el);
+
+          const target = parseFloat(el.getAttribute('data-target'));
+          const suffix = el.getAttribute('data-suffix') || '';
+          const isDecimal = el.getAttribute('data-decimal') === 'true';
+          const duration = 1400; // ms
+          const startTime = performance.now();
+
+          function updateCounter(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out cubic
+            const easeProgress = 1 - Math.pow(1 - progress, 3);
+            const currentVal = target * easeProgress;
+
+            if (isDecimal) {
+              el.textContent = currentVal.toFixed(1) + suffix;
+            } else {
+              el.textContent = Math.floor(currentVal) + suffix;
+            }
+
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            } else {
+              el.textContent = (isDecimal ? target.toFixed(1) : target) + suffix;
+            }
+          }
+
+          requestAnimationFrame(updateCounter);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    counterElements.forEach(el => counterObserver.observe(el));
+  }
 });
