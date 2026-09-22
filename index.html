@@ -40,36 +40,60 @@
 
         <nav class="nav-menu" aria-label="Primary Navigation">
           <a href="#about" class="nav-link active">
-            <span>// overview</span>
-            <span class="nav-num">01</span>
+            <span class="nav-label-group">
+              <span class="nav-icon">◈</span>
+              <span class="nav-text">SYSTEM CORE</span>
+            </span>
+            <span class="nav-code">01</span>
           </a>
           <a href="#experience" class="nav-link">
-            <span>// experience</span>
-            <span class="nav-num">02</span>
+            <span class="nav-label-group">
+              <span class="nav-icon">⚡</span>
+              <span class="nav-text">WORK DISPATCH</span>
+            </span>
+            <span class="nav-code">02</span>
           </a>
           <a href="#offers" class="nav-link">
-            <span>// offers_received</span>
-            <span class="nav-num">03</span>
+            <span class="nav-label-group">
+              <span class="nav-icon">★</span>
+              <span class="nav-text">OFFERS & TENURE</span>
+            </span>
+            <span class="nav-code">03</span>
           </a>
           <a href="#projects" class="nav-link">
-            <span>// projects</span>
-            <span class="nav-num">04</span>
+            <span class="nav-label-group">
+              <span class="nav-icon">⬡</span>
+              <span class="nav-text">MICROSERVICES</span>
+            </span>
+            <span class="nav-code">04</span>
           </a>
           <a href="#skills" class="nav-link">
-            <span>// technical_skills</span>
-            <span class="nav-num">05</span>
+            <span class="nav-label-group">
+              <span class="nav-icon">⚙</span>
+              <span class="nav-text">TECH RUNTIME</span>
+            </span>
+            <span class="nav-code">05</span>
           </a>
           <a href="#certifications" class="nav-link">
-            <span>// certifications</span>
-            <span class="nav-num">06</span>
+            <span class="nav-label-group">
+              <span class="nav-icon">✓</span>
+              <span class="nav-text">CREDENTIALS</span>
+            </span>
+            <span class="nav-code">06</span>
           </a>
           <a href="#education" class="nav-link">
-            <span>// education</span>
-            <span class="nav-num">07</span>
+            <span class="nav-label-group">
+              <span class="nav-icon">◎</span>
+              <span class="nav-text">ACADEMIC BASE</span>
+            </span>
+            <span class="nav-code">07</span>
           </a>
           <a href="#contact" class="nav-link">
-            <span>// contact</span>
-            <span class="nav-num">08</span>
+            <span class="nav-label-group">
+              <span class="nav-icon">✉</span>
+              <span class="nav-text">DISPATCH NODE</span>
+            </span>
+            <span class="nav-code">08</span>
           </a>
         </nav>
       </div>
@@ -126,49 +150,63 @@
                 <span class="dot"></span>
                 <span class="dot"></span>
               </div>
-              <span class="terminal-title">live_pipeline_flow.sim</span>
+              <span class="terminal-title">engineer_identity.core</span>
             </div>
             <div class="hero-visual-content">
-              <!-- Professional Photo Slot -->
-              <div class="photo-slot-container">
-                <div class="photo-avatar" id="headshotSlot">
+              <!-- Professional Photo Slot: Enriched & Enlarged -->
+              <div class="photo-slot-container photo-slot-expanded">
+                <div class="photo-avatar photo-avatar-large" id="headshotSlot">
                   <img src="profile.jpg" alt="Nikhil Reddy Levaku" onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';" />
                   <div class="photo-avatar-placeholder" id="photoFallback" style="display: none;">NR</div>
                 </div>
                 <div class="photo-meta">
+                  <span class="meta-badge-tag">// SYSTEM VERIFIED</span>
                   <span class="meta-name">Nikhil Reddy Levaku</span>
-                  <span class="meta-spec">Backend Engineer • Tirupati / Hybrid</span>
+                  <span class="meta-spec">Java Backend Developer • SVCE 8.5 CGPA</span>
                   <span class="live-ping">
-                    <span class="status-dot"></span> Available for SDE / Backend Roles
+                    <span class="status-dot"></span> Available for Backend Roles (2026)
                   </span>
+                  
+                  <!-- Quick Document Preview Triggers -->
+                  <div class="profile-doc-pills">
+                    <button class="pill-doc-btn" id="heroPreviewResumePill">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                      Resume.pdf
+                    </button>
+                    <button class="pill-doc-btn" id="heroPreviewAxleroPill">
+                      <span class="pill-dot-amber"></span>
+                      Axlero Offer
+                    </button>
+                    <button class="pill-doc-btn" id="heroPreviewInfotactPill">
+                      <span class="pill-dot-blue"></span>
+                      Infotact Offer
+                    </button>
+                  </div>
                 </div>
               </div>
 
-              <!-- Animated Request Simulation Nodes -->
-              <div class="architecture-snippet">
-                <div class="flow-row arch-node" id="node-client">
-                  <span>[01. Client Request]</span>
-                  <span class="badge-sys" id="badge-client">REST / WebSocket</span>
+              <!-- Clean Production Engineering Telemetry Widget (Replacing raw pipeline diagram) -->
+              <div class="engineering-telemetry-panel">
+                <div class="telemetry-item">
+                  <div class="telemetry-header">
+                    <span class="telemetry-label">DATABASE QUERY SLA</span>
+                    <span class="telemetry-value text-emerald">&lt; 30ms</span>
+                  </div>
+                  <div class="telemetry-progress-bar"><div class="telemetry-fill fill-emerald" style="width: 92%;"></div></div>
                 </div>
-                <div class="flow-divider" id="flow-link-1">│ (JWT Bearer Token + RBAC Verification)</div>
-                <div class="flow-row arch-node" id="node-gateway">
-                  <span>[02. Spring Security Gateway]</span>
-                  <span class="badge-sys" id="badge-gateway">Auth Passed</span>
+                <div class="telemetry-item">
+                  <div class="telemetry-header">
+                    <span class="telemetry-label">REDIS CACHE RELIEF</span>
+                    <span class="telemetry-value text-cyan">~40% Load Cut</span>
+                  </div>
+                  <div class="telemetry-progress-bar"><div class="telemetry-fill fill-cyan" style="width: 88%;"></div></div>
                 </div>
-                <div class="flow-divider" id="flow-link-2">│ (Idempotency Key Validation)</div>
-                <div class="flow-row arch-node" id="node-service">
-                  <span>[03. Spring Boot Service Layer]</span>
-                  <span class="badge-sys" id="badge-service">@Transactional</span>
-                </div>
-                <div class="flow-divider" id="flow-link-3">├── (Cache Layer Check)</div>
-                <div class="flow-row arch-node" id="node-redis">
-                  <span>[04. Redis Distributed Cache]</span>
-                  <span class="badge-sys" id="badge-redis">HIT: ~40% Offload</span>
-                </div>
-                <div class="flow-divider" id="flow-link-4">└── (Pessimistic Lock & Persistence)</div>
-                <div class="flow-row arch-node" id="node-postgres">
-                  <span>[05. PostgreSQL / HikariCP]</span>
-                  <span class="badge-sys" id="badge-postgres">Row Locked</span>
+                <div class="telemetry-item">
+                  <div class="telemetry-header">
+                    <span class="telemetry-label">CONCURRENCY SAFETY</span>
+                    <span class="telemetry-value text-purple">Zero Inventory Drift</span>
+                  </div>
+                  <div class="telemetry-progress-bar"><div class="telemetry-fill fill-purple" style="width: 100%;"></div></div>
                 </div>
               </div>
             </div>
@@ -376,6 +414,17 @@
               <div class="offer-desc">
                 Selected for backend service implementation, enterprise Java architecture, code reviews, and database query optimization under senior mentorship.
               </div>
+
+              <!-- Dedicated Offer Letter View Buttons -->
+              <div class="offer-action-row">
+                <button class="btn-view-doc" id="viewAxleroOfferBtn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <span>View Axlero Offer Letter</span>
+                </button>
+                <a href="axlero_offer.pdf" download="Axlero_Offer_Letter_Nikhil_Reddy.pdf" class="btn-download-doc" title="Download Official Letter">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -415,6 +464,17 @@
 
               <div class="offer-desc">
                 Selected to build enterprise web services, participate in code reviews, optimize MySQL/PostgreSQL queries, and maintain system architecture documentation.
+              </div>
+
+              <!-- Dedicated Offer Letter View Buttons -->
+              <div class="offer-action-row">
+                <button class="btn-view-doc" id="viewInfotactOfferBtn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <span>View Infotact Offer Letter</span>
+                </button>
+                <a href="infotact_offer.pdf" download="Infotact_Offer_Letter_Nikhil_Reddy.pdf" class="btn-download-doc" title="Download Official Letter">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </a>
               </div>
             </div>
           </div>
@@ -737,22 +797,22 @@ public class BookingService {
     </main>
   </div>
 
-  <!-- In-Browser Resume Modal Viewer -->
+  <!-- In-Browser Universal Document Modal Viewer -->
   <div class="resume-modal" id="resumeModal" aria-hidden="true">
     <div class="resume-modal-backdrop" id="resumeModalBackdrop"></div>
     <div class="resume-modal-content">
       <div class="resume-modal-header">
         <div style="display: flex; align-items: center; gap: 0.75rem;">
-          <span style="font-weight: 700; font-size: 0.95rem;">Nikhil_Reddy_Levaku_Resume.pdf</span>
-          <span class="mono-tag">// LIVE PREVIEW</span>
+          <span style="font-weight: 700; font-size: 0.95rem;" id="modalDocTitle">Nikhil_Reddy_Levaku_Resume.pdf</span>
+          <span class="mono-tag" id="modalDocTag">// VERIFIED DOCUMENT</span>
         </div>
         <div style="display: flex; gap: 0.6rem;">
-          <a href="resume.pdf" download="Nikhil_Reddy_Levaku_Resume.pdf" class="btn-primary" style="padding: 0.35rem 0.8rem; font-size: 0.78rem;">Download PDF</a>
+          <a href="resume.pdf" download="Nikhil_Reddy_Levaku_Resume.pdf" class="btn-primary" id="modalDownloadBtn" style="padding: 0.35rem 0.8rem; font-size: 0.78rem;">Download PDF</a>
           <button class="icon-btn" id="closeResumeModalBtn" style="cursor: pointer;">[Close ✕]</button>
         </div>
       </div>
       <div class="resume-modal-body">
-        <iframe src="resume.pdf" width="100%" height="100%" style="border: none;" title="Resume PDF Viewer"></iframe>
+        <iframe id="modalPdfFrame" src="resume.pdf" width="100%" height="100%" style="border: none;" title="PDF Document Viewer"></iframe>
       </div>
     </div>
   </div>

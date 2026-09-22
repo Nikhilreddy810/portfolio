@@ -257,32 +257,75 @@ document.addEventListener('DOMContentLoaded', () => {
     endpointSelect.addEventListener('change', executeMockApi);
   }
 
-  // 8. In-Browser Resume Modal
+  // 8. In-Browser Universal Document Modal (Resume, Axlero Offer, Infotact Offer)
   const resumeModal = document.getElementById('resumeModal');
-  const openModalBtn = document.getElementById('openResumeModalBtn');
-  const heroModalBtn = document.getElementById('heroPreviewResumeBtn');
+  const modalDocTitle = document.getElementById('modalDocTitle');
+  const modalDocTag = document.getElementById('modalDocTag');
+  const modalPdfFrame = document.getElementById('modalPdfFrame');
+  const modalDownloadBtn = document.getElementById('modalDownloadBtn');
   const closeModalBtn = document.getElementById('closeResumeModalBtn');
   const modalBackdrop = document.getElementById('resumeModalBackdrop');
 
-  function openResume() {
+  const openModalBtn = document.getElementById('openResumeModalBtn');
+  const heroModalBtn = document.getElementById('heroPreviewResumeBtn');
+  const heroPreviewResumePill = document.getElementById('heroPreviewResumePill');
+  const heroPreviewAxleroPill = document.getElementById('heroPreviewAxleroPill');
+  const heroPreviewInfotactPill = document.getElementById('heroPreviewInfotactPill');
+  const viewAxleroOfferBtn = document.getElementById('viewAxleroOfferBtn');
+  const viewInfotactOfferBtn = document.getElementById('viewInfotactOfferBtn');
+
+  function openDocument(pdfUrl, title, tag, downloadFilename) {
+    if (modalPdfFrame) modalPdfFrame.src = pdfUrl;
+    if (modalDocTitle) modalDocTitle.textContent = title;
+    if (modalDocTag) modalDocTag.textContent = tag;
+    if (modalDownloadBtn) {
+      modalDownloadBtn.href = pdfUrl;
+      modalDownloadBtn.download = downloadFilename || title;
+    }
     if (resumeModal) {
       resumeModal.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
   }
 
-  function closeResume() {
+  function closeDocument() {
     if (resumeModal) {
       resumeModal.classList.remove('active');
       document.body.style.overflow = '';
+      if (modalPdfFrame) modalPdfFrame.src = '';
     }
   }
 
-  if (openModalBtn) openModalBtn.addEventListener('click', openResume);
-  if (heroModalBtn) heroModalBtn.addEventListener('click', openResume);
-  if (closeModalBtn) closeModalBtn.addEventListener('click', closeResume);
-  if (modalBackdrop) modalBackdrop.addEventListener('click', closeResume);
+  // Resume Triggers
+  if (openModalBtn) openModalBtn.addEventListener('click', () => {
+    openDocument('resume.pdf', 'Nikhil_Reddy_Levaku_Resume.pdf', '// RESUME PREVIEW', 'Nikhil_Reddy_Levaku_Resume.pdf');
+  });
+  if (heroModalBtn) heroModalBtn.addEventListener('click', () => {
+    openDocument('resume.pdf', 'Nikhil_Reddy_Levaku_Resume.pdf', '// RESUME PREVIEW', 'Nikhil_Reddy_Levaku_Resume.pdf');
+  });
+  if (heroPreviewResumePill) heroPreviewResumePill.addEventListener('click', () => {
+    openDocument('resume.pdf', 'Nikhil_Reddy_Levaku_Resume.pdf', '// RESUME PREVIEW', 'Nikhil_Reddy_Levaku_Resume.pdf');
+  });
+
+  // Axlero Offer Letter Triggers
+  if (heroPreviewAxleroPill) heroPreviewAxleroPill.addEventListener('click', () => {
+    openDocument('axlero_offer.pdf', 'Axlero_Offer_Letter_Nikhil_Reddy.pdf', '// VERIFIED SELECTION: AXLERO', 'Axlero_Offer_Letter_Nikhil_Reddy.pdf');
+  });
+  if (viewAxleroOfferBtn) viewAxleroOfferBtn.addEventListener('click', () => {
+    openDocument('axlero_offer.pdf', 'Axlero_Offer_Letter_Nikhil_Reddy.pdf', '// VERIFIED SELECTION: AXLERO', 'Axlero_Offer_Letter_Nikhil_Reddy.pdf');
+  });
+
+  // Infotact Offer Letter Triggers
+  if (heroPreviewInfotactPill) heroPreviewInfotactPill.addEventListener('click', () => {
+    openDocument('infotact_offer.pdf', 'Infotact_Offer_Letter_Nikhil_Reddy.pdf', '// VERIFIED SELECTION: INFOTACT', 'Infotact_Offer_Letter_Nikhil_Reddy.pdf');
+  });
+  if (viewInfotactOfferBtn) viewInfotactOfferBtn.addEventListener('click', () => {
+    openDocument('infotact_offer.pdf', 'Infotact_Offer_Letter_Nikhil_Reddy.pdf', '// VERIFIED SELECTION: INFOTACT', 'Infotact_Offer_Letter_Nikhil_Reddy.pdf');
+  });
+
+  if (closeModalBtn) closeModalBtn.addEventListener('click', closeDocument);
+  if (modalBackdrop) modalBackdrop.addEventListener('click', closeDocument);
   window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeResume();
+    if (e.key === 'Escape') closeDocument();
   });
 });
