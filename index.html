@@ -3,576 +3,438 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nikhil Reddy Levaku — Java Backend Developer</title>
-  <meta name="description" content="Portfolio of Nikhil Reddy Levaku — Java Backend Developer specializing in Core Java, Spring Boot, Spring Security, PostgreSQL, and high-concurrency systems." />
+  <title>Nikhil Reddy Levaku — Backend Engineer</title>
+  <meta name="description" content="Portfolio of Nikhil Reddy Levaku — Backend Engineer building scalable distributed systems, high-concurrency Spring Boot microservices, Redis caching, and PostgreSQL." />
   
-  <!-- Fonts -->
+  <!-- Modern Premium Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Architectural background grid -->
-  <div class="blueprint-grid" aria-hidden="true"></div>
 
-  <!-- Dynamic Cursor Spotlight Follower -->
-  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <!-- Subtle Ambient Glow & Texture -->
+  <div class="ambient-canvas" aria-hidden="true">
+    <div class="ambient-glow-violet"></div>
+    <div class="ambient-glow-mint"></div>
+    <div class="subtle-grid"></div>
+  </div>
 
-  <!-- Mobile Top Navigation Header -->
-  <header class="mobile-nav-header">
-    <div style="font-weight: 800; font-size: 1rem; font-family: var(--font-mono);">NIKHIL.DEV</div>
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">[menu]</button>
+  <!-- STICKY TOP NAVIGATION -->
+  <header class="top-nav-header">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-monogram">N</span>
+        <span class="brand-name">nikhil<span class="dot-accent">.</span>dev</span>
+      </a>
+
+      <nav class="nav-links" id="desktopNav" aria-label="Main Navigation">
+        <a href="#about" class="nav-anchor">Summary</a>
+        <a href="#experience" class="nav-anchor">Experience</a>
+        <a href="#projects" class="nav-anchor">Projects</a>
+        <a href="#skills" class="nav-anchor">Skills</a>
+        <a href="#currently-building" class="nav-anchor">Roadmap</a>
+        <a href="#offers" class="nav-anchor">Offers</a>
+        <a href="#education" class="nav-anchor">Education</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn-talk">Let's Talk</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Nav -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <nav class="mobile-nav-list">
+        <a href="#about" class="mobile-nav-item">Engineering Summary</a>
+        <a href="#experience" class="mobile-nav-item">Work Experience</a>
+        <a href="#projects" class="mobile-nav-item">Selected Projects</a>
+        <a href="#skills" class="mobile-nav-item">Technical Skills</a>
+        <a href="#currently-building" class="mobile-nav-item">Currently Building</a>
+        <a href="#offers" class="mobile-nav-item">Offers Received</a>
+        <a href="#education" class="mobile-nav-item">Education & Certs</a>
+        <a href="#contact" class="mobile-nav-item mobile-talk-btn">Let's Talk ➔</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="app-layout">
-    <!-- Left Sticky Sidebar -->
-    <aside class="sidebar" id="sidebar">
-      <div>
-        <div class="brand-block">
-          <div class="brand-name">Nikhil Reddy Levaku</div>
-          <div class="brand-title">
-            <span class="status-dot" title="Available for Backend Engineer roles"></span>
-            <span>Java Backend Developer</span>
+  <!-- PAGE CONTAINER -->
+  <main class="page-container">
+
+    <!-- ========================================================
+         HERO SECTION (High-Impact Two-Column Layout)
+         ======================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-grid">
+        
+        <!-- Left: Who I am, What I build, CTAs, Socials -->
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-dot"></span>
+            JAVA BACKEND • CLOUD • DEVOPS
+          </div>
+
+          <h1 class="hero-title">
+            Nikhil Reddy
+          </h1>
+
+          <div class="hero-role-statement">
+            Backend Engineer building scalable systems.
+          </div>
+
+          <p class="hero-description">
+            Production experience engineering high-concurrency microservices, concurrency-safe transactional workflows, and distributed Redis caches across PostgreSQL databases.
+          </p>
+
+          <div class="hero-cta-row">
+            <a href="#projects" class="btn-primary">
+              <span>View My Work</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="resume.pdf" download="Nikhil_Reddy_Levaku_Resume.pdf" class="btn-secondary" id="heroDownloadResume">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Download Resume</span>
+            </a>
+          </div>
+
+          <!-- Social Quick Links & Live Status Indicator -->
+          <div class="hero-meta-row">
+            <div class="hero-social-links">
+              <a href="https://github.com/Nikhilreddy810" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span>GitHub</span>
+              </a>
+              <span class="social-separator">/</span>
+              <a href="https://www.linkedin.com/in/nikhilreddylevaku/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+
+            <div class="availability-pill">
+              <span class="pulse-dot"></span>
+              <span class="availability-text">Open to Backend & Cloud Roles</span>
+            </div>
           </div>
         </div>
 
-        <nav class="nav-menu" aria-label="Primary Navigation">
-          <a href="#about" class="nav-link active">
-            <span class="nav-label-group">
-              <span class="nav-icon">◈</span>
-              <span class="nav-text">SYSTEM CORE</span>
-            </span>
-            <span class="nav-code">01</span>
-          </a>
-          <a href="#experience" class="nav-link">
-            <span class="nav-label-group">
-              <span class="nav-icon">⚡</span>
-              <span class="nav-text">WORK DISPATCH</span>
-            </span>
-            <span class="nav-code">02</span>
-          </a>
-          <a href="#offers" class="nav-link">
-            <span class="nav-label-group">
-              <span class="nav-icon">★</span>
-              <span class="nav-text">OFFERS & TENURE</span>
-            </span>
-            <span class="nav-code">03</span>
-          </a>
-          <a href="#projects" class="nav-link">
-            <span class="nav-label-group">
-              <span class="nav-icon">⬡</span>
-              <span class="nav-text">MICROSERVICES</span>
-            </span>
-            <span class="nav-code">04</span>
-          </a>
-          <a href="#skills" class="nav-link">
-            <span class="nav-label-group">
-              <span class="nav-icon">⚙</span>
-              <span class="nav-text">TECH RUNTIME</span>
-            </span>
-            <span class="nav-code">05</span>
-          </a>
-          <a href="#certifications" class="nav-link">
-            <span class="nav-label-group">
-              <span class="nav-icon">✓</span>
-              <span class="nav-text">CREDENTIALS</span>
-            </span>
-            <span class="nav-code">06</span>
-          </a>
-          <a href="#education" class="nav-link">
-            <span class="nav-label-group">
-              <span class="nav-icon">◎</span>
-              <span class="nav-text">ACADEMIC BASE</span>
-            </span>
-            <span class="nav-code">07</span>
-          </a>
-          <a href="#contact" class="nav-link">
-            <span class="nav-label-group">
-              <span class="nav-icon">✉</span>
-              <span class="nav-text">DISPATCH NODE</span>
-            </span>
-            <span class="nav-code">08</span>
-          </a>
-        </nav>
-      </div>
+        <!-- Right: Professional Portrait + Subtle Aura + Technical Floating Tags -->
+        <div class="hero-visual">
+          <div class="portrait-stage" id="portraitStage">
+            <!-- Subtle Violet/Mint Aura behind the portrait -->
+            <div class="portrait-ambient-halo" aria-hidden="true"></div>
 
-      <div class="sidebar-footer">
-        <div style="display: flex; gap: 0.5rem; flex-direction: column;">
-          <button class="btn-resume-side" id="openResumeModalBtn" style="cursor: pointer; width: 100%;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            <span>Preview Resume</span>
-          </button>
-          <a href="resume.pdf" class="btn-resume-side" download="Nikhil_Reddy_Levaku_Resume.pdf" style="font-size: 0.74rem; padding: 0.55rem 0.8rem; opacity: 0.85;">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span>Direct PDF Download</span>
-          </a>
-        </div>
-        <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); text-align: center; margin-top: 0.4rem;">
-          v2.6.0 • PostgreSQL / Spring 3.x
-        </div>
-      </div>
-    </aside>
-
-    <!-- Main Content Area -->
-    <main class="main-content">
-      
-      <!-- HERO SECTION -->
-      <section class="hero-section" id="hero">
-        <div class="hero-grid">
-          <div class="hero-intro">
-            <span class="hero-greeting">// BACKEND & DISTRIBUTED SYSTEMS</span>
-            <h1 class="hero-name">Nikhil Reddy Levaku</h1>
-            <p class="hero-tagline">
-              <strong>Java Backend Developer</strong> with production internship experience shipping <strong>100+ production REST APIs</strong> — specializing in Spring Boot, Spring Security, PostgreSQL, Redis caching, and concurrency-safe transactional workflows.
-            </p>
-            <div class="hero-badges-row">
-              <span class="tech-chip">Java 17/21</span>
-              <span class="tech-chip">Spring Boot</span>
-              <span class="tech-chip">Spring Security (JWT/RBAC)</span>
-              <span class="tech-chip">PostgreSQL</span>
-              <span class="tech-chip">Redis</span>
-              <span class="tech-chip">Docker</span>
-              <span class="tech-chip">Flyway</span>
+            <!-- Controlled floating technical labels around image -->
+            <div class="tech-tag tag-top-right">
+              <span class="tag-accent-violet">●</span>
+              <span>Spring Boot</span>
             </div>
-            <div class="hero-cta-group">
-              <a href="#experience" class="btn-primary">Explore Production Work</a>
-              <button class="btn-secondary" id="heroPreviewResumeBtn" style="cursor: pointer;">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                <span>View Resume</span>
-              </button>
+            <div class="tech-tag tag-mid-left">
+              <span class="tag-accent-mint">●</span>
+              <span>Java 21</span>
             </div>
-          </div>
-
-          <!-- Hero 3D Silhouette Cutout Canvas (Matching Sketch) -->
-          <div class="hero-silhouette-showcase" id="hero3dStage">
-            <!-- Ambient Red & Crimson Radial Glow Halo behind 3D silhouette -->
-            <div class="silhouette-ambient-glow" aria-hidden="true"></div>
-            
-            <!-- Floating Tech System Tags around 3D Silhouette -->
-            <div class="floating-tech-badge badge-top-right">
-              <span class="badge-dot-red"></span>
-              <span>DISTRIBUTED SYSTEMS</span>
+            <div class="tech-tag tag-bottom-left">
+              <span class="tag-accent-violet">●</span>
+              <span>Docker</span>
             </div>
-            <div class="floating-tech-badge badge-bottom-left">
-              <span class="badge-dot-white"></span>
-              <span>HIGH CONCURRENCY</span>
+            <div class="tech-tag tag-bottom-right">
+              <span class="tag-accent-mint">●</span>
+              <span>AWS Cloud</span>
             </div>
 
-            <!-- The 3D Cutout Figure with interactive perspective tilt -->
-            <div class="silhouette-cutout-wrapper interactive-3d-figure" id="silhouetteFigure">
+            <!-- Cutout Silhouette Image -->
+            <div class="portrait-frame" id="portraitFrame">
               <img 
                 src="profile_clean.png" 
                 alt="Nikhil Reddy Levaku" 
-                class="silhouette-cutout-img"
+                class="portrait-img"
                 onerror="this.onerror=null; this.src='profile_cutout.png'; if(!this.src) this.src='profile.jpg';"
               />
-              <!-- Subtle bottom fade blending figure smoothly into page background -->
-              <div class="silhouette-base-fade" aria-hidden="true"></div>
+              <div class="portrait-base-gradient" aria-hidden="true"></div>
             </div>
 
-            <!-- Status Pill Float below Figure -->
-            <div class="silhouette-status-card">
-              <div class="status-indicator-live">
-                <span class="status-pulse-red"></span>
-                <span class="status-title">ONLINE & HIRING READY</span>
+            <!-- Subtle Live Hiring Status Pill -->
+            <div class="portrait-status-banner">
+              <div class="status-badge-live">
+                <span class="status-live-dot"></span>
+                <span>AVAILABLE NOW</span>
               </div>
-              <div class="status-sub">B.Tech 2026 • Java Backend Developer</div>
+              <div class="status-badge-sub">B.Tech 2026 • 8.5 CGPA</div>
             </div>
           </div>
         </div>
 
-        <!-- Key Numbers Strip with Interactive Animated Counter -->
-        <div class="metrics-strip">
-          <div class="metric-box interactive-tilt">
-            <span class="metric-val" data-target="100" data-suffix="+">100+</span>
-            <div class="metric-label">Production REST APIs Shipped</div>
-            <div class="metric-sub">// DeepLure B2B marketplace & on-demand services</div>
-          </div>
-          <div class="metric-box interactive-tilt">
-            <span class="metric-val" data-target="2" data-suffix="+">2+</span>
-            <div class="metric-label">Offers & Internships</div>
-            <div class="metric-sub">// Axlero Solutions & Infotact Solutions</div>
-          </div>
-          <div class="metric-box interactive-tilt">
-            <span class="metric-val" data-target="100" data-suffix="+">100+</span>
-            <div class="metric-label">LeetCode DSA Problems Solved</div>
-            <div class="metric-sub">// Algorithms, Trees, Graphs & Dynamic Programming</div>
-          </div>
+      </div>
+
+      <!-- Hero Key Metrics Numbers Strip -->
+      <div class="hero-metrics-strip">
+        <div class="metric-item">
+          <div class="metric-number" data-target="100" data-suffix="+">100+</div>
+          <div class="metric-title">Production REST APIs Shipped</div>
+          <div class="metric-caption">B2B services, payment gateways, and authentication</div>
         </div>
-      </section>
-
-      <!-- ABOUT / PROFESSIONAL SUMMARY -->
-      <section id="about">
-        <div class="section-header">
-          <span class="section-label">// 01. architecture & engineering profile</span>
-          <h2 class="section-title">Engineering Summary</h2>
+        <div class="metric-item">
+          <div class="metric-number" data-target="2" data-suffix="+">2+</div>
+          <div class="metric-title">Offers & Internships</div>
+          <div class="metric-caption">Axlero Solutions & Infotact Solutions selections</div>
         </div>
-        <div class="summary-card interactive-tilt">
-          <p class="summary-text">
-            Java Backend Developer with production internship experience delivering <strong>100+ RESTful APIs</strong> using Core Java, Spring Boot, and Spring Security. Experienced in secure authentication and authorization (JWT, OTP, RBAC), payment gateway integration, real-time messaging, and Redis-backed asynchronous processing over PostgreSQL. Strong in layered architecture, concurrency-safe transactional workflows, database optimization, and Agile SDLC delivery.
-          </p>
-
-          <div class="core-pillars-grid">
-            <div class="pillar-item">
-              <div class="pillar-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: var(--secondary-accent);" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                Secure Auth & RBAC
-              </div>
-              <p class="pillar-desc">Stateless JWT tokens, role hierarchies, OTP multi-factor delivery over SMS and email, preventing privilege escalation.</p>
-            </div>
-            <div class="pillar-item">
-              <div class="pillar-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: var(--secondary-accent);" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-                Concurrency & DB Scale
-              </div>
-              <p class="pillar-desc">Optimistic/pessimistic locking, transactional rollbacks, normalized schema design, and Redis caching cutting DB load by ~40%.</p>
-            </div>
-            <div class="pillar-item">
-              <div class="pillar-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: var(--secondary-accent);" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                Real-Time & Async
-              </div>
-              <p class="pillar-desc">WebSocket/STOMP bidirectional channels, Razorpay idempotency keys, Firebase Cloud Messaging, and async workers.</p>
-            </div>
-          </div>
+        <div class="metric-item">
+          <div class="metric-number" data-target="100" data-suffix="+">100+</div>
+          <div class="metric-title">LeetCode DSA Solved</div>
+          <div class="metric-caption">Algorithms, trees, graphs, and dynamic programming</div>
         </div>
-      </section>
-
-      <!-- EXPERIENCE SECTION -->
-      <section id="experience">
-        <div class="section-header">
-          <span class="section-label">// 02. career path & impact</span>
-          <h2 class="section-title">Work Experience</h2>
+        <div class="metric-item">
+          <div class="metric-number" data-target="8.5" data-suffix=" / 10" data-decimal="true">8.5 / 10</div>
+          <div class="metric-title">Academic CGPA</div>
+          <div class="metric-caption">B.Tech Electronics & Comm, SVCE Tirupati (2026)</div>
         </div>
+      </div>
+    </section>
 
-        <div class="timeline-list">
-          
-          <!-- Experience 1: DeepLure -->
-          <div class="experience-card interactive-tilt">
-            <div class="timeline-marker"></div>
-            <div class="exp-header">
-              <div>
-                <span class="exp-role">Backend Engineer Intern</span>
-                <span style="color: var(--text-muted);"> at </span>
-                <span class="exp-company">DeepLure Research Pvt Ltd</span>
-              </div>
-              <span class="exp-date">May 2026 – Present</span>
-            </div>
-            <div class="exp-stack">
-              <span class="tech-chip">Java</span>
-              <span class="tech-chip">Spring Boot</span>
-              <span class="tech-chip">Spring Security</span>
-              <span class="tech-chip">PostgreSQL</span>
-              <span class="tech-chip">Redis</span>
-              <span class="tech-chip">Docker</span>
-              <span class="tech-chip">Flyway</span>
-              <span class="tech-chip">Razorpay</span>
-            </div>
-            <ul class="exp-bullets">
-              <li>Designed and shipped <strong>100+ production REST APIs</strong> in Spring Boot across a B2B marketplace and an on-demand services platform, covering authentication, catalogue, orders, payments, and partner/admin modules.</li>
-              <li>Implemented secure authentication and authorization using <strong>JWT and role-based access control (RBAC)</strong>, with OTP verification delivered over SMS and email.</li>
-              <li>Integrated the <strong>Razorpay payment gateway</strong> for orders, wallets, and refunds, applying <strong>idempotency keys and optimistic/pessimistic locking</strong> to prevent double-charges and race conditions under concurrent requests.</li>
-              <li>Built real-time chat and support ticketing over <strong>WebSocket/STOMP</strong>, with Firebase Cloud Messaging push notifications and third-party SMS integration.</li>
-              <li>Engineered <strong>Redis-backed asynchronous workers</strong> for notifications, payment reconciliation, and booking expiry, reducing database load by <strong>~40%</strong> through Redis caching and query optimization.</li>
-              <li>Modeled normalized PostgreSQL schemas with <strong>Hibernate/JPA and versioned Flyway migrations</strong>; wrote unit and integration tests with JUnit 5 and Mockito, contributing in Agile sprints through code reviews and production defect fixes.</li>
-            </ul>
-          </div>
-
-          <!-- Experience 2: SmartBridge -->
-          <div class="experience-card interactive-tilt">
-            <div class="timeline-marker"></div>
-            <div class="exp-header">
-              <div>
-                <span class="exp-role">Data Analytics Intern</span>
-                <span style="color: var(--text-muted);"> at </span>
-                <span class="exp-company">SmartBridge Educational Services (APSCHE)</span>
-              </div>
-              <span class="exp-date">May 2025 – Jul 2025</span>
-            </div>
-            <div class="exp-stack">
-              <span class="tech-chip">SQL</span>
-              <span class="tech-chip">Tableau</span>
-              <span class="tech-chip">Data Cleaning</span>
-              <span class="tech-chip">ETL Queries</span>
-            </div>
-            <ul class="exp-bullets">
-              <li>Cleaned and transformed toy-manufacturing sales datasets using complex SQL joins, filters, and aggregate queries.</li>
-              <li>Engineered <strong>3 interactive Tableau dashboards</strong> used for state-level production and inventory review, surfacing operational bottlenecks.</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <!-- Interactive Live API Inspector / Runner -->
-        <div class="api-tester-container interactive-tilt">
-          <div class="api-tester-bar">
-            <div class="api-select-group">
-              <span style="color: var(--text-muted);">ENDPOINT:</span>
-              <select class="api-select" id="endpointSelect" aria-label="Select Mock REST Endpoint">
-                <option value="GET /api/v1/health">GET /api/v1/health</option>
-                <option value="POST /api/v1/orders/reserve">POST /api/v1/orders/reserve (Concurrency Lock)</option>
-                <option value="GET /api/v1/metrics/db-load">GET /api/v1/metrics/db-load (Redis ~40% Offload)</option>
-                <option value="GET /api/v1/offers/received">GET /api/v1/offers/received (Axlero & Infotact)</option>
-                <option value="GET /api/v1/developer/profile">GET /api/v1/developer/profile</option>
-              </select>
-            </div>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <span id="apiStatusCode" style="font-family: var(--font-mono); font-size: 0.75rem; color: #34D399;">HTTP 200 OK</span>
-              <span id="apiLatency" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">12ms</span>
-              <button class="btn-run-api" id="runApiBtn">Send Request & Run Pipeline</button>
-            </div>
-          </div>
-          <div class="api-output-view" id="apiOutput">{
-  "status": "UP",
-  "service": "nikhil-backend-core",
-  "runtime": "Java 21 / Spring Boot 3.2",
-  "database": "PostgreSQL [Pool: HikariCP 10/10 active]",
-  "cache": "Redis [HIT_RATE: 94.2%]",
-  "uptime": "99.98%"
-}</div>
-        </div>
-      </section>
-
-      <!-- OFFERS SECTION -->
-      <section id="offers">
-        <div class="section-header">
-          <span class="section-label">// 03. professional selections & pipeline</span>
-          <h2 class="section-title">Offers Received</h2>
-        </div>
-        <p style="color: var(--text-muted); margin-bottom: 1.8rem; font-size: 0.95rem;">
-          Verified Java engineering selections & upcoming internship tenures:
+    <!-- ========================================================
+         ENGINEERING SUMMARY (Concise + 3 Distinct Principles)
+         ======================================================== -->
+    <section class="section" id="about">
+      <div class="section-intro">
+        <span class="section-kicker">01 // PROFILE</span>
+        <h2 class="section-heading">Engineering Summary</h2>
+        <p class="section-lead">
+          Java Backend Developer with hands-on production internship experience architecting <strong>100+ production RESTful APIs</strong> using Core Java, Spring Boot, and PostgreSQL. Experienced in distributed Redis caching, stateless JWT/RBAC security, payment gateway idempotency, and high-concurrency database design.
         </p>
+      </div>
 
-        <div class="offers-grid">
-          
-          <!-- Offer 1: Axlero Solutions -->
-          <div class="offer-card interactive-tilt">
-            <div class="offer-status-badge">
-              <span class="status-pulse-amber"></span>
-              <span>SELECTION EXTENDED</span>
-            </div>
-            <div class="offer-body">
-              <div class="offer-company-row">
-                <div>
-                  <h3 class="offer-role">Java Developer Intern</h3>
-                  <div class="offer-company">Axlero Innovative Solutions</div>
-                </div>
-                <div class="offer-id-tag">AXL-JV-KSUL6U</div>
-              </div>
-
-              <div class="offer-meta-grid">
-                <div class="offer-meta-item">
-                  <span class="label">TENURE DATES</span>
-                  <span class="val">25 Sep 2026 – 25 Dec 2026</span>
-                </div>
-                <div class="offer-meta-item">
-                  <span class="label">DOMAIN & MODE</span>
-                  <span class="val">Software Eng • Remote</span>
-                </div>
-                <div class="offer-meta-item">
-                  <span class="label">FOCUS AREA</span>
-                  <span class="val">REST APIs & DB Maintenance</span>
-                </div>
-                <div class="offer-meta-item">
-                  <span class="label">VERIFICATION</span>
-                  <span class="val" style="color: #34D399;">Authorized HR Verification</span>
-                </div>
-              </div>
-
-              <div class="offer-desc">
-                Selected for backend service implementation, enterprise Java architecture, code reviews, and database query optimization under senior mentorship.
-              </div>
-
-              <!-- Dedicated Offer Letter View Buttons -->
-              <div class="offer-action-row">
-                <button class="btn-view-doc" id="viewAxleroOfferBtn">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                  <span>View Axlero Offer Letter</span>
-                </button>
-                <a href="axlero_offer.pdf" download="Axlero_Offer_Letter_Nikhil_Reddy.pdf" class="btn-download-doc" title="Download Official Letter">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                </a>
-              </div>
-            </div>
+      <!-- 3 Visually Distinct Principles -->
+      <div class="principles-grid">
+        <div class="principle-card">
+          <div class="principle-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
+          <h3 class="principle-title">Backend Engineering</h3>
+          <p class="principle-text">
+            Clean layered architectures (Controller → Service → Repository) with stateless JWT tokens, RBAC, and robust REST APIs.
+          </p>
+        </div>
 
-          <!-- Offer 2: Infotact Solutions -->
-          <div class="offer-card interactive-tilt">
-            <div class="offer-status-badge">
-              <span class="status-pulse-amber"></span>
-              <span>SELECTION EXTENDED</span>
-            </div>
-            <div class="offer-body">
-              <div class="offer-company-row">
-                <div>
-                  <h3 class="offer-role">Associate L1 (Java Development)</h3>
-                  <div class="offer-company">Infotact Solutions</div>
-                </div>
-                <div class="offer-id-tag">EMP: 8c62241c4127</div>
-              </div>
-
-              <div class="offer-meta-grid">
-                <div class="offer-meta-item">
-                  <span class="label">TENURE DATES</span>
-                  <span class="val">05 Sep 2026 – 05 Dec 2026</span>
-                </div>
-                <div class="offer-meta-item">
-                  <span class="label">DOMAIN & MODE</span>
-                  <span class="val">Java Backend • Remote</span>
-                </div>
-                <div class="offer-meta-item">
-                  <span class="label">TECH CORE</span>
-                  <span class="val">Core Java, Spring Boot, JDBC</span>
-                </div>
-                <div class="offer-meta-item">
-                  <span class="label">VERIFICATION</span>
-                  <span class="val" style="color: #34D399;">ISO 9001:2015 Approved</span>
-                </div>
-              </div>
-
-              <div class="offer-desc">
-                Selected to build enterprise web services, participate in code reviews, optimize MySQL/PostgreSQL queries, and maintain system architecture documentation.
-              </div>
-
-              <!-- Dedicated Offer Letter View Buttons -->
-              <div class="offer-action-row">
-                <button class="btn-view-doc" id="viewInfotactOfferBtn">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                  <span>View Infotact Offer Letter</span>
-                </button>
-                <a href="infotact_offer.pdf" download="Infotact_Offer_Letter_Nikhil_Reddy.pdf" class="btn-download-doc" title="Download Official Letter">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                </a>
-              </div>
-            </div>
+        <div class="principle-card">
+          <div class="principle-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
           </div>
-
-        </div>
-      </section>
-
-      <!-- PROJECTS SECTION -->
-      <section id="projects">
-        <div class="section-header">
-          <span class="section-label">// 04. engineering implementations</span>
-          <h2 class="section-title">Selected Projects & Architecture Deep Dive</h2>
+          <h3 class="principle-title">System Design</h3>
+          <p class="principle-text">
+            Concurrency-safe locking (pessimistic/optimistic), database normalization, transactional rollback, and Redis caching reducing DB load by ~40%.
+          </p>
         </div>
 
-        <!-- Interactive Category Filter Bar -->
-        <div class="project-filter-bar" role="tablist" aria-label="Project Categories">
-          <button class="filter-pill active" data-filter="all">All Systems (3)</button>
-          <button class="filter-pill" data-filter="spring">Spring Boot & Microservices</button>
-          <button class="filter-pill" data-filter="distributed">Distributed Systems & Redis</button>
-          <button class="filter-pill" data-filter="auth">Enterprise Auth & DB</button>
+        <div class="principle-card">
+          <div class="principle-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
+          <h3 class="principle-title">Cloud & DevOps</h3>
+          <p class="principle-text">
+            Containerization with Docker, schema migrations via Flyway, CI/CD pipeline automation, and Oracle Cloud Foundations certification.
+          </p>
         </div>
+      </div>
+    </section>
 
-        <div class="projects-grid">
-          
-          <!-- Project 1: Flight Booking System -->
-          <div class="project-panel interactive-tilt" data-category="spring distributed">
-            <div class="proj-top">
-              <div class="proj-title-group">
-                <h3>Flight Booking System</h3>
-                <div class="proj-dates">Aug 2025 – Jan 2026 • Distributed Booking Engine</div>
-              </div>
-              <div class="proj-links">
-                <a href="https://github.com/Nikhilreddy810/Flight_Booking" target="_blank" rel="noopener noreferrer" class="icon-btn">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                  <span>Repository</span>
-                </a>
+    <!-- ========================================================
+         WORK EXPERIENCE (Proper Visual Timeline, Impact-Driven)
+         ======================================================== -->
+    <section class="section" id="experience">
+      <div class="section-intro">
+        <span class="section-kicker">02 // TRACK RECORD</span>
+        <h2 class="section-heading">Work Experience</h2>
+        <p class="section-lead">Production engineering roles delivering enterprise systems, API pipelines, and query optimization.</p>
+      </div>
+
+      <div class="timeline-container">
+        
+        <!-- Experience 1: DeepLure (Most Recent & Visually Dominant) -->
+        <div class="timeline-entry featured-role">
+          <div class="timeline-node">
+            <div class="node-ring-active"></div>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <div>
+                <div class="role-badge-row">
+                  <span class="role-featured-pill">Current Role</span>
+                  <span class="timeline-date">May 2026 – Present</span>
+                </div>
+                <h3 class="timeline-role">Backend Engineer Intern</h3>
+                <div class="timeline-company">DeepLure Research Pvt Ltd</div>
               </div>
             </div>
 
-            <div class="proj-stack-chips">
-              <span class="tech-chip">Spring Boot</span>
-              <span class="tech-chip">Spring Security</span>
-              <span class="tech-chip">MySQL</span>
-              <span class="tech-chip">Redis</span>
-              <span class="tech-chip">Docker</span>
-              <span class="tech-chip">Swagger/OpenAPI</span>
+            <div class="timeline-stack">
+              <span class="stack-tag">Java 21</span>
+              <span class="stack-tag">Spring Boot</span>
+              <span class="stack-tag">Spring Security</span>
+              <span class="stack-tag">PostgreSQL</span>
+              <span class="stack-tag">Redis</span>
+              <span class="stack-tag">Razorpay</span>
+              <span class="stack-tag">WebSocket</span>
+              <span class="stack-tag">Docker</span>
+              <span class="stack-tag">Flyway</span>
             </div>
 
-            <ul class="proj-highlights">
-              <li>Developed <strong>14+ REST APIs</strong> for flight search, booking, cancellation, and authentication structured via layered architecture (Controller → Service → Repository) with JWT and role-based access control.</li>
-              <li>Implemented <strong>concurrency-safe seat allocation with transactional rollback</strong> on cancellation, eliminating overbooking and inventory drift under parallel requests.</li>
-              <li>Added <strong>Redis caching</strong> for search results, containerized the service using Docker, documented all endpoints via Swagger UI, and applied centralized exception handling across the entire API suite.</li>
+            <ul class="timeline-impact-list">
+              <li>
+                <strong>Engineered 100+ Production REST APIs:</strong> Delivered core endpoints across a B2B marketplace and on-demand service platform covering authentication, catalogue, transactional orders, and multi-tenant admin portals.
+              </li>
+              <li>
+                <strong>Implemented Secure Authentication & Authorization:</strong> Configured stateless JWT token lifecycles with role-based access control (RBAC) and OTP verification delivered securely via SMS and email channels.
+              </li>
+              <li>
+                <strong>Zero-Drift Payment Workflows:</strong> Integrated Razorpay gateway using strict idempotency keys and optimistic/pessimistic DB row locking, preventing double-charges and inventory race conditions.
+              </li>
+              <li>
+                <strong>Asynchronous Redis Workers & Real-Time Sync:</strong> Architected Redis-backed queues for background notifications and payment reconciliation, reducing primary PostgreSQL database load by <strong>~40%</strong> alongside WebSocket/STOMP support channels.
+              </li>
             </ul>
+          </div>
+        </div>
 
-            <!-- Architecture Topology Drawer Trigger Button -->
-            <div style="margin: 1rem 0 0.5rem 0; display: flex; gap: 0.6rem; flex-wrap: wrap;">
-              <button class="btn-toggle-topology" id="toggleArchTopologyBtn" type="button">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                <span id="topologyBtnText">Explore Visual Architecture Topology Flow ▾</span>
-              </button>
-            </div>
-
-            <!-- Visual Architecture Topology Drawer -->
-            <div class="arch-topology-drawer" id="flightArchDrawer">
-              <div class="arch-topology-header">
-                <div class="arch-topology-title">
-                  <span class="badge-dot-red"></span>
-                  <span>TRANSACTIONAL CONCURRENCY TOPOLOGY — FLIGHT BOOKING</span>
-                </div>
-                <div class="mono-tag">// ZERO INVENTORY DRIFT</div>
-              </div>
-
-              <div class="topology-flow">
-                <div class="topology-step">
-                  <div class="topology-step-num">01</div>
-                  <div class="topology-node">
-                    <div class="node-badge">CLIENT</div>
-                    <div class="node-label">Concurrent User / API Gateway</div>
-                    <div class="node-meta">POST /api/v1/reserve {flightId, seat, idemKey}</div>
-                  </div>
-                </div>
-
-                <div class="topology-arrow">➔</div>
-
-                <div class="topology-step">
-                  <div class="topology-step-num">02</div>
-                  <div class="topology-node highlight-redis">
-                    <div class="node-badge">REDIS DISTRIBUTED LOCK</div>
-                    <div class="node-label">TTL Idempotency Guard</div>
-                    <div class="node-meta">SETNX lock:flight:101:seat:12A (EX 15s)</div>
-                  </div>
-                </div>
-
-                <div class="topology-arrow">➔</div>
-
-                <div class="topology-step">
-                  <div class="topology-step-num">03</div>
-                  <div class="topology-node highlight-spring">
-                    <div class="node-badge">SPRING SERVICE</div>
-                    <div class="node-label">BookingService @Transactional</div>
-                    <div class="node-meta">Pessimistic Write Lock (Isolation.SERIALIZABLE)</div>
-                  </div>
-                </div>
-
-                <div class="topology-arrow">➔</div>
-
-                <div class="topology-step">
-                  <div class="topology-step-num">04</div>
-                  <div class="topology-node highlight-db">
-                    <div class="node-badge">POSTGRES / MYSQL</div>
-                    <div class="node-label">Row Locked & Committed</div>
-                    <div class="node-meta">UPDATE seat SET status='LOCKED' + Auto-Rollback</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="topology-footer">
-                <span>Guarantees: Strict Idempotency • Race-Condition Elimination • Instant Redis Lock Eviction on Abort</span>
+        <!-- Experience 2: SmartBridge -->
+        <div class="timeline-entry">
+          <div class="timeline-node">
+            <div class="node-ring"></div>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-date">May 2025 – Jul 2025</span>
+                <h3 class="timeline-role">Data Analytics Intern</h3>
+                <div class="timeline-company">SmartBridge Educational Services (APSCHE)</div>
               </div>
             </div>
 
-            <!-- Architecture Code Deep Dive Tab -->
-            <div class="code-tab-container" style="margin-top: 1.2rem;">
-              <div class="code-tab-bar">
-                <span class="code-tab-btn active" data-target="code-flight">ConcurrencyLockService.java</span>
-                <span class="code-tab-label">Spring @Transactional & Lock Primitives</span>
-              </div>
-              <pre class="code-tab-content" id="code-flight"><code>@Service
+            <div class="timeline-stack">
+              <span class="stack-tag">SQL</span>
+              <span class="stack-tag">Tableau</span>
+              <span class="stack-tag">Data Cleaning</span>
+              <span class="stack-tag">ETL Queries</span>
+            </div>
+
+            <ul class="timeline-impact-list">
+              <li>Cleaned, filtered, and aggregated complex manufacturing and sales datasets using structured SQL multi-table joins.</li>
+              <li>Engineered <strong>3 interactive Tableau dashboards</strong> utilized for operational state-level inventory review and supply bottleneck resolution.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SELECTED PROJECTS (Case Study Presentation)
+         ======================================================== -->
+    <section class="section" id="projects">
+      <div class="section-intro">
+        <span class="section-kicker">03 // CODE & ARCHITECTURE</span>
+        <h2 class="section-heading">Selected Projects</h2>
+        <p class="section-lead">Systems I've designed and built with concurrency, reliability, and scale in mind.</p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="project-filter-row" role="tablist" aria-label="Project Categories">
+        <button class="filter-btn active" data-filter="all">All Systems</button>
+        <button class="filter-btn" data-filter="spring">Spring Boot & Microservices</button>
+        <button class="filter-btn" data-filter="distributed">Distributed Systems & Redis</button>
+        <button class="filter-btn" data-filter="auth">Enterprise Auth & DB</button>
+      </div>
+
+      <!-- FEATURED PROJECT 1: Flight Booking System Case Study -->
+      <article class="featured-case-study project-item" data-category="spring distributed">
+        <div class="case-study-badge">
+          <span class="badge-dot-mint"></span>
+          FEATURED CASE STUDY
+        </div>
+
+        <div class="case-study-header">
+          <div>
+            <h3 class="case-study-title">Flight Booking System</h3>
+            <div class="case-study-sub">Distributed seat allocation engine with pessimistic locking and transactional idempotency.</div>
+          </div>
+          <div class="case-study-links">
+            <a href="https://github.com/Nikhilreddy810/Flight_Booking" target="_blank" rel="noopener noreferrer" class="btn-project-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <span>GitHub Repository</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Problem Statement & Engineering Decisions -->
+        <div class="case-study-grid">
+          <div class="case-study-column">
+            <div class="column-label">PROBLEM STATEMENT</div>
+            <p class="column-text">
+              High-frequency airline seat reservations suffer from race conditions, overbooking, and payment discrepancies when multiple concurrent requests target the same seat inventory.
+            </p>
+          </div>
+          <div class="case-study-column">
+            <div class="column-label">KEY ENGINEERING DECISIONS</div>
+            <p class="column-text">
+              Implemented pessimistic write locking (`Isolation.SERIALIZABLE`) at the database layer paired with Redis idempotency keys, guaranteeing atomic seat status transitions with automatic rollback on failure.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tech Stack Badges -->
+        <div class="case-study-stack">
+          <span class="stack-tag">Java 17</span>
+          <span class="stack-tag">Spring Boot</span>
+          <span class="stack-tag">Spring Security (JWT)</span>
+          <span class="stack-tag">MySQL</span>
+          <span class="stack-tag">Redis Caching</span>
+          <span class="stack-tag">Docker</span>
+          <span class="stack-tag">Swagger OpenAPI</span>
+        </div>
+
+        <!-- SIMPLIFIED VISUAL ARCHITECTURE FLOW (Requested Exact Flow) -->
+        <div class="arch-flow-wrapper">
+          <div class="arch-flow-title">SYSTEM ARCHITECTURE FLOW</div>
+          <div class="arch-flow-diagram">
+            <div class="flow-box">
+              <span class="flow-step-num">01</span>
+              <span class="flow-name">Client</span>
+              <span class="flow-meta">HTTP Request</span>
+            </div>
+            <div class="flow-arrow">➔</div>
+            <div class="flow-box">
+              <span class="flow-step-num">02</span>
+              <span class="flow-name">Spring Boot API</span>
+              <span class="flow-meta">REST Controller</span>
+            </div>
+            <div class="flow-arrow">➔</div>
+            <div class="flow-box">
+              <span class="flow-step-num">03</span>
+              <span class="flow-name">Service Layer</span>
+              <span class="flow-meta">@Transactional</span>
+            </div>
+            <div class="flow-arrow">➔</div>
+            <div class="flow-box highlight-storage">
+              <span class="flow-step-num">04</span>
+              <span class="flow-name">MySQL + Redis + Auth</span>
+              <span class="flow-meta">Locks, Cache & JWT</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Expandable Deep-Dive Architecture Code Snippet -->
+        <div class="case-study-code-tab">
+          <button class="code-tab-toggle" id="toggleCodeSnippetBtn" type="button">
+            <span class="code-file-name">ConcurrencyLockService.java</span>
+            <span class="code-toggle-indicator" id="codeIndicator">Show Implementation Snippet ▾</span>
+          </button>
+          <div class="code-tab-body" id="codeSnippetBody">
+            <pre><code>@Service
 public class BookingService {
     @Transactional(isolation = Isolation.SERIALIZABLE)
     public BookingResponse reserveSeatWithLock(Long flightId, String seatNumber, String idempotencyKey) {
@@ -590,315 +452,437 @@ public class BookingService {
         return new BookingResponse("SUCCESS", saved.getId());
     }
 }</code></pre>
-            </div>
           </div>
-
-          <!-- Project 2: User Management System -->
-          <div class="project-panel interactive-tilt" data-category="spring auth">
-            <div class="proj-top">
-              <div class="proj-title-group">
-                <h3>User Management System</h3>
-                <div class="proj-dates">Oct 2024 – Dec 2024 • Enterprise Identity Service</div>
-              </div>
-              <div class="proj-links">
-                <a href="https://github.com/Nikhilreddy810/User_Management" target="_blank" rel="noopener noreferrer" class="icon-btn">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                  <span>Repository</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="proj-stack-chips">
-              <span class="tech-chip">Spring Boot</span>
-              <span class="tech-chip">Hibernate / JPA</span>
-              <span class="tech-chip">MySQL</span>
-              <span class="tech-chip">Postman</span>
-            </div>
-
-            <ul class="proj-highlights">
-              <li>Built a comprehensive CRUD REST API featuring dynamic search, criteria-based filtering, request payload validation, and centralized exception handling.</li>
-              <li>Modeled a normalized <strong>6-table relational schema</strong> in MySQL with Hibernate/JPA entity relationships, tested and documented rigorously in Postman collections.</li>
-            </ul>
-          </div>
-
-          <!-- Project 3: Distributed B2B Marketplace & Asynchronous Engine -->
-          <div class="project-panel interactive-tilt" data-category="spring distributed auth">
-            <div class="proj-top">
-              <div class="proj-title-group">
-                <h3>DeepLure B2B Marketplace & Async Engine</h3>
-                <div class="proj-dates">May 2026 – Present • Enterprise Distributed Services</div>
-              </div>
-              <div class="proj-links">
-                <span class="mono-tag" style="background: rgba(168,85,247,0.12); color: var(--primary-accent); padding: 0.25rem 0.6rem; border-radius: 4px; border: 1px solid rgba(168,85,247,0.3);">
-                  Production Deployment
-                </span>
-              </div>
-            </div>
-
-            <div class="proj-stack-chips">
-              <span class="tech-chip">Java 21</span>
-              <span class="tech-chip">Spring Boot 3.x</span>
-              <span class="tech-chip">Spring Security</span>
-              <span class="tech-chip">PostgreSQL</span>
-              <span class="tech-chip">Redis</span>
-              <span class="tech-chip">Razorpay</span>
-              <span class="tech-chip">WebSocket</span>
-              <span class="tech-chip">Docker</span>
-            </div>
-
-            <ul class="proj-highlights">
-              <li>Shipped <strong>100+ production REST endpoints</strong> handling transactions, catalogue, authentication, wallet refunds, and multi-tenant admin dashboards.</li>
-              <li>Engineered <strong>Redis-backed asynchronous job processing</strong> for notifications, booking expiry, and payment reconciliation, reducing primary PostgreSQL load by <strong>~40%</strong>.</li>
-              <li>Integrated <strong>Razorpay payment gateway</strong> with strict idempotency keys and optimistic/pessimistic locking to prevent double-charges and race conditions.</li>
-              <li>Deployed real-time support chat via <strong>WebSocket/STOMP</strong> with Firebase Cloud Messaging (FCM) fallback.</li>
-            </ul>
-          </div>
-
         </div>
-      </section>
+      </article>
 
-      <!-- SKILLS SECTION -->
-      <section id="skills">
-        <div class="section-header">
-          <span class="section-label">// 05. technical capabilities</span>
-          <h2 class="section-title">Technical Skills</h2>
+      <!-- SECONDARY PROJECTS GRID -->
+      <div class="secondary-projects-grid">
+        
+        <!-- Project 2: User Management System -->
+        <article class="secondary-project-card project-item" data-category="spring auth">
+          <div class="card-top">
+            <div>
+              <div class="project-type-tag">ENTERPRISE IDENTITY SERVICE</div>
+              <h3 class="secondary-project-title">User Management System</h3>
+            </div>
+            <a href="https://github.com/Nikhilreddy810/User_Management" target="_blank" rel="noopener noreferrer" class="icon-link-btn" title="View Repository">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+
+          <p class="secondary-project-desc">
+            Production-grade RESTful identity API featuring dynamic search, criteria-based filtering, request validation, and centralized exception handlers over a normalized 6-table relational schema.
+          </p>
+
+          <div class="secondary-project-stack">
+            <span class="stack-tag">Spring Boot</span>
+            <span class="stack-tag">Hibernate / JPA</span>
+            <span class="stack-tag">MySQL</span>
+            <span class="stack-tag">Postman</span>
+          </div>
+        </article>
+
+        <!-- Project 3: DeepLure Distributed Platform Architecture -->
+        <article class="secondary-project-card project-item" data-category="spring distributed auth">
+          <div class="card-top">
+            <div>
+              <div class="project-type-tag">PRODUCTION MICROSERVICES</div>
+              <h3 class="secondary-project-title">DeepLure B2B Services Platform</h3>
+            </div>
+            <span class="status-prod-pill">Production</span>
+          </div>
+
+          <p class="secondary-project-desc">
+            Shipped 100+ production REST endpoints covering orders, payments, authentication, and notifications. Integrated Redis caching cutting database load by ~40% and Razorpay transaction locking.
+          </p>
+
+          <div class="secondary-project-stack">
+            <span class="stack-tag">Java 21</span>
+            <span class="stack-tag">Spring Boot 3.x</span>
+            <span class="stack-tag">PostgreSQL</span>
+            <span class="stack-tag">Redis</span>
+            <span class="stack-tag">Razorpay</span>
+            <span class="stack-tag">Docker</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TECHNICAL SKILLS (Clean 4 Categories Pill Components)
+         ======================================================== -->
+    <section class="section" id="skills">
+      <div class="section-intro">
+        <span class="section-kicker">04 // COMPETENCIES</span>
+        <h2 class="section-heading">Technical Skills</h2>
+        <p class="section-lead">Technologies and engineering tools used to architect and ship software in production.</p>
+      </div>
+
+      <div class="skills-category-grid">
+        
+        <!-- Category 1: Backend -->
+        <div class="skill-category-block">
+          <div class="skill-category-header">
+            <span class="cat-accent-dot"></span>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-pill-wrap">
+            <span class="skill-pill">Java (17 / 21)</span>
+            <span class="skill-pill">Spring Boot</span>
+            <span class="skill-pill">REST APIs</span>
+            <span class="skill-pill">Hibernate / JPA</span>
+            <span class="skill-pill">Spring Security (JWT/RBAC)</span>
+          </div>
         </div>
 
-        <div class="skills-schema-grid">
+        <!-- Category 2: Database -->
+        <div class="skill-category-block">
+          <div class="skill-category-header">
+            <span class="cat-accent-dot mint"></span>
+            <h3>Database</h3>
+          </div>
+          <div class="skill-pill-wrap">
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">Redis (Cache & Queues)</span>
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">Flyway Migrations</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Cloud & DevOps -->
+        <div class="skill-category-block">
+          <div class="skill-category-header">
+            <span class="cat-accent-dot"></span>
+            <h3>Cloud & DevOps</h3>
+          </div>
+          <div class="skill-pill-wrap">
+            <span class="skill-pill">AWS</span>
+            <span class="skill-pill">Docker</span>
+            <span class="skill-pill">Linux</span>
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">CI/CD Pipelines</span>
+          </div>
+        </div>
+
+        <!-- Category 4: Tools -->
+        <div class="skill-category-block">
+          <div class="skill-category-header">
+            <span class="cat-accent-dot mint"></span>
+            <h3>Tools</h3>
+          </div>
+          <div class="skill-pill-wrap">
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">Postman</span>
+            <span class="skill-pill">Maven</span>
+            <span class="skill-pill">JUnit 5 & Mockito</span>
+            <span class="skill-pill">Swagger / OpenAPI</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CURRENTLY BUILDING (Visual Roadmap Section)
+         ======================================================== -->
+    <section class="section" id="currently-building">
+      <div class="section-intro">
+        <span class="section-kicker">05 // ACTIVE EXPANSION</span>
+        <h2 class="section-heading">Currently Building</h2>
+        <p class="section-lead">Actively transitioning and expanding from core backend engineering into cloud-native infrastructure and distributed messaging systems.</p>
+      </div>
+
+      <div class="roadmap-card">
+        <div class="roadmap-flow">
           
-          <div class="skill-category-card interactive-tilt">
-            <div class="skill-cat-title">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Languages & Frameworks
-            </div>
-            <div class="skill-pill-list">
-              <span class="skill-pill">Java (Core / 17 / 21)</span>
-              <span class="skill-pill">Spring Boot</span>
-              <span class="skill-pill">Spring Security</span>
-              <span class="skill-pill">Hibernate / JPA</span>
-              <span class="skill-pill">SQL</span>
-            </div>
+          <div class="roadmap-step">
+            <div class="step-badge">IN PROGRESS</div>
+            <div class="step-title">Microservices</div>
+            <div class="step-desc">Service discovery, distributed configuration & resilience patterns.</div>
           </div>
 
-          <div class="skill-category-card interactive-tilt">
-            <div class="skill-cat-title">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-              Databases & Storage
-            </div>
-            <div class="skill-pill-list">
-              <span class="skill-pill">PostgreSQL</span>
-              <span class="skill-pill">MySQL</span>
-              <span class="skill-pill">Redis (Cache & Queues)</span>
-              <span class="skill-pill">Flyway Migrations</span>
-            </div>
+          <div class="roadmap-step">
+            <div class="step-badge">IN PROGRESS</div>
+            <div class="step-title">Kafka</div>
+            <div class="step-desc">Event-driven messaging and log-structured event streaming.</div>
           </div>
 
-          <div class="skill-category-card interactive-tilt">
-            <div class="skill-cat-title">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-              Testing, DevOps & Tools
-            </div>
-            <div class="skill-pill-list">
-              <span class="skill-pill">Docker</span>
-              <span class="skill-pill">JUnit 5</span>
-              <span class="skill-pill">Mockito</span>
-              <span class="skill-pill">Postman</span>
-              <span class="skill-pill">Swagger / OpenAPI</span>
-              <span class="skill-pill">Git & GitHub</span>
-              <span class="skill-pill">Maven / Gradle</span>
-            </div>
+          <div class="roadmap-step">
+            <div class="step-badge">IN PROGRESS</div>
+            <div class="step-title">CI/CD</div>
+            <div class="step-desc">Automated build verification, container artifact publishing, and test runners.</div>
           </div>
 
-          <div class="skill-category-card interactive-tilt">
-            <div class="skill-cat-title">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"/></svg>
-              Architecture & Concepts
-            </div>
-            <div class="skill-pill-list">
-              <span class="skill-pill">REST API Design</span>
-              <span class="skill-pill">JWT & RBAC</span>
-              <span class="skill-pill">Concurrency & Locks</span>
-              <span class="skill-pill">System Design</span>
-              <span class="skill-pill">WebSocket / STOMP</span>
-              <span class="skill-pill">Agile SDLC</span>
-            </div>
+          <div class="roadmap-step">
+            <div class="step-badge">NEXT MILESTONE</div>
+            <div class="step-title">AWS & Docker</div>
+            <div class="step-desc">Container orchestration, ECS deployment, and managed cloud databases.</div>
           </div>
 
-        </div>
-      </section>
-
-      <!-- CERTIFICATIONS & ACHIEVEMENTS -->
-      <section id="certifications">
-        <div class="section-header">
-          <span class="section-label">// 06. credentials & milestones</span>
-          <h2 class="section-title">Certifications & Achievements</h2>
-        </div>
-
-        <div class="certs-grid">
-          
-          <div class="cert-card interactive-tilt">
-            <div class="cert-badge">OCI</div>
-            <div class="cert-info">
-              <h4>Oracle Cloud Infrastructure Foundations Associate</h4>
-              <div class="cert-meta">Oracle • Issued Sep 2025</div>
-            </div>
+          <div class="roadmap-step">
+            <div class="step-badge">NEXT MILESTONE</div>
+            <div class="step-title">Kubernetes</div>
+            <div class="step-desc">Cluster provisioning, ingress controllers, and auto-scaling pods.</div>
           </div>
 
-          <div class="cert-card interactive-tilt">
-            <div class="cert-badge">HR</div>
-            <div class="cert-info">
-              <h4>Problem Solving (Intermediate)</h4>
-              <div class="cert-meta">HackerRank • Issued Apr 2026</div>
-            </div>
+          <div class="roadmap-step">
+            <div class="step-badge">CORE FOCUS</div>
+            <div class="step-title">System Design</div>
+            <div class="step-desc">Partitioning, CAP theorem trade-offs, and high-availability architecture.</div>
           </div>
 
-          <div class="cert-card interactive-tilt">
-            <div class="cert-badge">SQL</div>
-            <div class="cert-info">
-              <h4>SQL (Intermediate)</h4>
-              <div class="cert-meta">HackerRank • Issued Mar 2026</div>
-            </div>
-          </div>
-
-          <div class="cert-card interactive-tilt">
-            <div class="cert-badge">GFG</div>
-            <div class="cert-info">
-              <h4>Java Programming Certification</h4>
-              <div class="cert-meta">GeeksforGeeks • Issued Mar 2026</div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Hackathon & DSA Achievements -->
-        <div class="achievements-box interactive-tilt">
-          <div class="achieve-item">
-            <div class="achieve-icon">★</div>
-            <div class="achieve-text">
-              <strong>Design Spark Challenge 2026 (Ratan Tata Innovation Hub - RTIH):</strong> Built and pitched an end-to-end Spring Boot backend for a Learning Management System during a rigorous 48-hour continuous innovation marathon in Andhra Pradesh.
-            </div>
-          </div>
-          <div class="achieve-item">
-            <div class="achieve-icon">★</div>
-            <div class="achieve-text">
-              <strong>100+ Data Structures & Algorithms Solved:</strong> Maintained regular problem-solving practice on LeetCode covering dynamic programming, graph traversal, and concurrency primitives.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- EDUCATION -->
-      <section id="education">
-        <div class="section-header">
-          <span class="section-label">// 07. academic background</span>
-          <h2 class="section-title">Education</h2>
-        </div>
-
-        <div class="education-card interactive-tilt">
-          <div>
-            <div class="edu-institute">Sri Venkateswara College of Engineering (SVCE)</div>
-            <div class="edu-degree">Bachelor of Technology — Electronics & Communication Engineering</div>
-            <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.3rem;">Tirupati, Andhra Pradesh, India</div>
-          </div>
-          <div class="edu-meta-right">
-            <div class="edu-cgpa" data-target="8.5" data-suffix=" / 10" data-decimal="true">8.5 / 10</div>
-            <div class="edu-years">2022 – May 2026</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact">
-        <div class="section-header">
-          <span class="section-label">// 08. communications endpoint</span>
-          <h2 class="section-title">Let's Connect</h2>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-card interactive-tilt">
-            <a href="mailto:levakunikhilreddy8@gmail.com" class="contact-item">
-              <div class="item-meta">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: var(--primary-accent);" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <span>levakunikhilreddy8@gmail.com</span>
-              </div>
-              <button class="copy-btn" onclick="event.preventDefault(); copyText('levakunikhilreddy8@gmail.com', this);">copy</button>
-            </a>
-
-            <a href="tel:+916303252008" class="contact-item">
-              <div class="item-meta">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: var(--primary-accent);" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <span>+91-6303252008</span>
-              </div>
-              <button class="copy-btn" onclick="event.preventDefault(); copyText('+916303252008', this);">copy</button>
-            </a>
-
-            <a href="https://www.linkedin.com/in/nikhilreddylevaku/" target="_blank" rel="noopener noreferrer" class="contact-item">
-              <div class="item-meta">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: var(--primary-accent);" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                <span>LinkedIn (nikhilreddylevaku)</span>
-              </div>
-              <span class="mono-tag">profile ↗</span>
-            </a>
-
-            <a href="https://wa.me/916303252008?text=Hi%20Nikhil,%20reviewed%20your%20backend%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener noreferrer" class="contact-item contact-whatsapp">
-              <div class="item-meta">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                <span>WhatsApp (+91 6303252008)</span>
-              </div>
-              <span class="mono-tag" style="color: var(--secondary-accent);">instant chat ↗</span>
-            </a>
-
-            <a href="https://github.com/Nikhilreddy810" target="_blank" rel="noopener noreferrer" class="contact-item">
-              <div class="item-meta">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: var(--primary-accent);" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                <span>GitHub Profile</span>
-              </div>
-              <span class="mono-tag">external ↗</span>
-            </a>
-          </div>
-
-          <div class="contact-card interactive-tilt" style="justify-content: center;">
-            <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-red); margin-bottom: 0.5rem;">
-              // STATUS: OPEN TO ROLES
-            </div>
-            <h3 style="font-size: 1.4rem; margin-bottom: 0.6rem;">Looking for Backend & Systems Opportunities</h3>
-            <p class="contact-note">
-              Actively seeking roles in Java Backend Development, Distributed Systems, Microservices Architecture, and Cloud Infrastructure. Whether you have an open position or want to discuss architecture, feel free to reach out directly.
-            </p>
-            <div style="margin-top: 1.5rem;">
-              <a href="mailto:levakunikhilreddy8@gmail.com?subject=Opportunity%20Discussion%20-%20Backend%20Engineer" class="btn-primary" style="width: 100%; justify-content: center;">
-                Send Direct Email
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-family: var(--font-mono); font-size: 0.76rem; color: var(--text-muted);">
-        <div>Nikhil Reddy Levaku • Engineered with Java & Systems in mind</div>
-        <div>Spring Boot 3.x • PostgreSQL • Redis</div>
-      </footer>
-
-    </main>
-  </div>
-
-  <!-- In-Browser Universal Document Modal Viewer -->
-  <div class="resume-modal" id="resumeModal" aria-hidden="true">
-    <div class="resume-modal-backdrop" id="resumeModalBackdrop"></div>
-    <div class="resume-modal-content">
-      <div class="resume-modal-header">
-        <div style="display: flex; align-items: center; gap: 0.75rem;">
-          <span style="font-weight: 700; font-size: 0.95rem;" id="modalDocTitle">Nikhil_Reddy_Levaku_Resume.pdf</span>
-          <span class="mono-tag" id="modalDocTag">// VERIFIED DOCUMENT</span>
-        </div>
-        <div style="display: flex; gap: 0.6rem;">
-          <a href="resume.pdf" download="Nikhil_Reddy_Levaku_Resume.pdf" class="btn-primary" id="modalDownloadBtn" style="padding: 0.35rem 0.8rem; font-size: 0.78rem;">Download PDF</a>
-          <button class="icon-btn" id="closeResumeModalBtn" style="cursor: pointer;">[Close ✕]</button>
         </div>
       </div>
-      <div class="resume-modal-body">
-        <iframe id="modalPdfFrame" src="resume.pdf" width="100%" height="100%" style="border: none;" title="PDF Document Viewer"></iframe>
+    </section>
+
+    <!-- ========================================================
+         OFFERS RECEIVED (Factual, Compact, Clean)
+         ======================================================== -->
+    <section class="section" id="offers">
+      <div class="section-intro">
+        <span class="section-kicker">06 // SELECTIONS</span>
+        <h2 class="section-heading">Offers Received</h2>
+        <p class="section-lead">Verified industry engineering selections and upcoming internship tenures.</p>
+      </div>
+
+      <div class="offers-compact-grid">
+        
+        <!-- Offer 1: Axlero Solutions -->
+        <div class="offer-compact-card">
+          <div class="offer-card-top">
+            <div>
+              <h3 class="offer-card-company">Axlero Innovative Solutions</h3>
+              <div class="offer-card-role">Java Developer Intern</div>
+            </div>
+            <span class="offer-status-tag">Selection Extended</span>
+          </div>
+
+          <div class="offer-specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">TENURE</span>
+              <span class="spec-val">25 Sep 2026 – 25 Dec 2026</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">MODE</span>
+              <span class="spec-val">Remote Software Eng</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">DOMAIN</span>
+              <span class="spec-val">REST APIs & DB Maintenance</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">VERIFICATION</span>
+              <span class="spec-val verified">Authorized HR Verified</span>
+            </div>
+          </div>
+
+          <div class="offer-action-buttons">
+            <button class="btn-doc-preview" id="viewAxleroOfferBtn" type="button">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>View Offer Letter</span>
+            </button>
+            <a href="axlero_offer.pdf" download="Axlero_Offer_Letter_Nikhil_Reddy.pdf" class="btn-doc-download" title="Download Official Letter">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Offer 2: Infotact Solutions -->
+        <div class="offer-compact-card">
+          <div class="offer-card-top">
+            <div>
+              <h3 class="offer-card-company">Infotact Solutions</h3>
+              <div class="offer-card-role">Associate L1 (Java Development)</div>
+            </div>
+            <span class="offer-status-tag">Selection Extended</span>
+          </div>
+
+          <div class="offer-specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">TENURE</span>
+              <span class="spec-val">05 Sep 2026 – 05 Dec 2026</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">MODE</span>
+              <span class="spec-val">Remote Java Backend</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">DOMAIN</span>
+              <span class="spec-val">Core Java, Spring Boot, JDBC</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">VERIFICATION</span>
+              <span class="spec-val verified">ISO 9001:2015 Approved</span>
+            </div>
+          </div>
+
+          <div class="offer-action-buttons">
+            <button class="btn-doc-preview" id="viewInfotactOfferBtn" type="button">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>View Offer Letter</span>
+            </button>
+            <a href="infotact_offer.pdf" download="Infotact_Offer_Letter_Nikhil_Reddy.pdf" class="btn-doc-download" title="Download Official Letter">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CERTIFICATIONS & ACHIEVEMENTS (Compact Cards)
+         ======================================================== -->
+    <section class="section" id="certifications">
+      <div class="section-intro">
+        <span class="section-kicker">07 // CREDENTIALS</span>
+        <h2 class="section-heading">Certifications & Achievements</h2>
+      </div>
+
+      <div class="certs-compact-grid">
+        <div class="cert-compact-item">
+          <div class="cert-compact-icon">OCI</div>
+          <div>
+            <h4 class="cert-compact-title">Oracle Cloud Infrastructure Foundations Associate</h4>
+            <div class="cert-compact-issuer">Oracle • Issued Sep 2025</div>
+          </div>
+        </div>
+
+        <div class="cert-compact-item">
+          <div class="cert-compact-icon">HR</div>
+          <div>
+            <h4 class="cert-compact-title">Problem Solving (Intermediate)</h4>
+            <div class="cert-compact-issuer">HackerRank • Issued Apr 2026</div>
+          </div>
+        </div>
+
+        <div class="cert-compact-item">
+          <div class="cert-compact-icon">SQL</div>
+          <div>
+            <h4 class="cert-compact-title">SQL (Intermediate)</h4>
+            <div class="cert-compact-issuer">HackerRank • Issued Mar 2026</div>
+          </div>
+        </div>
+
+        <div class="cert-compact-item">
+          <div class="cert-compact-icon">GFG</div>
+          <div>
+            <h4 class="cert-compact-title">Java Programming Certification</h4>
+            <div class="cert-compact-issuer">GeeksforGeeks • Issued Mar 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievement Highlight -->
+      <div class="achievement-banner">
+        <div class="achievement-icon">★</div>
+        <div class="achievement-text">
+          <strong>Design Spark Challenge 2026 (Ratan Tata Innovation Hub - RTIH):</strong> Built and pitched an end-to-end Spring Boot backend for an LMS during a continuous 48-hour hackathon marathon in Andhra Pradesh.
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         EDUCATION (Single Clean Card, No Wasted Space)
+         ======================================================== -->
+    <section class="section" id="education">
+      <div class="section-intro">
+        <span class="section-kicker">08 // ACADEMICS</span>
+        <h2 class="section-heading">Education</h2>
+      </div>
+
+      <div class="education-single-card">
+        <div>
+          <h3 class="edu-college">Sri Venkateswara College of Engineering (SVCE)</h3>
+          <div class="edu-degree">Bachelor of Technology — Electronics & Communication Engineering</div>
+          <div class="edu-location">Tirupati, Andhra Pradesh, India</div>
+        </div>
+        <div class="edu-meta-block">
+          <div class="edu-grade" data-target="8.5" data-suffix=" / 10" data-decimal="true">8.5 / 10</div>
+          <div class="edu-tenure">2022 – May 2026</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CONTACT (Strong Final CTA Section)
+         ======================================================== -->
+    <section class="section contact-section" id="contact">
+      <div class="contact-box">
+        <span class="contact-eyebrow">// GET IN TOUCH</span>
+        <h2 class="contact-heading">Let's build something useful.</h2>
+        <p class="contact-sub">Open to backend, cloud and DevOps opportunities.</p>
+
+        <div class="contact-action-row">
+          <a href="mailto:levakunikhilreddy8@gmail.com?subject=Opportunity%20Discussion%20-%20Backend%20Engineer" class="btn-primary btn-talk-large">
+            <span>Let's Talk</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/916303252008?text=Hi%20Nikhil,%20reviewed%20your%20backend%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <span>WhatsApp Quick Chat</span>
+          </a>
+        </div>
+
+        <div class="contact-methods-strip">
+          <a href="mailto:levakunikhilreddy8@gmail.com" class="method-link">
+            <span class="method-label">EMAIL:</span>
+            <span class="method-val">levakunikhilreddy8@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/nikhilreddylevaku/" target="_blank" rel="noopener noreferrer" class="method-link">
+            <span class="method-label">LINKEDIN:</span>
+            <span class="method-val">nikhilreddylevaku ↗</span>
+          </a>
+          <a href="https://github.com/Nikhilreddy810" target="_blank" rel="noopener noreferrer" class="method-link">
+            <span class="method-label">GITHUB:</span>
+            <span class="method-val">Nikhilreddy810 ↗</span>
+          </a>
+          <a href="resume.pdf" download="Nikhil_Reddy_Levaku_Resume.pdf" class="method-link">
+            <span class="method-label">RESUME:</span>
+            <span class="method-val">Direct PDF Download ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         FOOTER (Minimal)
+         ======================================================== -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        <span class="footer-name">Nikhil Reddy Levaku</span>
+        <span class="footer-sep">•</span>
+        <span class="footer-note">Backend & Cloud Systems</span>
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com/Nikhilreddy810" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/nikhilreddylevaku/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+        <a href="mailto:levakunikhilreddy8@gmail.com" class="footer-link">Email</a>
+        <span class="footer-copy">© 2026 Nikhil Reddy. All rights reserved.</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Universal Document Modal Viewer -->
+  <div class="doc-modal" id="docModal" aria-hidden="true">
+    <div class="doc-modal-backdrop" id="docModalBackdrop"></div>
+    <div class="doc-modal-content">
+      <div class="doc-modal-header">
+        <div class="doc-modal-info">
+          <span class="doc-title" id="modalDocTitle">Document Viewer</span>
+          <span class="doc-tag" id="modalDocTag">// VERIFIED DOCUMENT</span>
+        </div>
+        <div class="doc-modal-buttons">
+          <a href="resume.pdf" download="" class="btn-modal-dl" id="modalDownloadBtn">Download PDF</a>
+          <button class="btn-modal-close" id="closeDocModalBtn" type="button" aria-label="Close modal">✕</button>
+        </div>
+      </div>
+      <div class="doc-modal-body">
+        <iframe id="modalPdfFrame" src="" title="PDF Document Viewer"></iframe>
       </div>
     </div>
   </div>
