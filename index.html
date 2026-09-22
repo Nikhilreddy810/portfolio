@@ -17,6 +17,9 @@
   <!-- Architectural background grid -->
   <div class="blueprint-grid" aria-hidden="true"></div>
 
+  <!-- Dynamic Cursor Spotlight Follower -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
   <!-- Mobile Top Navigation Header -->
   <header class="mobile-nav-header">
     <div style="font-weight: 800; font-size: 1rem; font-family: var(--font-mono);">NIKHIL.DEV</div>
@@ -44,25 +47,29 @@
             <span>// experience</span>
             <span class="nav-num">02</span>
           </a>
+          <a href="#offers" class="nav-link">
+            <span>// offers_received</span>
+            <span class="nav-num">03</span>
+          </a>
           <a href="#projects" class="nav-link">
             <span>// projects</span>
-            <span class="nav-num">03</span>
+            <span class="nav-num">04</span>
           </a>
           <a href="#skills" class="nav-link">
             <span>// technical_skills</span>
-            <span class="nav-num">04</span>
+            <span class="nav-num">05</span>
           </a>
           <a href="#certifications" class="nav-link">
             <span>// certifications</span>
-            <span class="nav-num">05</span>
+            <span class="nav-num">06</span>
           </a>
           <a href="#education" class="nav-link">
             <span>// education</span>
-            <span class="nav-num">06</span>
+            <span class="nav-num">07</span>
           </a>
           <a href="#contact" class="nav-link">
             <span>// contact</span>
-            <span class="nav-num">07</span>
+            <span class="nav-num">08</span>
           </a>
         </nav>
       </div>
@@ -73,7 +80,7 @@
           <span>Download Resume</span>
         </a>
         <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); text-align: center;">
-          v2.4.0 • PostgreSQL / Spring 3.x
+          v2.5.0 • PostgreSQL / Spring 3.x
         </div>
       </div>
     </aside>
@@ -101,12 +108,12 @@
             </div>
             <div class="hero-cta-group">
               <a href="#experience" class="btn-primary">Explore Production Work</a>
-              <a href="#contact" class="btn-secondary">Initiate Contact</a>
+              <a href="#offers" class="btn-secondary">View Offer Letters</a>
             </div>
           </div>
 
           <!-- Hero Visual Architecture Card + Headshot Slot -->
-          <div class="hero-visual-card">
+          <div class="hero-visual-card interactive-tilt">
             <div class="terminal-header">
               <div class="terminal-dots">
                 <span class="dot"></span>
@@ -119,7 +126,6 @@
               <!-- Professional Photo Slot -->
               <div class="photo-slot-container">
                 <div class="photo-avatar" id="headshotSlot">
-                  <!-- When Nikhil places his headshot image as 'profile.jpg', this img tag displays it -->
                   <img src="profile.jpg" alt="Nikhil Reddy Levaku" onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';" />
                   <div class="photo-avatar-placeholder" id="photoFallback" style="display: none;">NR</div>
                 </div>
@@ -158,19 +164,19 @@
           </div>
         </div>
 
-        <!-- Key Numbers Strip (Asymmetric & Authentic) -->
+        <!-- Key Numbers Strip -->
         <div class="metrics-strip">
-          <div class="metric-box">
+          <div class="metric-box interactive-tilt">
             <span class="metric-val">100+</span>
             <div class="metric-label">Production REST APIs Shipped</div>
             <div class="metric-sub">// DeepLure B2B marketplace & on-demand services</div>
           </div>
-          <div class="metric-box">
-            <span class="metric-val">2</span>
-            <div class="metric-label">Engineering Internships</div>
-            <div class="metric-sub">// DeepLure Backend + SmartBridge Data Analytics</div>
+          <div class="metric-box interactive-tilt">
+            <span class="metric-val">2+</span>
+            <div class="metric-label">Offers & Internships</div>
+            <div class="metric-sub">// Axlero Solutions & Infotact Solutions</div>
           </div>
-          <div class="metric-box">
+          <div class="metric-box interactive-tilt">
             <span class="metric-val">100+</span>
             <div class="metric-label">LeetCode DSA Problems Solved</div>
             <div class="metric-sub">// Algorithms, Trees, Graphs & Dynamic Programming</div>
@@ -184,7 +190,7 @@
           <span class="section-label">// 01. architecture & engineering profile</span>
           <h2 class="section-title">Engineering Summary</h2>
         </div>
-        <div class="summary-card">
+        <div class="summary-card interactive-tilt">
           <p class="summary-text">
             Java Backend Developer with production internship experience delivering <strong>100+ RESTful APIs</strong> using Core Java, Spring Boot, and Spring Security. Experienced in secure authentication and authorization (JWT, OTP, RBAC), payment gateway integration, real-time messaging, and Redis-backed asynchronous processing over PostgreSQL. Strong in layered architecture, concurrency-safe transactional workflows, database optimization, and Agile SDLC delivery.
           </p>
@@ -225,7 +231,7 @@
         <div class="timeline-list">
           
           <!-- Experience 1: DeepLure -->
-          <div class="experience-card">
+          <div class="experience-card interactive-tilt">
             <div class="timeline-marker"></div>
             <div class="exp-header">
               <div>
@@ -256,7 +262,7 @@
           </div>
 
           <!-- Experience 2: SmartBridge -->
-          <div class="experience-card">
+          <div class="experience-card interactive-tilt">
             <div class="timeline-marker"></div>
             <div class="exp-header">
               <div>
@@ -281,7 +287,7 @@
         </div>
 
         <!-- Interactive Live API Inspector / Runner -->
-        <div class="api-tester-container">
+        <div class="api-tester-container interactive-tilt">
           <div class="api-tester-bar">
             <div class="api-select-group">
               <span style="color: var(--text-muted);">ENDPOINT:</span>
@@ -289,6 +295,7 @@
                 <option value="GET /api/v1/health">GET /api/v1/health</option>
                 <option value="POST /api/v1/orders/reserve">POST /api/v1/orders/reserve (Concurrency Lock)</option>
                 <option value="GET /api/v1/metrics/db-load">GET /api/v1/metrics/db-load (Redis ~40% Offload)</option>
+                <option value="GET /api/v1/offers/received">GET /api/v1/offers/received (Axlero & Infotact)</option>
                 <option value="GET /api/v1/developer/profile">GET /api/v1/developer/profile</option>
               </select>
             </div>
@@ -309,24 +316,119 @@
         </div>
       </section>
 
+      <!-- OFFERS SECTION -->
+      <section id="offers">
+        <div class="section-header">
+          <span class="section-label">// 03. professional selections & pipeline</span>
+          <h2 class="section-title">Offers Received</h2>
+        </div>
+        <p style="color: var(--text-muted); margin-bottom: 1.8rem; font-size: 0.95rem;">
+          Verified Java engineering selections & upcoming internship tenures:
+        </p>
+
+        <div class="offers-grid">
+          
+          <!-- Offer 1: Axlero Solutions -->
+          <div class="offer-card interactive-tilt">
+            <div class="offer-status-badge">
+              <span class="status-pulse-amber"></span>
+              <span>SELECTION EXTENDED</span>
+            </div>
+            <div class="offer-body">
+              <div class="offer-company-row">
+                <div>
+                  <h3 class="offer-role">Java Developer Intern</h3>
+                  <div class="offer-company">Axlero Innovative Solutions</div>
+                </div>
+                <div class="offer-id-tag">AXL-JV-KSUL6U</div>
+              </div>
+
+              <div class="offer-meta-grid">
+                <div class="offer-meta-item">
+                  <span class="label">TENURE DATES</span>
+                  <span class="val">25 Sep 2026 – 25 Dec 2026</span>
+                </div>
+                <div class="offer-meta-item">
+                  <span class="label">DOMAIN & MODE</span>
+                  <span class="val">Software Eng • Remote</span>
+                </div>
+                <div class="offer-meta-item">
+                  <span class="label">FOCUS AREA</span>
+                  <span class="val">REST APIs & DB Maintenance</span>
+                </div>
+                <div class="offer-meta-item">
+                  <span class="label">VERIFICATION</span>
+                  <span class="val" style="color: #34D399;">Authorized HR Verification</span>
+                </div>
+              </div>
+
+              <div class="offer-desc">
+                Selected for backend service implementation, enterprise Java architecture, code reviews, and database query optimization under senior mentorship.
+              </div>
+            </div>
+          </div>
+
+          <!-- Offer 2: Infotact Solutions -->
+          <div class="offer-card interactive-tilt">
+            <div class="offer-status-badge">
+              <span class="status-pulse-amber"></span>
+              <span>SELECTION EXTENDED</span>
+            </div>
+            <div class="offer-body">
+              <div class="offer-company-row">
+                <div>
+                  <h3 class="offer-role">Associate L1 (Java Development)</h3>
+                  <div class="offer-company">Infotact Solutions</div>
+                </div>
+                <div class="offer-id-tag">EMP: 8c62241c4127</div>
+              </div>
+
+              <div class="offer-meta-grid">
+                <div class="offer-meta-item">
+                  <span class="label">TENURE DATES</span>
+                  <span class="val">05 Sep 2026 – 05 Dec 2026</span>
+                </div>
+                <div class="offer-meta-item">
+                  <span class="label">DOMAIN & MODE</span>
+                  <span class="val">Java Backend • Remote</span>
+                </div>
+                <div class="offer-meta-item">
+                  <span class="label">TECH CORE</span>
+                  <span class="val">Core Java, Spring Boot, JDBC</span>
+                </div>
+                <div class="offer-meta-item">
+                  <span class="label">VERIFICATION</span>
+                  <span class="val" style="color: #34D399;">ISO 9001:2015 Approved</span>
+                </div>
+              </div>
+
+              <div class="offer-desc">
+                Selected to build enterprise web services, participate in code reviews, optimize MySQL/PostgreSQL queries, and maintain system architecture documentation.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       <!-- PROJECTS SECTION -->
       <section id="projects">
         <div class="section-header">
-          <span class="section-label">// 03. engineering implementations</span>
+          <span class="section-label">// 04. engineering implementations</span>
           <h2 class="section-title">Selected Projects</h2>
         </div>
 
         <div class="projects-grid">
           
           <!-- Project 1: Flight Booking System -->
-          <div class="project-panel">
+          <div class="project-panel interactive-tilt">
             <div class="proj-top">
               <div class="proj-title-group">
                 <h3>Flight Booking System</h3>
                 <div class="proj-dates">Aug 2025 – Jan 2026 • Distributed Booking Engine</div>
               </div>
               <div class="proj-links">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="icon-btn">
+                <a href="https://github.com/Nikhilreddy810" target="_blank" rel="noopener noreferrer" class="icon-btn">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                   <span>Repository</span>
                 </a>
@@ -350,14 +452,14 @@
           </div>
 
           <!-- Project 2: User Management System -->
-          <div class="project-panel">
+          <div class="project-panel interactive-tilt">
             <div class="proj-top">
               <div class="proj-title-group">
                 <h3>User Management System</h3>
                 <div class="proj-dates">Oct 2024 – Dec 2024 • Enterprise Identity Service</div>
               </div>
               <div class="proj-links">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="icon-btn">
+                <a href="https://github.com/Nikhilreddy810" target="_blank" rel="noopener noreferrer" class="icon-btn">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                   <span>Repository</span>
                 </a>
@@ -383,13 +485,13 @@
       <!-- SKILLS SECTION -->
       <section id="skills">
         <div class="section-header">
-          <span class="section-label">// 04. technical capabilities</span>
+          <span class="section-label">// 05. technical capabilities</span>
           <h2 class="section-title">Technical Skills</h2>
         </div>
 
         <div class="skills-schema-grid">
           
-          <div class="skill-category-card">
+          <div class="skill-category-card interactive-tilt">
             <div class="skill-cat-title">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
               Languages & Frameworks
@@ -403,7 +505,7 @@
             </div>
           </div>
 
-          <div class="skill-category-card">
+          <div class="skill-category-card interactive-tilt">
             <div class="skill-cat-title">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
               Databases & Storage
@@ -416,7 +518,7 @@
             </div>
           </div>
 
-          <div class="skill-category-card">
+          <div class="skill-category-card interactive-tilt">
             <div class="skill-cat-title">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
               Testing, DevOps & Tools
@@ -432,7 +534,7 @@
             </div>
           </div>
 
-          <div class="skill-category-card">
+          <div class="skill-category-card interactive-tilt">
             <div class="skill-cat-title">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"/></svg>
               Architecture & Concepts
@@ -453,13 +555,13 @@
       <!-- CERTIFICATIONS & ACHIEVEMENTS -->
       <section id="certifications">
         <div class="section-header">
-          <span class="section-label">// 05. credentials & milestones</span>
+          <span class="section-label">// 06. credentials & milestones</span>
           <h2 class="section-title">Certifications & Achievements</h2>
         </div>
 
         <div class="certs-grid">
           
-          <div class="cert-card">
+          <div class="cert-card interactive-tilt">
             <div class="cert-badge">OCI</div>
             <div class="cert-info">
               <h4>Oracle Cloud Infrastructure Foundations Associate</h4>
@@ -467,7 +569,7 @@
             </div>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card interactive-tilt">
             <div class="cert-badge">HR</div>
             <div class="cert-info">
               <h4>Problem Solving (Intermediate)</h4>
@@ -475,7 +577,7 @@
             </div>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card interactive-tilt">
             <div class="cert-badge">SQL</div>
             <div class="cert-info">
               <h4>SQL (Intermediate)</h4>
@@ -483,7 +585,7 @@
             </div>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card interactive-tilt">
             <div class="cert-badge">GFG</div>
             <div class="cert-info">
               <h4>Java Programming Certification</h4>
@@ -494,7 +596,7 @@
         </div>
 
         <!-- Hackathon & DSA Achievements -->
-        <div class="achievements-box">
+        <div class="achievements-box interactive-tilt">
           <div class="achieve-item">
             <div class="achieve-icon">★</div>
             <div class="achieve-text">
@@ -513,11 +615,11 @@
       <!-- EDUCATION -->
       <section id="education">
         <div class="section-header">
-          <span class="section-label">// 06. academic background</span>
+          <span class="section-label">// 07. academic background</span>
           <h2 class="section-title">Education</h2>
         </div>
 
-        <div class="education-card">
+        <div class="education-card interactive-tilt">
           <div>
             <div class="edu-institute">Sri Venkateswara College of Engineering (SVCE)</div>
             <div class="edu-degree">Bachelor of Technology — Electronics & Communication Engineering</div>
@@ -533,12 +635,12 @@
       <!-- CONTACT -->
       <section id="contact">
         <div class="section-header">
-          <span class="section-label">// 07. communications endpoint</span>
+          <span class="section-label">// 08. communications endpoint</span>
           <h2 class="section-title">Let's Connect</h2>
         </div>
 
         <div class="contact-grid">
-          <div class="contact-card">
+          <div class="contact-card interactive-tilt">
             <a href="mailto:levakunikhilreddy8@gmail.com" class="contact-item">
               <div class="item-meta">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -563,7 +665,7 @@
               <span class="mono-tag">external ↗</span>
             </a>
 
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <a href="https://github.com/Nikhilreddy810" target="_blank" rel="noopener noreferrer" class="contact-item">
               <div class="item-meta">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                 <span>GitHub Profile</span>
@@ -572,7 +674,7 @@
             </a>
           </div>
 
-          <div class="contact-card" style="justify-content: center;">
+          <div class="contact-card interactive-tilt" style="justify-content: center;">
             <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-cyan); margin-bottom: 0.5rem;">
               // STATUS: OPEN TO ROLES
             </div>

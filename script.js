@@ -1,7 +1,54 @@
 // Nikhil Reddy Levaku — Interactive Portfolio Script
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Nav Toggle
+  // 1. Interactive Cursor Glow Spotlight
+  const cursorGlow = document.getElementById('cursorGlow');
+  if (cursorGlow) {
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let currentX = mouseX;
+    let currentY = mouseY;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animateSpotlight() {
+      // Smooth lerp follow
+      currentX += (mouseX - currentX) * 0.12;
+      currentY += (mouseY - currentY) * 0.12;
+      cursorGlow.style.left = currentX + 'px';
+      cursorGlow.style.top = currentY + 'px';
+      requestAnimationFrame(animateSpotlight);
+    }
+    animateSpotlight();
+  }
+
+  // 2. Interactive 3D Card Tilt & Movement on Cursor
+  const tiltCards = document.querySelectorAll('.interactive-tilt');
+  tiltCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      // Calculate tilt degree (subtle and high-tech: max 4.5deg)
+      const rotateX = ((y - centerY) / centerY) * -4.5;
+      const rotateY = ((x - centerX) / centerX) * 4.5;
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-3px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+    });
+  });
+
+  // 3. Mobile Nav Toggle
   const menuBtn = document.getElementById('mobileMenuBtn');
   const sidebar = document.querySelector('.sidebar');
   if (menuBtn && sidebar) {
@@ -21,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Active Nav Link Spy on Scroll
+  // 4. Active Nav Spy on Scroll
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
 
@@ -44,14 +91,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', highlightNavOnScroll);
 
-  // Copy to clipboard helper
+  // 5. Copy to Clipboard
   window.copyText = function(text, btnElement) {
     navigator.clipboard.writeText(text).then(() => {
-      const originalText = btnElement.innerText;
+      const origText = btnElement.innerText;
       btnElement.innerText = 'copied!';
       btnElement.style.color = '#38BDF8';
       setTimeout(() => {
-        btnElement.innerText = originalText;
+        btnElement.innerText = origText;
         btnElement.style.color = '';
       }, 2000);
     }).catch(err => {
@@ -59,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // Interactive Mock API Sandbox
+  // 6. Interactive Mock API Sandbox
   const mockEndpoints = {
     "GET /api/v1/health": {
       status: 200,
@@ -68,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
         status: "UP",
         service: "nikhil-backend-core",
         runtime: "Java 21 / Spring Boot 3.2",
-        database: "PostgreSQL [Pool: HikariCP 10/10 active]",
+        database: "PostgreSQL [HikariCP pool 10/10 active]",
         cache: "Redis [HIT_RATE: 94.2%]",
         uptime: "99.98%"
       }
@@ -96,6 +143,31 @@ document.addEventListener('DOMContentLoaded', () => {
         loadReduction: "~40% via Redis Caching",
         cachingTier: "Redis Cluster + Flyway Normalized Schemas",
         testedWith: "JUnit 5 + Mockito load simulation"
+      }
+    },
+    "GET /api/v1/offers/received": {
+      status: 200,
+      latency: "15ms",
+      response: {
+        candidate: "Nikhil Reddy Levaku",
+        verifiedOffers: [
+          {
+            company: "Axlero Innovative Solutions",
+            role: "Java Developer Intern",
+            tenure: "25 Sep 2026 - 25 Dec 2026",
+            empId: "AXL-JV-KSUL6U",
+            mode: "Remote",
+            scope: "Spring REST APIs & Database performance"
+          },
+          {
+            company: "Infotact Solutions",
+            role: "Associate L1 (Java Development)",
+            tenure: "05 Sep 2026 - 05 Dec 2026",
+            empId: "8c62241c4127",
+            mode: "Remote",
+            scope: "Core Java, JDBC, Spring Boot, MySQL/PostgreSQL"
+          }
+        ]
       }
     },
     "GET /api/v1/developer/profile": {
