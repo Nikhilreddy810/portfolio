@@ -46,6 +46,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 2b. Interactive 3D Cutout Silhouette Parallax Tilt (Matching Sketch)
+  const hero3dStage = document.getElementById('hero3dStage');
+  const silhouetteFigure = document.getElementById('silhouetteFigure');
+  if (hero3dStage && silhouetteFigure) {
+    hero3dStage.addEventListener('mousemove', (e) => {
+      const rect = hero3dStage.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      // Realistic 3D rotational tilt & slight dynamic translation
+      const rotateX = ((y - centerY) / centerY) * -9; // -9deg to +9deg
+      const rotateY = ((x - centerX) / centerX) * 11; // -11deg to +11deg
+      const moveX = ((x - centerX) / centerX) * 8;
+
+      silhouetteFigure.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateX(${moveX.toFixed(1)}px)`;
+    });
+
+    hero3dStage.addEventListener('mouseleave', () => {
+      silhouetteFigure.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateX(0px)';
+    });
+  }
+
   // 3. Mobile Nav Toggle
   const menuBtn = document.getElementById('mobileMenuBtn');
   const sidebar = document.querySelector('.sidebar');

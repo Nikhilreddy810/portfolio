@@ -138,77 +138,47 @@
             </div>
             <div class="hero-cta-group">
               <a href="#experience" class="btn-primary">Explore Production Work</a>
-              <button class="btn-secondary" id="heroPreviewResumeBtn" style="cursor: pointer;">View Resume (Interactive)</button>
+              <button class="btn-secondary" id="heroPreviewResumeBtn" style="cursor: pointer;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <span>View Resume</span>
+              </button>
             </div>
           </div>
 
-          <!-- Hero Visual Architecture Card + Headshot Slot -->
-          <div class="hero-visual-card interactive-tilt">
-            <div class="terminal-header">
-              <div class="terminal-dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-              </div>
-              <span class="terminal-title">engineer_identity.core</span>
+          <!-- Hero 3D Silhouette Cutout Canvas (Matching Sketch) -->
+          <div class="hero-silhouette-showcase" id="hero3dStage">
+            <!-- Ambient Red & Crimson Radial Glow Halo behind 3D silhouette -->
+            <div class="silhouette-ambient-glow" aria-hidden="true"></div>
+            
+            <!-- Floating Tech System Tags around 3D Silhouette -->
+            <div class="floating-tech-badge badge-top-right">
+              <span class="badge-dot-red"></span>
+              <span>DISTRIBUTED SYSTEMS</span>
             </div>
-            <div class="hero-visual-content">
-              <!-- Professional Photo Slot: Enriched & Enlarged -->
-              <div class="photo-slot-container photo-slot-expanded">
-                <div class="photo-avatar photo-avatar-large" id="headshotSlot">
-                  <img src="profile.jpg" alt="Nikhil Reddy Levaku" onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';" />
-                  <div class="photo-avatar-placeholder" id="photoFallback" style="display: none;">NR</div>
-                </div>
-                <div class="photo-meta">
-                  <span class="meta-badge-tag">// SYSTEM VERIFIED</span>
-                  <span class="meta-name">Nikhil Reddy Levaku</span>
-                  <span class="meta-spec">Java Backend Developer • SVCE 8.5 CGPA</span>
-                  <span class="live-ping">
-                    <span class="status-dot"></span> Available for Backend Roles (2026)
-                  </span>
-                  
-                  <!-- Quick Document Preview Triggers -->
-                  <div class="profile-doc-pills">
-                    <button class="pill-doc-btn" id="heroPreviewResumePill">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                      Resume.pdf
-                    </button>
-                    <button class="pill-doc-btn" id="heroPreviewAxleroPill">
-                      <span class="pill-dot-amber"></span>
-                      Axlero Offer
-                    </button>
-                    <button class="pill-doc-btn" id="heroPreviewInfotactPill">
-                      <span class="pill-dot-blue"></span>
-                      Infotact Offer
-                    </button>
-                  </div>
-                </div>
-              </div>
+            <div class="floating-tech-badge badge-bottom-left">
+              <span class="badge-dot-white"></span>
+              <span>HIGH CONCURRENCY</span>
+            </div>
 
-              <!-- Clean Production Engineering Telemetry Widget (Replacing raw pipeline diagram) -->
-              <div class="engineering-telemetry-panel">
-                <div class="telemetry-item">
-                  <div class="telemetry-header">
-                    <span class="telemetry-label">DATABASE QUERY SLA</span>
-                    <span class="telemetry-value text-emerald">&lt; 30ms</span>
-                  </div>
-                  <div class="telemetry-progress-bar"><div class="telemetry-fill fill-emerald" style="width: 92%;"></div></div>
-                </div>
-                <div class="telemetry-item">
-                  <div class="telemetry-header">
-                    <span class="telemetry-label">REDIS CACHE RELIEF</span>
-                    <span class="telemetry-value text-cyan">~40% Load Cut</span>
-                  </div>
-                  <div class="telemetry-progress-bar"><div class="telemetry-fill fill-cyan" style="width: 88%;"></div></div>
-                </div>
-                <div class="telemetry-item">
-                  <div class="telemetry-header">
-                    <span class="telemetry-label">CONCURRENCY SAFETY</span>
-                    <span class="telemetry-value text-purple">Zero Inventory Drift</span>
-                  </div>
-                  <div class="telemetry-progress-bar"><div class="telemetry-fill fill-purple" style="width: 100%;"></div></div>
-                </div>
+            <!-- The 3D Cutout Figure with interactive perspective tilt -->
+            <div class="silhouette-cutout-wrapper interactive-3d-figure" id="silhouetteFigure">
+              <img 
+                src="profile_clean.png" 
+                alt="Nikhil Reddy Levaku" 
+                class="silhouette-cutout-img"
+                onerror="this.onerror=null; this.src='profile_cutout.png'; if(!this.src) this.src='profile.jpg';"
+              />
+              <!-- Subtle bottom fade blending figure smoothly into page background -->
+              <div class="silhouette-base-fade" aria-hidden="true"></div>
+            </div>
+
+            <!-- Status Pill Float below Figure -->
+            <div class="silhouette-status-card">
+              <div class="status-indicator-live">
+                <span class="status-pulse-red"></span>
+                <span class="status-title">ONLINE & HIRING READY</span>
               </div>
+              <div class="status-sub">B.Tech 2026 • Java Backend Developer</div>
             </div>
           </div>
         </div>
@@ -247,21 +217,21 @@
           <div class="core-pillars-grid">
             <div class="pillar-item">
               <div class="pillar-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 Secure Auth & RBAC
               </div>
               <p class="pillar-desc">Stateless JWT tokens, role hierarchies, OTP multi-factor delivery over SMS and email, preventing privilege escalation.</p>
             </div>
             <div class="pillar-item">
               <div class="pillar-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
                 Concurrency & DB Scale
               </div>
               <p class="pillar-desc">Optimistic/pessimistic locking, transactional rollbacks, normalized schema design, and Redis caching cutting DB load by ~40%.</p>
             </div>
             <div class="pillar-item">
               <div class="pillar-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
                 Real-Time & Async
               </div>
               <p class="pillar-desc">WebSocket/STOMP bidirectional channels, Razorpay idempotency keys, Firebase Cloud Messaging, and async workers.</p>
@@ -740,7 +710,7 @@ public class BookingService {
           <div class="contact-card interactive-tilt">
             <a href="mailto:levakunikhilreddy8@gmail.com" class="contact-item">
               <div class="item-meta">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 <span>levakunikhilreddy8@gmail.com</span>
               </div>
               <button class="copy-btn" onclick="event.preventDefault(); copyText('levakunikhilreddy8@gmail.com', this);">copy</button>
@@ -748,7 +718,7 @@ public class BookingService {
 
             <a href="tel:+916303252008" class="contact-item">
               <div class="item-meta">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 <span>+91-6303252008</span>
               </div>
               <button class="copy-btn" onclick="event.preventDefault(); copyText('+916303252008', this);">copy</button>
@@ -756,7 +726,7 @@ public class BookingService {
 
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-item">
               <div class="item-meta">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                 <span>LinkedIn Profile</span>
               </div>
               <span class="mono-tag">external ↗</span>
@@ -764,7 +734,7 @@ public class BookingService {
 
             <a href="https://github.com/Nikhilreddy810" target="_blank" rel="noopener noreferrer" class="contact-item">
               <div class="item-meta">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                 <span>GitHub Profile</span>
               </div>
               <span class="mono-tag">external ↗</span>
@@ -772,7 +742,7 @@ public class BookingService {
           </div>
 
           <div class="contact-card interactive-tilt" style="justify-content: center;">
-            <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-cyan); margin-bottom: 0.5rem;">
+            <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-red); margin-bottom: 0.5rem;">
               // STATUS: OPEN TO ROLES
             </div>
             <h3 style="font-size: 1.4rem; margin-bottom: 0.6rem;">Looking for Backend & Systems Opportunities</h3>
