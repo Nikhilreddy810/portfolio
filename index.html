@@ -97,9 +97,13 @@
               <span>View My Work</span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
-            <a href="resume.pdf" download="Nikhil_Reddy_Levaku_Resume.pdf" class="btn-secondary" id="heroDownloadResume">
+            <button type="button" class="btn-secondary" id="heroPreviewResumeBtn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>Preview Resume</span>
+            </button>
+            <a href="resume.pdf" download="Nikhil_Reddy_Levaku_Resume.pdf" class="btn-secondary" id="heroDownloadResume" title="Download PDF directly">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              <span>Download Resume</span>
+              <span>Download</span>
             </a>
           </div>
 
@@ -840,10 +844,10 @@ public class BookingService {
             <span class="method-label">GITHUB:</span>
             <span class="method-val">Nikhilreddy810 ↗</span>
           </a>
-          <a href="resume.pdf" download="Nikhil_Reddy_Levaku_Resume.pdf" class="method-link">
+          <button type="button" class="method-link" id="contactPreviewResumeBtn" style="background:none; border:none; text-align:left; cursor:pointer; font-family:inherit;">
             <span class="method-label">RESUME:</span>
-            <span class="method-val">Direct PDF Download ↗</span>
-          </a>
+            <span class="method-val">Interactive Preview ↗</span>
+          </button>
         </div>
       </div>
     </section>

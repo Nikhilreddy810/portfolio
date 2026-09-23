@@ -140,6 +140,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Resume preview triggers
+  const heroPreviewResumeBtn = document.getElementById('heroPreviewResumeBtn');
+  if (heroPreviewResumeBtn) {
+    heroPreviewResumeBtn.addEventListener('click', () => {
+      openModalDocument('resume.pdf', 'Nikhil_Reddy_Levaku_Resume.pdf', '// VERIFIED RESUME', 'Nikhil_Reddy_Levaku_Resume.pdf');
+    });
+  }
+
+  const contactPreviewResumeBtn = document.getElementById('contactPreviewResumeBtn');
+  if (contactPreviewResumeBtn) {
+    contactPreviewResumeBtn.addEventListener('click', () => {
+      openModalDocument('resume.pdf', 'Nikhil_Reddy_Levaku_Resume.pdf', '// VERIFIED RESUME', 'Nikhil_Reddy_Levaku_Resume.pdf');
+    });
+  }
+
   // Offer letter triggers
   const viewAxleroBtn = document.getElementById('viewAxleroOfferBtn');
   if (viewAxleroBtn) {
