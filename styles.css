@@ -1411,8 +1411,8 @@ body {
    ======================================================== */
 .offers-compact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.8rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
 .offer-compact-card {
@@ -1960,7 +1960,7 @@ body {
   .hero-title {
     font-size: 3.2rem;
   }
-  .principles-grid, .hero-metrics-strip, .roadmap-flow, .certs-compact-grid {
+  .principles-grid, .hero-metrics-strip, .roadmap-flow, .certs-compact-grid, .offers-compact-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .arch-flow-diagram {

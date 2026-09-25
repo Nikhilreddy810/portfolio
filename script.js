@@ -170,6 +170,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const viewGfcOfferBtn = document.getElementById('viewGfcOfferBtn');
+  if (viewGfcOfferBtn) {
+    viewGfcOfferBtn.addEventListener('click', () => {
+      openModalDocument('gfc_offer.pdf', 'GFC_Offer_Letter_Nikhil_Reddy.pdf', '// VERIFIED OFFER: GLOBAL FUTURE CAREER', 'GFC_Offer_Letter_Nikhil_Reddy.pdf');
+    });
+  }
+
   if (closeDocModalBtn) closeDocModalBtn.addEventListener('click', closeModalDocument);
   if (modalBackdrop) modalBackdrop.addEventListener('click', closeModalDocument);
   window.addEventListener('keydown', (e) => {
