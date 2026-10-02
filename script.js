@@ -170,10 +170,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const viewGfcOfferBtn = document.getElementById('viewGfcOfferBtn');
-  if (viewGfcOfferBtn) {
-    viewGfcOfferBtn.addEventListener('click', () => {
-      openModalDocument('gfc_offer.pdf', 'GFC_Offer_Letter_Nikhil_Reddy.pdf', '// VERIFIED OFFER: GLOBAL FUTURE CAREER', 'GFC_Offer_Letter_Nikhil_Reddy.pdf');
+  const viewAxonbloomOfferBtn = document.getElementById('viewAxonbloomOfferBtn');
+  if (viewAxonbloomOfferBtn) {
+    viewAxonbloomOfferBtn.addEventListener('click', () => {
+      openModalDocument('axonbloom_offer.pdf', 'Axonbloom_Offer_Letter_Nikhil_Reddy.pdf', '// VERIFIED SELECTION: AXONBLOOM TALENT', 'Axonbloom_Offer_Letter_Nikhil_Reddy.pdf');
     });
   }
 
