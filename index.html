@@ -359,13 +359,13 @@
       <article class="featured-case-study project-item" data-category="spring distributed devops">
         <div class="case-study-badge">
           <span class="badge-dot-mint"></span>
-          FEATURED CASE STUDY • DEVOPS &amp; BACKEND
+          FEATURED CASE STUDY • MICROSERVICES &amp; EVENT-DRIVEN
         </div>
 
         <div class="case-study-header">
           <div>
-            <h3 class="case-study-title">Flight Booking System</h3>
-            <div class="case-study-sub">Containerized distributed booking engine with GitHub Actions CI/CD, AWS EC2 deployment, and transactional seat allocation.</div>
+            <h3 class="case-study-title">Flight Booking System (Microservices &amp; Kafka)</h3>
+            <div class="case-study-sub">Refactored monolithic backend into 4 independently deployable microservices (Auth, Flight, Booking, Notification) with Apache Kafka event streaming.</div>
           </div>
           <div class="case-study-links">
             <a href="https://github.com/Nikhilreddy810/Flight_Booking" target="_blank" rel="noopener noreferrer" class="btn-project-link">
@@ -378,15 +378,15 @@
         <!-- Problem Statement & Engineering Decisions -->
         <div class="case-study-grid">
           <div class="case-study-column">
-            <div class="column-label">PROBLEM STATEMENT</div>
+            <div class="column-label">ARCHITECTURAL DECOUPLING &amp; FLOW</div>
             <p class="column-text">
-              High-frequency airline seat reservations suffer from race conditions and overbooking under parallel traffic, while deployment pipelines need automated containerization, database migrations, and cloud provisioning.
+              Refactored monolithic architecture into <strong>4 microservices (Auth, Flight, Booking, Notification)</strong>, each with dedicated Spring Boot instances, PostgreSQL databases, and Flyway migrations. Implemented REST-based inter-service communication forwarding JWTs for role-based authentication.
             </p>
           </div>
           <div class="case-study-column">
-            <div class="column-label">KEY DEVOPS &amp; ENGINEERING DECISIONS</div>
+            <div class="column-label">EVENT-DRIVEN STREAMING &amp; CI/CD</div>
             <p class="column-text">
-              Containerized Spring Boot, PostgreSQL, and Redis with <strong>Docker Compose</strong>. Engineered an automated <strong>GitHub Actions CI/CD pipeline</strong> (Gradle build/test, Docker Hub push, automated SSH deployment to <strong>AWS EC2</strong> via <code>docker compose up -d</code>), resolved a critical Flyway migration failure from MySQL-specific syntax, and applied pessimistic write locks.
+              Engineered asynchronous event-driven notifications using <strong>Apache Kafka</strong>: Booking Service publishes <code>booking-created</code> events consumed asynchronously by the Notification Service. Containerized each service with multi-stage Docker builds and automated GitHub Actions CI/CD workflows.
             </p>
           </div>
         </div>
@@ -397,40 +397,40 @@
           <span class="stack-tag">Spring Security</span>
           <span class="stack-tag">PostgreSQL</span>
           <span class="stack-tag">Redis</span>
+          <span class="stack-tag">Apache Kafka</span>
           <span class="stack-tag">Docker</span>
-          <span class="stack-tag">Docker Compose</span>
-          <span class="stack-tag">GitHub Actions (CI/CD)</span>
-          <span class="stack-tag">AWS EC2</span>
+          <span class="stack-tag">GitHub Actions</span>
           <span class="stack-tag">Flyway</span>
-          <span class="stack-tag">Swagger UI</span>
+          <span class="stack-tag">Jakarta Validation</span>
+          <span class="stack-tag">JUnit 5 &amp; Mockito</span>
         </div>
 
         <!-- SIMPLIFIED VISUAL ARCHITECTURE FLOW -->
         <div class="arch-flow-wrapper">
-          <div class="arch-flow-title">SYSTEM &amp; CI/CD DEPLOYMENT PIPELINE</div>
+          <div class="arch-flow-title">MICROSERVICES &amp; KAFKA EVENT STREAMING ARCHITECTURE</div>
           <div class="arch-flow-diagram">
             <div class="flow-box">
               <span class="flow-step-num">01</span>
-              <span class="flow-name">Code Push</span>
-              <span class="flow-meta">GitHub Actions Trigger</span>
+              <span class="flow-name">Auth Service</span>
+              <span class="flow-meta">JWT &amp; RBAC Validation</span>
             </div>
             <div class="flow-arrow">➔</div>
             <div class="flow-box">
               <span class="flow-step-num">02</span>
-              <span class="flow-name">CI Pipeline</span>
-              <span class="flow-meta">Gradle Test &amp; Build</span>
+              <span class="flow-name">Flight Service</span>
+              <span class="flow-meta">Seat State + Redis Cache</span>
             </div>
             <div class="flow-arrow">➔</div>
             <div class="flow-box">
               <span class="flow-step-num">03</span>
-              <span class="flow-name">Docker Hub</span>
-              <span class="flow-meta">Image Build &amp; Push</span>
+              <span class="flow-name">Booking Service</span>
+              <span class="flow-meta">REST Call + DB Commit</span>
             </div>
             <div class="flow-arrow">➔</div>
             <div class="flow-box highlight-storage">
               <span class="flow-step-num">04</span>
-              <span class="flow-name">AWS EC2 Deploy</span>
-              <span class="flow-meta">SSH + Compose Up -d</span>
+              <span class="flow-name">Kafka ➔ Notification</span>
+              <span class="flow-meta">booking-created Event</span>
             </div>
           </div>
         </div>
@@ -545,18 +545,19 @@ public class BookingService {
           </div>
         </div>
 
-        <!-- Category 2: Database -->
+        <!-- Category 2: Database & Streaming -->
         <div class="skill-category-block">
           <div class="skill-category-header">
             <span class="cat-accent-dot mint"></span>
-            <h3>Database</h3>
+            <h3>Database &amp; Messaging</h3>
           </div>
           <div class="skill-pill-wrap">
-            <span class="skill-pill">MySQL</span>
-            <span class="skill-pill">SQL</span>
-            <span class="skill-pill">Redis (Cache & Queues)</span>
             <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">Redis (Cache &amp; Queues)</span>
+            <span class="skill-pill">Apache Kafka</span>
             <span class="skill-pill">Flyway Migrations</span>
+            <span class="skill-pill">SQL</span>
           </div>
         </div>
 
@@ -610,21 +611,21 @@ public class BookingService {
         <div class="roadmap-flow">
           
           <div class="roadmap-step">
-            <div class="step-badge">IN PROGRESS</div>
+            <div class="step-badge" style="background: rgba(45, 212, 191, 0.15); color: var(--accent-mint); border-color: rgba(45, 212, 191, 0.4);">SHIPPED</div>
             <div class="step-title">Microservices</div>
-            <div class="step-desc">Service discovery, distributed configuration & resilience patterns.</div>
+            <div class="step-desc">4 decoupled services (Auth, Flight, Booking, Notification) with JWT inter-service authentication.</div>
           </div>
 
           <div class="roadmap-step">
-            <div class="step-badge">IN PROGRESS</div>
-            <div class="step-title">Kafka</div>
-            <div class="step-desc">Event-driven messaging and log-structured event streaming.</div>
+            <div class="step-badge" style="background: rgba(45, 212, 191, 0.15); color: var(--accent-mint); border-color: rgba(45, 212, 191, 0.4);">SHIPPED</div>
+            <div class="step-title">Apache Kafka</div>
+            <div class="step-desc">Asynchronous event-driven notification flow decoupling booking transactions.</div>
           </div>
 
           <div class="roadmap-step">
-            <div class="step-badge">IN PROGRESS</div>
-            <div class="step-title">CI/CD</div>
-            <div class="step-desc">Automated build verification, container artifact publishing, and test runners.</div>
+            <div class="step-badge" style="background: rgba(45, 212, 191, 0.15); color: var(--accent-mint); border-color: rgba(45, 212, 191, 0.4);">SHIPPED</div>
+            <div class="step-title">CI/CD &amp; Docker</div>
+            <div class="step-desc">Multi-stage Docker builds and automated GitHub Actions CI/CD pipelines.</div>
           </div>
 
           <div class="roadmap-step">
