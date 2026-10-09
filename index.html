@@ -384,9 +384,9 @@
             </p>
           </div>
           <div class="case-study-column">
-            <div class="column-label">EVENT-DRIVEN STREAMING &amp; CI/CD</div>
+            <div class="column-label">EVENT-DRIVEN STREAMING &amp; NGINX INGRESS</div>
             <p class="column-text">
-              Engineered asynchronous event-driven notifications using <strong>Apache Kafka</strong>: Booking Service publishes <code>booking-created</code> events consumed asynchronously by the Notification Service. Containerized each service with multi-stage Docker builds and automated GitHub Actions CI/CD workflows.
+              Engineered asynchronous event-driven notifications using <strong>Apache Kafka</strong> (<code>booking-created</code> topic). Orchestrated a 10-container architecture via Docker Compose fronted by an <strong>Nginx Reverse Proxy</strong> on port 80 with path-based routing, proxy headers, and automated GitHub Actions CI/CD workflows.
             </p>
           </div>
         </div>
@@ -398,7 +398,8 @@
           <span class="stack-tag">PostgreSQL</span>
           <span class="stack-tag">Redis</span>
           <span class="stack-tag">Apache Kafka</span>
-          <span class="stack-tag">Docker</span>
+          <span class="stack-tag">Nginx</span>
+          <span class="stack-tag">Docker Compose</span>
           <span class="stack-tag">GitHub Actions</span>
           <span class="stack-tag">Flyway</span>
           <span class="stack-tag">Jakarta Validation</span>
@@ -407,28 +408,22 @@
 
         <!-- SIMPLIFIED VISUAL ARCHITECTURE FLOW -->
         <div class="arch-flow-wrapper">
-          <div class="arch-flow-title">MICROSERVICES &amp; KAFKA EVENT STREAMING ARCHITECTURE</div>
+          <div class="arch-flow-title">NGINX INGRESS, MICROSERVICES &amp; KAFKA STREAMING ARCHITECTURE</div>
           <div class="arch-flow-diagram">
             <div class="flow-box">
               <span class="flow-step-num">01</span>
-              <span class="flow-name">Auth Service</span>
-              <span class="flow-meta">JWT &amp; RBAC Validation</span>
+              <span class="flow-name">Nginx (:80)</span>
+              <span class="flow-meta">Reverse Proxy Routing</span>
             </div>
             <div class="flow-arrow">➔</div>
             <div class="flow-box">
               <span class="flow-step-num">02</span>
-              <span class="flow-name">Flight Service</span>
-              <span class="flow-meta">Seat State + Redis Cache</span>
-            </div>
-            <div class="flow-arrow">➔</div>
-            <div class="flow-box">
-              <span class="flow-step-num">03</span>
-              <span class="flow-name">Booking Service</span>
-              <span class="flow-meta">REST Call + DB Commit</span>
+              <span class="flow-name">Auth / Flight / Booking</span>
+              <span class="flow-meta">JWT &amp; Locks &amp; Redis</span>
             </div>
             <div class="flow-arrow">➔</div>
             <div class="flow-box highlight-storage">
-              <span class="flow-step-num">04</span>
+              <span class="flow-step-num">03</span>
               <span class="flow-name">Kafka ➔ Notification</span>
               <span class="flow-meta">booking-created Event</span>
             </div>
@@ -573,6 +568,7 @@ public class BookingService {
             <span class="skill-pill">AWS (IAM, EC2, VPC, Security Groups, S3, EBS, Auto Scaling)</span>
             <span class="skill-pill">Docker</span>
             <span class="skill-pill">Docker Compose</span>
+            <span class="skill-pill">Nginx (Reverse Proxy)</span>
             <span class="skill-pill">GitHub Actions (CI/CD)</span>
             <span class="skill-pill">Docker Hub</span>
             <span class="skill-pill">Git &amp; GitHub</span>
