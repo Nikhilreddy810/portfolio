@@ -384,9 +384,9 @@
             </p>
           </div>
           <div class="case-study-column">
-            <div class="column-label">EVENT-DRIVEN STREAMING &amp; NGINX INGRESS</div>
+            <div class="column-label">EVENT-DRIVEN STREAMING &amp; OBSERVABILITY</div>
             <p class="column-text">
-              Engineered asynchronous event-driven notifications using <strong>Apache Kafka</strong> (<code>booking-created</code> topic). Orchestrated a 10-container architecture via Docker Compose fronted by an <strong>Nginx Reverse Proxy</strong> on port 80 with path-based routing, proxy headers, and automated GitHub Actions CI/CD workflows.
+              Engineered asynchronous event notifications via <strong>Apache Kafka</strong>. Orchestrated a 10-container architecture via Docker Compose fronted by an <strong>Nginx Reverse Proxy</strong> (:80). Integrated complete system observability with <strong>Spring Boot Actuator</strong>, <strong>Micrometer</strong>, <strong>Prometheus</strong> (15s scrape interval), <strong>AWS CloudWatch</strong> host telemetry, and custom <strong>Grafana</strong> dashboards (JVM memory/GC, CPU, HTTP latency) tunneled securely over SSH.
             </p>
           </div>
         </div>
@@ -400,15 +400,17 @@
           <span class="stack-tag">Apache Kafka</span>
           <span class="stack-tag">Nginx</span>
           <span class="stack-tag">Docker Compose</span>
+          <span class="stack-tag">Prometheus</span>
+          <span class="stack-tag">Grafana</span>
+          <span class="stack-tag">AWS CloudWatch</span>
           <span class="stack-tag">GitHub Actions</span>
           <span class="stack-tag">Flyway</span>
-          <span class="stack-tag">Jakarta Validation</span>
           <span class="stack-tag">JUnit 5 &amp; Mockito</span>
         </div>
 
         <!-- SIMPLIFIED VISUAL ARCHITECTURE FLOW -->
         <div class="arch-flow-wrapper">
-          <div class="arch-flow-title">NGINX INGRESS, MICROSERVICES &amp; KAFKA STREAMING ARCHITECTURE</div>
+          <div class="arch-flow-title">NGINX INGRESS, MICROSERVICES, KAFKA &amp; OBSERVABILITY PIPELINE</div>
           <div class="arch-flow-diagram">
             <div class="flow-box">
               <span class="flow-step-num">01</span>
@@ -418,14 +420,14 @@
             <div class="flow-arrow">➔</div>
             <div class="flow-box">
               <span class="flow-step-num">02</span>
-              <span class="flow-name">Auth / Flight / Booking</span>
-              <span class="flow-meta">JWT &amp; Locks &amp; Redis</span>
+              <span class="flow-name">Services &amp; Kafka</span>
+              <span class="flow-meta">JWT, Locks, Events</span>
             </div>
             <div class="flow-arrow">➔</div>
             <div class="flow-box highlight-storage">
               <span class="flow-step-num">03</span>
-              <span class="flow-name">Kafka ➔ Notification</span>
-              <span class="flow-meta">booking-created Event</span>
+              <span class="flow-name">Prometheus ➔ Grafana</span>
+              <span class="flow-meta">Actuator, PromQL &amp; CloudWatch</span>
             </div>
           </div>
         </div>
@@ -569,6 +571,10 @@ public class BookingService {
             <span class="skill-pill">Docker</span>
             <span class="skill-pill">Docker Compose</span>
             <span class="skill-pill">Nginx (Reverse Proxy)</span>
+            <span class="skill-pill">Prometheus</span>
+            <span class="skill-pill">Grafana</span>
+            <span class="skill-pill">AWS CloudWatch</span>
+            <span class="skill-pill">Spring Boot Actuator</span>
             <span class="skill-pill">GitHub Actions (CI/CD)</span>
             <span class="skill-pill">Docker Hub</span>
             <span class="skill-pill">Git &amp; GitHub</span>
@@ -587,6 +593,7 @@ public class BookingService {
             <span class="skill-pill">Maven</span>
             <span class="skill-pill">JUnit 5 & Mockito</span>
             <span class="skill-pill">Swagger / OpenAPI</span>
+            <span class="skill-pill">SSH Tunneling</span>
           </div>
         </div>
 
@@ -600,7 +607,7 @@ public class BookingService {
       <div class="section-intro">
         <span class="section-kicker">05 // ACTIVE EXPANSION</span>
         <h2 class="section-heading">Currently Building</h2>
-        <p class="section-lead">Actively transitioning and expanding from core backend engineering into cloud-native infrastructure and distributed messaging systems.</p>
+        <p class="section-lead">Actively transitioning and expanding from core backend engineering into cloud-native infrastructure, distributed messaging, and production observability.</p>
       </div>
 
       <div class="roadmap-card">
@@ -625,9 +632,15 @@ public class BookingService {
           </div>
 
           <div class="roadmap-step">
+            <div class="step-badge" style="background: rgba(45, 212, 191, 0.15); color: var(--accent-mint); border-color: rgba(45, 212, 191, 0.4);">SHIPPED</div>
+            <div class="step-title">Observability</div>
+            <div class="step-desc">Prometheus scraping, custom Grafana dashboards (JVM/CPU/HTTP), and CloudWatch EC2 monitoring.</div>
+          </div>
+
+          <div class="roadmap-step">
             <div class="step-badge">NEXT MILESTONE</div>
-            <div class="step-title">AWS & Docker</div>
-            <div class="step-desc">Container orchestration, ECS deployment, and managed cloud databases.</div>
+            <div class="step-title">AWS ECS / Terraform</div>
+            <div class="step-desc">Infrastructure as Code, container orchestration, and managed cloud databases.</div>
           </div>
 
           <div class="roadmap-step">
