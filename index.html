@@ -384,9 +384,9 @@
             </p>
           </div>
           <div class="case-study-column">
-            <div class="column-label">EVENT-DRIVEN STREAMING &amp; OBSERVABILITY</div>
+            <div class="column-label">EVENT-DRIVEN STREAMING &amp; CLOUD DEPLOYMENT</div>
             <p class="column-text">
-              Engineered asynchronous event notifications via <strong>Apache Kafka</strong>. Orchestrated a 10-container architecture via Docker Compose fronted by an <strong>Nginx Reverse Proxy</strong> (:80). Integrated complete system observability with <strong>Spring Boot Actuator</strong>, <strong>Micrometer</strong>, <strong>Prometheus</strong> (15s scrape interval), <strong>AWS CloudWatch</strong> host telemetry, and custom <strong>Grafana</strong> dashboards (JVM memory/GC, CPU, HTTP latency) tunneled securely over SSH.
+              Engineered asynchronous event notifications via <strong>Apache Kafka</strong>. Automated AWS cloud provisioning using <strong>Terraform (IaC)</strong> (custom VPC, subnet, IGW, security group, and encrypted EC2). Orchestrated a 10-container architecture via Docker Compose fronted by an <strong>Nginx Reverse Proxy</strong> (:80). Integrated complete system observability with <strong>Prometheus</strong>, <strong>AWS CloudWatch</strong>, and <strong>Grafana</strong> dashboards tunneled over SSH.
             </p>
           </div>
         </div>
@@ -398,6 +398,8 @@
           <span class="stack-tag">PostgreSQL</span>
           <span class="stack-tag">Redis</span>
           <span class="stack-tag">Apache Kafka</span>
+          <span class="stack-tag">Terraform (IaC)</span>
+          <span class="stack-tag">AWS (EC2, VPC)</span>
           <span class="stack-tag">Nginx</span>
           <span class="stack-tag">Docker Compose</span>
           <span class="stack-tag">Prometheus</span>
@@ -567,7 +569,8 @@ public class BookingService {
           <div class="skill-pill-wrap">
             <span class="skill-pill">Linux</span>
             <span class="skill-pill">Networking</span>
-            <span class="skill-pill">AWS (IAM, EC2, VPC, Security Groups, S3, EBS, Auto Scaling)</span>
+            <span class="skill-pill">Terraform (IaC)</span>
+            <span class="skill-pill">AWS (VPC, Subnets, IGW, Route Tables, EC2, Security Groups, S3, EBS, IAM)</span>
             <span class="skill-pill">Docker</span>
             <span class="skill-pill">Docker Compose</span>
             <span class="skill-pill">Nginx (Reverse Proxy)</span>
@@ -633,14 +636,20 @@ public class BookingService {
 
           <div class="roadmap-step">
             <div class="step-badge" style="background: rgba(45, 212, 191, 0.15); color: var(--accent-mint); border-color: rgba(45, 212, 191, 0.4);">SHIPPED</div>
+            <div class="step-title">Terraform (IaC)</div>
+            <div class="step-desc">Modular AWS VPC, subnet, route table, security group, and EC2 provisioning.</div>
+          </div>
+
+          <div class="roadmap-step">
+            <div class="step-badge" style="background: rgba(45, 212, 191, 0.15); color: var(--accent-mint); border-color: rgba(45, 212, 191, 0.4);">SHIPPED</div>
             <div class="step-title">Observability</div>
             <div class="step-desc">Prometheus scraping, custom Grafana dashboards (JVM/CPU/HTTP), and CloudWatch EC2 monitoring.</div>
           </div>
 
           <div class="roadmap-step">
             <div class="step-badge">NEXT MILESTONE</div>
-            <div class="step-title">AWS ECS / Terraform</div>
-            <div class="step-desc">Infrastructure as Code, container orchestration, and managed cloud databases.</div>
+            <div class="step-title">AWS ECS / Fargate</div>
+            <div class="step-desc">Production container orchestration, task definitions, and managed cloud databases.</div>
           </div>
 
           <div class="roadmap-step">
