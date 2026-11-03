@@ -355,7 +355,81 @@
         <button class="filter-btn" data-filter="auth">Enterprise Auth &amp; DB</button>
       </div>
 
-      <!-- FEATURED PROJECT 1: Flight Booking System Case Study -->
+      <!-- FEATURED PROJECT 1: KubeHeal Autonomous SRE Operator -->
+      <article class="featured-case-study project-item" data-category="devops distributed">
+        <div class="case-study-badge">
+          <span class="badge-dot-mint"></span>
+          FLAGSHIP SRE PROJECT • AUTONOMOUS AIOPS &amp; KUBERNETES GITOPS
+        </div>
+
+        <div class="case-study-header">
+          <div>
+            <h3 class="case-study-title">KubeHeal — Autonomous Kubernetes SRE Operator</h3>
+            <div class="case-study-sub">Cloud-native autonomous self-healing operator built in Python (FastAPI + Kubernetes Client) with real-time APIServer streaming, automated crash triage, and Argo CD GitOps reconciliation.</div>
+          </div>
+          <div class="case-study-links">
+            <a href="https://github.com/Nikhilreddy810/KubeHeal" target="_blank" rel="noopener noreferrer" class="btn-project-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <span>GitHub Repository</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Problem Statement & Engineering Decisions -->
+        <div class="case-study-grid">
+          <div class="case-study-column">
+            <div class="column-label">REAL-TIME APISERVER STREAMING &amp; TRIAGE</div>
+            <p class="column-text">
+              Engineered a non-polling event listener using <strong>kubernetes.watch.Watch</strong> on the Kube-APIServer HTTP/2 event stream to catch container failures (<code>CrashLoopBackOff</code>, <code>OOMKilled</code>, <code>Error</code>) with sub-second latency. Implemented forensic log extraction querying dead-container logs (<code>previous=True</code>) and mapping Linux termination signals (Exit Code <code>137</code>).
+            </p>
+          </div>
+          <div class="case-study-column">
+            <div class="column-label">CLOSED-LOOP REMEDIATION &amp; GITOPS PIPELINE</div>
+            <p class="column-text">
+              Engineered intelligent triage logic: auto-remediates transient failures via proactive pod recreations, while halting blind restart loops on memory limit breaches and compiling structured Markdown Root Cause Analysis (RCA) reports. Packaged as a production <strong>Helm 3 chart</strong> with least-privilege RBAC, a non-root multi-stage Docker container (&lt;80MB), and continuous GitOps delivery using <strong>Argo CD</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tech Stack Badges -->
+        <div class="case-study-stack">
+          <span class="stack-tag">Python 3.12</span>
+          <span class="stack-tag">FastAPI</span>
+          <span class="stack-tag">Kubernetes API Client</span>
+          <span class="stack-tag">Helm 3</span>
+          <span class="stack-tag">Argo CD (GitOps)</span>
+          <span class="stack-tag">Docker Multi-Stage</span>
+          <span class="stack-tag">Jenkins CI/CD</span>
+          <span class="stack-tag">RBAC Security</span>
+          <span class="stack-tag">Linux Signals (Exit 137)</span>
+        </div>
+
+        <!-- VISUAL ARCHITECTURE FLOW -->
+        <div class="arch-flow-wrapper">
+          <div class="arch-flow-title">KUBE-APISERVER EVENT STREAMING, TRIAGE &amp; GITOPS REMEDIATION</div>
+          <div class="arch-flow-diagram">
+            <div class="flow-box">
+              <span class="flow-step-num">01</span>
+              <span class="flow-name">Kube-APIServer</span>
+              <span class="flow-meta">Watch Stream (HTTP/2)</span>
+            </div>
+            <div class="flow-arrow">➔</div>
+            <div class="flow-box">
+              <span class="flow-step-num">02</span>
+              <span class="flow-name">Triage Engine</span>
+              <span class="flow-meta">previous=True, Exit 137</span>
+            </div>
+            <div class="flow-arrow">➔</div>
+            <div class="flow-box highlight-storage">
+              <span class="flow-step-num">03</span>
+              <span class="flow-name">Self-Heal &amp; Argo CD</span>
+              <span class="flow-meta">RCA Report &amp; GitOps Sync</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- FEATURED PROJECT 2: Flight Booking System Case Study -->
       <article class="featured-case-study project-item" data-category="spring distributed devops">
         <div class="case-study-badge">
           <span class="badge-dot-mint"></span>
