@@ -2342,3 +2342,233 @@ body {
   flex-shrink: 0;
   margin-top: 3px;
 }
+
+/* ========================================================
+   UBAIDA PROJECT CARDS & VISUAL GRID
+   ======================================================== */
+.ubaida-filter-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ubaida-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.ubaida-project-card {
+  background: #111420;
+  border: 1px solid #1F2435;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.ubaida-project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(168, 85, 247, 0.45);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 24px rgba(168, 85, 247, 0.15);
+}
+
+.ubaida-project-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #090B10;
+}
+
+.ubaida-project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.ubaida-project-card:hover .ubaida-project-img {
+  transform: scale(1.05);
+}
+
+.ubaida-project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 12, 18, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.ubaida-project-card:hover .ubaida-project-overlay {
+  opacity: 1;
+}
+
+.ubaida-preview-btn {
+  background: var(--accent-violet);
+  color: #FFFFFF;
+  border: none;
+  padding: 0.65rem 1.2rem;
+  border-radius: 9999px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.ubaida-preview-btn:hover {
+  background: var(--accent-violet-hover);
+  transform: scale(1.05);
+}
+
+.ubaida-project-info {
+  padding: 1.4rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.ubaida-project-sub {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-mint);
+  margin-bottom: 0.4rem;
+}
+
+.ubaida-project-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 1.1rem;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.ubaida-project-links {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ubaida-link-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: var(--accent-violet-hover);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ubaida-link-pill:hover {
+  background: var(--accent-violet);
+  color: #FFFFFF;
+  border-color: var(--accent-violet);
+  transform: translateY(-1px);
+}
+
+.ubaida-link-pill.pill-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.ubaida-link-pill.pill-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Ubaida Stats Row in Profile / Summary */
+.ubaida-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.ubaida-stat-box {
+  background: #111420;
+  border: 1px solid #1F2435;
+  border-radius: 14px;
+  padding: 1.3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.ubaida-stat-box:hover {
+  transform: translateY(-3px);
+  border-color: rgba(168, 85, 247, 0.35);
+}
+
+.stat-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(168, 85, 247, 0.12);
+  color: var(--accent-violet);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.3rem;
+}
+
+.stat-val {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+.stat-lbl {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.ubaida-bio-text {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+/* Centered Hero Arch */
+.ubaida-hero-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Floating Bottom Dock Responsive */
+@media (max-width: 768px) {
+  .ubaida-stats-row {
+    grid-template-columns: 1fr;
+  }
+  .ubaida-projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

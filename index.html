@@ -124,31 +124,12 @@
           </div>
         </div>
 
-        <!-- Right: Professional Portrait + Subtle Aura + Technical Floating Tags -->
-        <div class="hero-visual">
+        <!-- Ubaida Style Arch Framed Portrait -->
+        <div class="hero-visual ubaida-hero-center">
           <div class="portrait-stage" id="portraitStage">
             <!-- Subtle Violet/Mint Aura behind the portrait -->
             <div class="portrait-ambient-halo" aria-hidden="true"></div>
 
-            <!-- Controlled floating technical labels around image -->
-            <div class="tech-tag tag-top-right">
-              <span class="tag-accent-violet">●</span>
-              <span>Spring Boot</span>
-            </div>
-            <div class="tech-tag tag-mid-left">
-              <span class="tag-accent-mint">●</span>
-              <span>Java 21</span>
-            </div>
-            <div class="tech-tag tag-bottom-left">
-              <span class="tag-accent-violet">●</span>
-              <span>Docker</span>
-            </div>
-            <div class="tech-tag tag-bottom-right">
-              <span class="tag-accent-mint">●</span>
-              <span>AWS Cloud</span>
-            </div>
-
-            <!-- Ubaida Style Arch Framed Portrait -->
             <div class="portrait-frame ubaida-arch-frame" id="portraitFrame">
               <div class="ubaida-arch-bg" aria-hidden="true"></div>
               <img 
@@ -159,13 +140,13 @@
               <div class="portrait-base-gradient" aria-hidden="true"></div>
             </div>
 
-            <!-- Subtle Live Hiring Status Pill -->
+            <!-- Floating Social / Quick Status Pills -->
             <div class="portrait-status-banner">
               <div class="status-badge-live">
                 <span class="status-live-dot"></span>
-                <span>AVAILABLE NOW</span>
+                <span>AVAILABLE FOR HIRE</span>
               </div>
-              <div class="status-badge-sub">B.Tech 2026 • 8.5 CGPA</div>
+              <div class="status-badge-sub">DevOps &amp; Cloud Engineer</div>
             </div>
           </div>
         </div>
@@ -198,16 +179,42 @@
     </section>
 
     <!-- ========================================================
-         ENGINEERING SUMMARY (Concise + 3 Distinct Principles)
+         ENGINEERING SUMMARY (Clean Profile & Key Stats)
          ======================================================== -->
     <section class="section" id="about">
       <div class="section-intro">
-        <span class="section-kicker">01 // PROFILE</span>
-        <h2 class="section-heading">Engineering Summary</h2>
-        <p class="section-lead">
-          <strong>DevOps-focused Backend Engineer</strong> with hands-on experience containerizing and deploying applications using <strong>Docker, Docker Compose, and AWS EC2</strong>. Built automated <strong>GitHub Actions CI/CD pipelines</strong> (build, test, Docker Hub push, and automated EC2 deployment) and managing Linux and AWS cloud infrastructure (EC2, VPC, S3, IAM, Security Groups). Backed by production backend experience delivering <strong>100+ production RESTful APIs</strong> using Core Java, Spring Boot, and PostgreSQL.
-        </p>
+        <span class="section-kicker">01 // ABOUT ME</span>
+        <h2 class="section-heading">Engineering Profile</h2>
       </div>
+
+      <!-- Ubaida Style 3 Quick Highlights -->
+      <div class="ubaida-stats-row">
+        <div class="ubaida-stat-box">
+          <div class="stat-icon-circle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div class="stat-val">100+</div>
+          <div class="stat-lbl">APIs Shipped in Prod</div>
+        </div>
+        <div class="ubaida-stat-box">
+          <div class="stat-icon-circle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="stat-val">10+</div>
+          <div class="stat-lbl">K8s &amp; SRE Scenarios Drilled</div>
+        </div>
+        <div class="ubaida-stat-box">
+          <div class="stat-icon-circle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+          </div>
+          <div class="stat-val">2+</div>
+          <div class="stat-lbl">Industry Selections</div>
+        </div>
+      </div>
+
+      <p class="section-lead ubaida-bio-text">
+        <strong>DevOps &amp; Cloud Engineer</strong> with deep hands-on expertise building autonomous Kubernetes operators, containerizing microservices with Docker, and orchestrating GitOps continuous delivery via Helm 3 and Argo CD. Backed by real-world backend experience engineering high-concurrency Spring Boot APIs, Redis caching, and PostgreSQL systems.
+      </p>
 
       <!-- 3 Visually Distinct Principles -->
       <div class="principles-grid">
@@ -379,340 +386,266 @@
         <p class="section-lead">Systems I've designed and built with concurrency, reliability, and scale in mind.</p>
       </div>
 
-      <!-- Category Filter Pills -->
-      <div class="project-filter-row" role="tablist" aria-label="Project Categories">
-        <button class="filter-btn active" data-filter="all">All Systems</button>
-        <button class="filter-btn" data-filter="devops">DevOps &amp; Cloud CI/CD</button>
-        <button class="filter-btn" data-filter="spring">Spring Boot &amp; Microservices</button>
-        <button class="filter-btn" data-filter="distributed">Distributed Systems &amp; Redis</button>
-        <button class="filter-btn" data-filter="auth">Enterprise Auth &amp; DB</button>
+      <!-- Category Filter Pills (Ubaida Style) -->
+      <div class="project-filter-row ubaida-filter-row" role="tablist" aria-label="Project Categories">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="devops">DevOps &amp; SRE</button>
+        <button class="filter-btn" data-filter="microservices">Microservices &amp; Cloud</button>
+        <button class="filter-btn" data-filter="backend">Backend &amp; Security</button>
       </div>
 
-      <!-- FEATURED PROJECT 1: KubeHeal Autonomous SRE Operator -->
-      <article class="featured-case-study project-item" data-category="devops distributed">
-        <div class="case-study-badge">
-          <span class="badge-dot-mint"></span>
-          FLAGSHIP SRE PROJECT • AUTONOMOUS AIOPS &amp; KUBERNETES GITOPS
-        </div>
-
-        <div class="case-study-header">
-          <div>
-            <h3 class="case-study-title">KubeHeal — Autonomous Kubernetes SRE Operator</h3>
-            <div class="case-study-sub">Cloud-native autonomous self-healing operator built in Python (FastAPI + Kubernetes Client) with real-time APIServer streaming, automated crash triage, and Argo CD GitOps reconciliation.</div>
-          </div>
-          <div class="case-study-links">
-            <a href="https://github.com/Nikhilreddy810/KubeHeal" target="_blank" rel="noopener noreferrer" class="btn-project-link">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              <span>GitHub Repository</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Problem Statement & Engineering Decisions -->
-        <div class="case-study-grid">
-          <div class="case-study-column">
-            <div class="column-label">REAL-TIME APISERVER STREAMING &amp; TRIAGE</div>
-            <p class="column-text">
-              Engineered a non-polling event listener using <strong>kubernetes.watch.Watch</strong> on the Kube-APIServer HTTP/2 event stream to catch container failures (<code>CrashLoopBackOff</code>, <code>OOMKilled</code>, <code>Error</code>) with sub-second latency. Implemented forensic log extraction querying dead-container logs (<code>previous=True</code>) and mapping Linux termination signals (Exit Code <code>137</code>).
-            </p>
-          </div>
-          <div class="case-study-column">
-            <div class="column-label">CLOSED-LOOP REMEDIATION &amp; GITOPS PIPELINE</div>
-            <p class="column-text">
-              Engineered intelligent triage logic: auto-remediates transient failures via proactive pod recreations, while halting blind restart loops on memory limit breaches and compiling structured Markdown Root Cause Analysis (RCA) reports. Packaged as a production <strong>Helm 3 chart</strong> with least-privilege RBAC, a non-root multi-stage Docker container (&lt;80MB), and continuous GitOps delivery using <strong>Argo CD</strong>.
-            </p>
-          </div>
-        </div>
-
-        <!-- Tech Stack Badges -->
-        <div class="case-study-stack">
-          <span class="stack-tag">Python 3.12</span>
-          <span class="stack-tag">FastAPI</span>
-          <span class="stack-tag">Kubernetes API Client</span>
-          <span class="stack-tag">Helm 3</span>
-          <span class="stack-tag">Argo CD (GitOps)</span>
-          <span class="stack-tag">Docker Multi-Stage</span>
-          <span class="stack-tag">Jenkins CI/CD</span>
-          <span class="stack-tag">RBAC Security</span>
-          <span class="stack-tag">Linux Signals (Exit 137)</span>
-        </div>
-
-        <!-- VISUAL ARCHITECTURE FLOW -->
-        <div class="arch-flow-wrapper">
-          <div class="arch-flow-title">KUBE-APISERVER EVENT STREAMING, TRIAGE &amp; GITOPS REMEDIATION</div>
-          <div class="arch-flow-diagram">
-            <div class="flow-box">
-              <span class="flow-step-num">01</span>
-              <span class="flow-name">Kube-APIServer</span>
-              <span class="flow-meta">Watch Stream (HTTP/2)</span>
-            </div>
-            <div class="flow-arrow">➔</div>
-            <div class="flow-box">
-              <span class="flow-step-num">02</span>
-              <span class="flow-name">Triage Engine</span>
-              <span class="flow-meta">previous=True, Exit 137</span>
-            </div>
-            <div class="flow-arrow">➔</div>
-            <div class="flow-box highlight-storage">
-              <span class="flow-step-num">03</span>
-              <span class="flow-name">Self-Heal &amp; Argo CD</span>
-              <span class="flow-meta">RCA Report &amp; GitOps Sync</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- FEATURED PROJECT 2: Flight Booking System Case Study -->
-      <article class="featured-case-study project-item" data-category="spring distributed devops">
-        <div class="case-study-badge">
-          <span class="badge-dot-mint"></span>
-          FEATURED CASE STUDY • MICROSERVICES &amp; EVENT-DRIVEN
-        </div>
-
-        <div class="case-study-header">
-          <div>
-            <h3 class="case-study-title">Flight Booking System (Microservices &amp; Kafka)</h3>
-            <div class="case-study-sub">Refactored monolithic backend into 4 independently deployable microservices (Auth, Flight, Booking, Notification) with Apache Kafka event streaming.</div>
-          </div>
-          <div class="case-study-links">
-            <a href="https://github.com/Nikhilreddy810/Flight_Booking" target="_blank" rel="noopener noreferrer" class="btn-project-link">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              <span>GitHub Repository</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Problem Statement & Engineering Decisions -->
-        <div class="case-study-grid">
-          <div class="case-study-column">
-            <div class="column-label">ARCHITECTURAL DECOUPLING &amp; FLOW</div>
-            <p class="column-text">
-              Refactored monolithic architecture into <strong>4 microservices (Auth, Flight, Booking, Notification)</strong>, each with dedicated Spring Boot instances, PostgreSQL databases, and Flyway migrations. Implemented REST-based inter-service communication forwarding JWTs for role-based authentication.
-            </p>
-          </div>
-          <div class="case-study-column">
-            <div class="column-label">EVENT-DRIVEN STREAMING &amp; CLOUD DEPLOYMENT</div>
-            <p class="column-text">
-              Engineered asynchronous event notifications via <strong>Apache Kafka</strong>. Automated AWS cloud provisioning using <strong>Terraform (IaC)</strong> and remote host configuration with <strong>Ansible &amp; Chef</strong>. Orchestrated a 10-container architecture via Docker Compose fronted by an <strong>Nginx Reverse Proxy</strong> (:80). Integrated complete system observability with <strong>Prometheus</strong>, <strong>AWS CloudWatch</strong>, and <strong>Grafana</strong> dashboards tunneled over SSH.
-            </p>
-          </div>
-        </div>
-
-        <!-- Tech Stack Badges -->
-        <div class="case-study-stack">
-          <span class="stack-tag">Spring Boot</span>
-          <span class="stack-tag">Spring Security</span>
-          <span class="stack-tag">PostgreSQL</span>
-          <span class="stack-tag">Redis</span>
-          <span class="stack-tag">Apache Kafka</span>
-          <span class="stack-tag">Terraform (IaC)</span>
-          <span class="stack-tag">Ansible &amp; Chef</span>
-          <span class="stack-tag">SonarQube &amp; SonarScanner</span>
-          <span class="stack-tag">AWS (EC2, VPC)</span>
-          <span class="stack-tag">Nginx</span>
-          <span class="stack-tag">Docker Compose</span>
-          <span class="stack-tag">Prometheus</span>
-          <span class="stack-tag">Grafana</span>
-          <span class="stack-tag">AWS CloudWatch</span>
-          <span class="stack-tag">GitHub Actions</span>
-          <span class="stack-tag">Flyway</span>
-          <span class="stack-tag">JUnit 5 &amp; Mockito</span>
-        </div>
-
-        <!-- SIMPLIFIED VISUAL ARCHITECTURE FLOW -->
-        <div class="arch-flow-wrapper">
-          <div class="arch-flow-title">NGINX INGRESS, MICROSERVICES, KAFKA &amp; OBSERVABILITY PIPELINE</div>
-          <div class="arch-flow-diagram">
-            <div class="flow-box">
-              <span class="flow-step-num">01</span>
-              <span class="flow-name">Nginx (:80)</span>
-              <span class="flow-meta">Reverse Proxy Routing</span>
-            </div>
-            <div class="flow-arrow">➔</div>
-            <div class="flow-box">
-              <span class="flow-step-num">02</span>
-              <span class="flow-name">Services &amp; Kafka</span>
-              <span class="flow-meta">JWT, Locks, Events</span>
-            </div>
-            <div class="flow-arrow">➔</div>
-            <div class="flow-box highlight-storage">
-              <span class="flow-step-num">03</span>
-              <span class="flow-name">Prometheus ➔ Grafana</span>
-              <span class="flow-meta">Actuator, PromQL &amp; CloudWatch</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Expandable Deep-Dive Architecture Code Snippet -->
-        <div class="case-study-code-tab">
-          <button class="code-tab-toggle" id="toggleCodeSnippetBtn" type="button">
-            <span class="code-file-name">ConcurrencyLockService.java</span>
-            <span class="code-toggle-indicator" id="codeIndicator">Show Implementation Snippet ▾</span>
-          </button>
-          <div class="code-tab-body" id="codeSnippetBody">
-            <pre><code>@Service
-public class BookingService {
-    @Transactional(isolation = Isolation.SERIALIZABLE)
-    public BookingResponse reserveSeatWithLock(Long flightId, String seatNumber, String idempotencyKey) {
-        // 1. Verify Idempotency in Redis
-        if (redisTemplate.hasKey("idem:" + idempotencyKey)) {
-            return (BookingResponse) redisTemplate.opsForValue().get("idem:" + idempotencyKey);
-        }
-        // 2. Pessimistic Write Lock on Seat Inventory
-        Seat seat = seatRepository.findWithPessimisticLock(flightId, seatNumber)
-            .orElseThrow(() -> new SeatUnavailableException("Seat already booked"));
-        seat.setStatus(SeatStatus.LOCKED);
-        // 3. Persist & cache with TTL
-        Booking saved = bookingRepository.save(new Booking(seat));
-        redisTemplate.opsForValue().set("idem:" + idempotencyKey, saved, Duration.ofMinutes(15));
-        return new BookingResponse("SUCCESS", saved.getId());
-    }
-}</code></pre>
-          </div>
-        </div>
-      </article>
-
-      <!-- SECONDARY PROJECTS GRID -->
-      <div class="secondary-projects-grid">
+      <!-- Ubaida Style Visual Projects Grid -->
+      <div class="ubaida-projects-grid">
         
-        <!-- Project 2: User Management System -->
-        <article class="secondary-project-card project-item" data-category="spring auth">
-          <div class="card-top">
-            <div>
-              <div class="project-type-tag">ENTERPRISE IDENTITY SERVICE</div>
-              <h3 class="secondary-project-title">User Management System</h3>
+        <!-- PROJECT CARD 1: KubeHeal -->
+        <div class="ubaida-project-card project-item" data-category="devops">
+          <div class="ubaida-project-img-wrap">
+            <img src="kubeheal_card.jpg" alt="KubeHeal SRE Operator" class="ubaida-project-img" />
+            <div class="ubaida-project-overlay">
+              <button class="ubaida-preview-btn" onclick="openExpModal('kubehealModal')">
+                <span>View Architecture</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
             </div>
-            <a href="https://github.com/Nikhilreddy810/User_Management" target="_blank" rel="noopener noreferrer" class="icon-link-btn" title="View Repository">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            </a>
           </div>
-
-          <p class="secondary-project-desc">
-            Production-grade RESTful identity API featuring dynamic search, criteria-based filtering, request validation, and centralized exception handlers over a normalized 6-table relational schema.
-          </p>
-
-          <div class="secondary-project-stack">
-            <span class="stack-tag">Spring Boot</span>
-            <span class="stack-tag">Hibernate / JPA</span>
-            <span class="stack-tag">MySQL</span>
-            <span class="stack-tag">Postman</span>
-          </div>
-        </article>
-
-        <!-- Project 3: DeepLure Distributed Platform Architecture -->
-        <article class="secondary-project-card project-item" data-category="spring distributed auth">
-          <div class="card-top">
-            <div>
-              <div class="project-type-tag">PRODUCTION MICROSERVICES</div>
-              <h3 class="secondary-project-title">DeepLure B2B Services Platform</h3>
+          <div class="ubaida-project-info">
+            <div class="ubaida-project-sub">Kubernetes / Python / GitOps ▷</div>
+            <h3 class="ubaida-project-title">KubeHeal — Autonomous SRE Operator</h3>
+            <div class="ubaida-project-links">
+              <a href="https://github.com/Nikhilreddy810/KubeHeal" target="_blank" rel="noopener noreferrer" class="ubaida-link-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span>GitHub</span>
+              </a>
+              <button class="ubaida-link-pill pill-secondary" onclick="openExpModal('kubehealModal')">
+                <span>Details</span>
+              </button>
             </div>
-            <span class="status-prod-pill">Production</span>
           </div>
+        </div>
 
-          <p class="secondary-project-desc">
-            Shipped 100+ production REST endpoints covering orders, payments, authentication, and notifications. Integrated Redis caching cutting database load by ~40% and Razorpay transaction locking.
-          </p>
-
-          <div class="secondary-project-stack">
-            <span class="stack-tag">Java 21</span>
-            <span class="stack-tag">Spring Boot 3.x</span>
-            <span class="stack-tag">PostgreSQL</span>
-            <span class="stack-tag">Redis</span>
-            <span class="stack-tag">Razorpay</span>
-            <span class="stack-tag">Docker</span>
+        <!-- PROJECT CARD 2: Flight Booking -->
+        <div class="ubaida-project-card project-item" data-category="microservices">
+          <div class="ubaida-project-img-wrap">
+            <img src="flight_card.jpg" alt="Flight Booking Architecture" class="ubaida-project-img" />
+            <div class="ubaida-project-overlay">
+              <button class="ubaida-preview-btn" onclick="openExpModal('flightModal')">
+                <span>View Architecture</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
           </div>
-        </article>
+          <div class="ubaida-project-info">
+            <div class="ubaida-project-sub">AWS / Terraform / Kafka ▷</div>
+            <h3 class="ubaida-project-title">Flight Booking Microservices</h3>
+            <div class="ubaida-project-links">
+              <a href="https://github.com/Nikhilreddy810/Flight_Booking" target="_blank" rel="noopener noreferrer" class="ubaida-link-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span>GitHub</span>
+              </a>
+              <button class="ubaida-link-pill pill-secondary" onclick="openExpModal('flightModal')">
+                <span>Details</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 3: User Management System -->
+        <div class="ubaida-project-card project-item" data-category="backend">
+          <div class="ubaida-project-img-wrap">
+            <img src="user_card.jpg" alt="User Management Security" class="ubaida-project-img" />
+            <div class="ubaida-project-overlay">
+              <button class="ubaida-preview-btn" onclick="openExpModal('userModal')">
+                <span>View Architecture</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="ubaida-project-info">
+            <div class="ubaida-project-sub">Spring Boot / JWT / MySQL ▷</div>
+            <h3 class="ubaida-project-title">User Management System</h3>
+            <div class="ubaida-project-links">
+              <a href="https://github.com/Nikhilreddy810/User_Management" target="_blank" rel="noopener noreferrer" class="ubaida-link-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span>GitHub</span>
+              </a>
+              <button class="ubaida-link-pill pill-secondary" onclick="openExpModal('userModal')">
+                <span>Details</span>
+              </button>
+            </div>
+          </div>
+        </div>
 
       </div>
+
+      <!-- KubeHeal Modal -->
+      <div class="exp-modal-backdrop" id="kubehealModal" onclick="closeExpModalOnBackdrop(event, 'kubehealModal')">
+        <div class="exp-modal-card">
+          <div class="exp-modal-header">
+            <div>
+              <span class="modal-sub-tag">Cloud-Native Kubernetes Operator</span>
+              <h3 class="modal-title">KubeHeal SRE Operator</h3>
+              <div class="modal-role-badge">Python • FastAPI • Kubernetes Client • Helm 3 • Argo CD</div>
+            </div>
+            <button class="exp-modal-close" onclick="closeExpModal('kubehealModal')">✕</button>
+          </div>
+          <div class="exp-modal-body">
+            <ul class="ubaida-modal-checklist">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span><strong>Real-Time Event Streaming:</strong> Uses <code>kubernetes.watch.Watch</code> over persistent HTTP/2 to intercept pod crashes (<code>CrashLoopBackOff</code>, <code>OOMKilled</code>) with 0s polling latency.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span><strong>Dead-Container Log Extraction:</strong> Pulls logs via <code>previous=True</code> to isolate Linux exit codes (Exit Code 137) and crash stack traces.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span><strong>Intelligent Loop Prevention:</strong> Proactively deletes transiently failing pods while locking runaway restarts on hard code defects and publishing structured Root Cause Analysis (RCA) reports.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span><strong>GitOps Delivery:</strong> Packaged via Helm 3 with least-privilege RBAC and reconciled continuously via Argo CD.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flight Booking Modal -->
+      <div class="exp-modal-backdrop" id="flightModal" onclick="closeExpModalOnBackdrop(event, 'flightModal')">
+        <div class="exp-modal-card">
+          <div class="exp-modal-header">
+            <div>
+              <span class="modal-sub-tag">Distributed Microservices &amp; IaC</span>
+              <h3 class="modal-title">Flight Booking Platform</h3>
+              <div class="modal-role-badge">Terraform (IaC) • AWS EC2/VPC • Docker Compose • Kafka • Nginx</div>
+            </div>
+            <button class="exp-modal-close" onclick="closeExpModal('flightModal')">✕</button>
+          </div>
+          <div class="exp-modal-body">
+            <ul class="ubaida-modal-checklist">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span><strong>Modular Terraform (IaC):</strong> Fully automated provisioning of custom AWS VPC, public subnets, Internet Gateways, route tables, and hardened security groups.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span><strong>Event-Driven Kafka Architecture:</strong> Decoupled flight booking transactions from notification workers using asynchronous Apache Kafka event queues.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span><strong>Nginx Ingress Routing:</strong> Orchestrated 10 container services via Docker Compose fronted by an Nginx reverse proxy with path-based routing.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span><strong>High-Concurrency Protection:</strong> Enforced row-level pessimistic write locking (<code>PESSIMISTIC_WRITE</code>) and Redis idempotency to prevent seat overbooking.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- User Management Modal -->
+      <div class="exp-modal-backdrop" id="userModal" onclick="closeExpModalOnBackdrop(event, 'userModal')">
+        <div class="exp-modal-card">
+          <div class="exp-modal-header">
+            <div>
+              <span class="modal-sub-tag">Enterprise Identity API</span>
+              <h3 class="modal-title">User Management System</h3>
+              <div class="modal-role-badge">Java 21 • Spring Boot • Hibernate/JPA • MySQL • REST</div>
+            </div>
+            <button class="exp-modal-close" onclick="closeExpModal('userModal')">✕</button>
+          </div>
+          <div class="exp-modal-body">
+            <ul class="ubaida-modal-checklist">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span><strong>Dynamic Search &amp; Filtering:</strong> Built a flexible criteria-based search API allowing multi-attribute querying across users and organizations.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span><strong>Relational Data Integrity:</strong> Designed a normalized 6-table schema with JPA bidirectional entity relationships and automated schema validation.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <!-- ========================================================
-         TECHNICAL SKILLS (Clean 4 Categories Pill Components)
+         TECHNICAL SKILLS (Clean Compact Cards)
          ======================================================== -->
     <section class="section" id="skills">
       <div class="section-intro">
         <span class="section-kicker">04 // COMPETENCIES</span>
         <h2 class="section-heading">Technical Skills</h2>
-        <p class="section-lead">Technologies and engineering tools used to architect and ship software in production.</p>
       </div>
 
-      <div class="skills-category-grid">
+      <div class="skills-category-grid ubaida-skills-grid">
         
-        <!-- Category 1: Backend -->
-        <div class="skill-category-block">
-          <div class="skill-category-header">
-            <span class="cat-accent-dot"></span>
-            <h3>Backend</h3>
-          </div>
-          <div class="skill-pill-wrap">
-            <span class="skill-pill">Java (17 / 21)</span>
-            <span class="skill-pill">Spring Boot</span>
-            <span class="skill-pill">REST APIs</span>
-            <span class="skill-pill">Hibernate / JPA</span>
-            <span class="skill-pill">Spring Security (JWT/RBAC)</span>
-          </div>
-        </div>
-
-        <!-- Category 2: Database & Streaming -->
-        <div class="skill-category-block">
-          <div class="skill-category-header">
-            <span class="cat-accent-dot mint"></span>
-            <h3>Database &amp; Messaging</h3>
-          </div>
-          <div class="skill-pill-wrap">
-            <span class="skill-pill">PostgreSQL</span>
-            <span class="skill-pill">MySQL</span>
-            <span class="skill-pill">Redis (Cache &amp; Queues)</span>
-            <span class="skill-pill">Apache Kafka</span>
-            <span class="skill-pill">Flyway Migrations</span>
-            <span class="skill-pill">SQL</span>
-          </div>
-        </div>
-
-        <!-- Category 3: Cloud & DevOps -->
-        <div class="skill-category-block">
+        <!-- Category 1: Cloud & DevOps -->
+        <div class="skill-category-block ubaida-skill-box">
           <div class="skill-category-header">
             <span class="cat-accent-dot"></span>
             <h3>Cloud &amp; DevOps</h3>
           </div>
           <div class="skill-pill-wrap">
-            <span class="skill-pill">Linux</span>
-            <span class="skill-pill">Bash / Shell Scripting</span>
-            <span class="skill-pill">Networking</span>
-            <span class="skill-pill">Kubernetes (Pods, Deployments, Services, Ingress, ConfigMaps, Secrets)</span>
+            <span class="skill-pill">Kubernetes</span>
+            <span class="skill-pill">Docker &amp; Compose</span>
             <span class="skill-pill">Helm 3</span>
-            <span class="skill-pill">Argo CD (GitOps Continuous Delivery)</span>
-            <span class="skill-pill">Docker</span>
-            <span class="skill-pill">Docker Compose</span>
-            <span class="skill-pill">Terraform (IaC Modules &amp; State)</span>
-            <span class="skill-pill">Ansible &amp; Chef</span>
-            <span class="skill-pill">Jenkins (CI/CD Pipelines)</span>
-            <span class="skill-pill">SonarQube &amp; SonarScanner</span>
-            <span class="skill-pill">AWS (VPC, Subnets, IGW, Route Tables, EC2, Security Groups, S3, EBS, IAM, ALB, Auto Scaling)</span>
-            <span class="skill-pill">Nginx (Reverse Proxy)</span>
-            <span class="skill-pill">Prometheus</span>
-            <span class="skill-pill">Grafana</span>
-            <span class="skill-pill">AWS CloudWatch</span>
-            <span class="skill-pill">Spring Boot Actuator</span>
-            <span class="skill-pill">GitHub Actions (CI/CD)</span>
-            <span class="skill-pill">Docker Hub</span>
-            <span class="skill-pill">Git &amp; GitHub</span>
+            <span class="skill-pill">Argo CD (GitOps)</span>
+            <span class="skill-pill">Terraform (IaC)</span>
+            <span class="skill-pill">AWS (EC2, VPC, S3)</span>
+            <span class="skill-pill">GitHub Actions CI/CD</span>
+            <span class="skill-pill">Linux &amp; Bash</span>
           </div>
         </div>
 
-        <!-- Category 4: Tools -->
-        <div class="skill-category-block">
+        <!-- Category 2: Backend Systems -->
+        <div class="skill-category-block ubaida-skill-box">
           <div class="skill-category-header">
             <span class="cat-accent-dot mint"></span>
-            <h3>Tools</h3>
+            <h3>Backend Architecture</h3>
           </div>
           <div class="skill-pill-wrap">
-            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">Python &amp; FastAPI</span>
+            <span class="skill-pill">Java 21</span>
+            <span class="skill-pill">Spring Boot</span>
+            <span class="skill-pill">RESTful APIs</span>
+            <span class="skill-pill">Hibernate / JPA</span>
+            <span class="skill-pill">Spring Security (JWT/RBAC)</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Database & Streaming -->
+        <div class="skill-category-block ubaida-skill-box">
+          <div class="skill-category-header">
+            <span class="cat-accent-dot"></span>
+            <h3>Databases &amp; Messaging</h3>
+          </div>
+          <div class="skill-pill-wrap">
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">Redis (Caching &amp; Queues)</span>
+            <span class="skill-pill">Apache Kafka</span>
+            <span class="skill-pill">SQL Optimization</span>
+          </div>
+        </div>
+
+        <!-- Category 4: Observability & Tools -->
+        <div class="skill-category-block ubaida-skill-box">
+          <div class="skill-category-header">
+            <span class="cat-accent-dot mint"></span>
+            <h3>Observability &amp; Tools</h3>
+          </div>
+          <div class="skill-pill-wrap">
+            <span class="skill-pill">Prometheus</span>
+            <span class="skill-pill">Grafana</span>
+            <span class="skill-pill">CloudWatch</span>
             <span class="skill-pill">Postman</span>
-            <span class="skill-pill">Maven</span>
-            <span class="skill-pill">JUnit 5 & Mockito</span>
-            <span class="skill-pill">Swagger / OpenAPI</span>
-            <span class="skill-pill">SSH Tunneling</span>
+            <span class="skill-pill">Git &amp; GitHub</span>
+            <span class="skill-pill">Nginx</span>
           </div>
         </div>
 
