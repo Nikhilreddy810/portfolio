@@ -597,22 +597,43 @@ body {
   position: relative;
   z-index: 5;
   width: 100%;
-  height: 410px;
+  max-width: 320px;
+  height: 420px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
+  border-radius: 160px 160px 20px 20px;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  background: linear-gradient(180deg, rgba(30, 27, 46, 0.9) 0%, rgba(13, 15, 24, 0.95) 100%);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(168, 85, 247, 0.2);
+}
+
+.ubaida-arch-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 160px 160px 20px 20px;
+  background: radial-gradient(circle at 50% 25%, rgba(192, 132, 252, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .portrait-img {
-  width: auto;
-  max-width: 95%;
+  width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: bottom center;
-  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.7));
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 160px 160px 20px 20px;
+  filter: contrast(1.08) brightness(0.98);
   user-select: none;
   pointer-events: none;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.portrait-frame:hover .portrait-img {
+  transform: scale(1.04);
 }
 
 .portrait-base-gradient {
@@ -2018,4 +2039,306 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+/* ========================================================
+   UBAIDA & METAMINDS PREMIUM DESIGN UPGRADE STYLES
+   ======================================================== */
+
+/* Ubaida Floating Bottom Navigation Dock */
+.floating-dock-nav {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  pointer-events: auto;
+}
+
+.dock-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.85rem;
+  background: rgba(16, 18, 27, 0.85);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 9999px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(168, 85, 247, 0.15);
+}
+
+.dock-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.dock-item:hover {
+  color: #FFFFFF;
+  background: rgba(168, 85, 247, 0.2);
+  transform: translateY(-3px);
+}
+
+.dock-item.active {
+  color: #FFFFFF;
+  background: var(--accent-violet);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+}
+
+/* Tooltip on Dock */
+.dock-item::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  opacity: 0;
+  pointer-events: none;
+  padding: 0.25rem 0.6rem;
+  background: #151824;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: #FFFFFF;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.dock-item:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* Ubaida Experience Grid & Cards */
+.ubaida-experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.ubaida-exp-card {
+  position: relative;
+  background: #111420;
+  border: 1px solid #232738;
+  border-radius: 16px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.ubaida-exp-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(168, 85, 247, 0.45);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(168, 85, 247, 0.15);
+}
+
+.ubaida-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.ubaida-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.ubaida-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  background: rgba(168, 85, 247, 0.12);
+  color: var(--accent-violet-hover);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.ubaida-exp-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.25rem;
+}
+
+.ubaida-exp-role {
+  font-size: 0.92rem;
+  color: var(--accent-mint);
+  font-weight: 500;
+  margin-bottom: 0.85rem;
+}
+
+.ubaida-exp-summary {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.ubaida-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(35, 39, 56, 0.6);
+}
+
+.ubaida-mini-stack {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.ubaida-mini-stack span {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  color: #C084FC;
+}
+
+.btn-see-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  color: var(--accent-violet);
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-see-more:hover {
+  color: #FFFFFF;
+  background: rgba(168, 85, 247, 0.2);
+  transform: translateX(2px);
+}
+
+/* Ubaida Modal Popups */
+.exp-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 5, 8, 0.8);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.exp-modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.exp-modal-card {
+  background: #111420;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  border-radius: 20px;
+  max-width: 650px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(168, 85, 247, 0.2);
+  transform: translateY(20px) scale(0.96);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.exp-modal-backdrop.open .exp-modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.exp-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.8rem 2rem 1.2rem;
+  border-bottom: 1px solid #232738;
+}
+
+.modal-sub-tag {
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--accent-mint);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.modal-role-badge {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.exp-modal-close {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.exp-modal-close:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #EF4444;
+  border-color: #EF4444;
+}
+
+.exp-modal-body {
+  padding: 1.8rem 2rem;
+}
+
+.ubaida-modal-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.ubaida-modal-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 0.92rem;
+  color: #E2E8F0;
+  line-height: 1.6;
+}
+
+.ubaida-modal-checklist li svg {
+  flex-shrink: 0;
+  margin-top: 3px;
 }

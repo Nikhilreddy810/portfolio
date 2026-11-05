@@ -225,3 +225,60 @@ document.addEventListener('DOMContentLoaded', () => {
     counterElements.forEach(el => counterObserver.observe(el));
   }
 });
+
+// ========================================================
+// UBAIDA EXPERIENCE MODALS & DOCK ACTIVE HIGHLIGHT
+// ========================================================
+
+function openExpModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeExpModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+
+function closeExpModalOnBackdrop(event, modalId) {
+  if (event.target.id === modalId) {
+    closeExpModal(modalId);
+  }
+}
+
+// Escape key closes modal
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const openModals = document.querySelectorAll('.exp-modal-backdrop.open');
+    openModals.forEach(m => m.classList.remove('open'));
+    document.body.style.overflow = '';
+  }
+});
+
+// Floating Dock Active State on Scroll
+window.addEventListener('scroll', () => {
+  const sections = ['hero', 'about', 'experience', 'projects', 'contact'];
+  const scrollPos = window.scrollY + 200;
+
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      const top = el.offsetTop;
+      const height = el.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        document.querySelectorAll('.dock-item').forEach(item => {
+          item.classList.remove('active');
+          if (item.getAttribute('href') === '#' + id) {
+            item.classList.add('active');
+          }
+        });
+      }
+    }
+  });
+});
