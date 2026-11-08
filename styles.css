@@ -517,123 +517,58 @@ body {
 .portrait-stage {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
   height: 460px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 }
 
 .portrait-ambient-halo {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.25) 0%, rgba(45, 212, 191, 0.08) 50%, transparent 70%);
-  filter: blur(50px);
-  pointer-events: none;
-  z-index: 1;
+  display: none;
 }
 
 /* Floating Technical Tags around Image */
 .tech-tag {
-  position: absolute;
-  z-index: 10;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.4rem 0.85rem;
-  background: rgba(21, 24, 36, 0.92);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-pill);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-  pointer-events: none;
-  transition: transform 0.3s ease;
-}
-
-.tag-top-right {
-  top: 25px;
-  right: -15px;
-  border-color: rgba(168, 85, 247, 0.3);
-}
-
-.tag-mid-left {
-  top: 45%;
-  left: -20px;
-  border-color: rgba(45, 212, 191, 0.3);
-}
-
-.tag-bottom-left {
-  bottom: 80px;
-  left: -10px;
-  border-color: rgba(168, 85, 247, 0.3);
-}
-
-.tag-bottom-right {
-  bottom: 95px;
-  right: -12px;
-  border-color: rgba(45, 212, 191, 0.3);
-}
-
-.tag-accent-violet {
-  color: var(--accent-violet);
-  font-size: 0.65rem;
-}
-
-.tag-accent-mint {
-  color: var(--accent-mint);
-  font-size: 0.65rem;
+  display: none;
 }
 
 .portrait-frame {
   position: relative;
   z-index: 5;
   width: 100%;
-  max-width: 320px;
+  max-width: 340px;
   height: 420px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 160px 160px 20px 20px;
-  border: 1px solid rgba(168, 85, 247, 0.35);
-  background: linear-gradient(180deg, rgba(30, 27, 46, 0.9) 0%, rgba(13, 15, 24, 0.95) 100%);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(168, 85, 247, 0.2);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #141721;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 .ubaida-arch-bg {
-  position: absolute;
-  inset: 0;
-  border-radius: 160px 160px 20px 20px;
-  background: radial-gradient(circle at 50% 25%, rgba(192, 132, 252, 0.25) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 1;
+  display: none;
 }
 
 .portrait-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
-  border-radius: 160px 160px 20px 20px;
-  filter: contrast(1.08) brightness(0.98);
+  object-position: center 15%;
+  border-radius: 14px;
+  filter: contrast(1.1) brightness(0.97);
   user-select: none;
   pointer-events: none;
   position: relative;
   z-index: 2;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.4s ease;
 }
 
 .portrait-frame:hover .portrait-img {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 .portrait-base-gradient {
