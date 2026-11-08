@@ -663,61 +663,24 @@
       </div>
 
       <div class="roadmap-card">
-        <div class="roadmap-flow">
+                <div class="roadmap-flow" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
           
-          <div class="roadmap-step">
-            <div class="step-badge" style="background: rgba(45, 212, 191, 0.15); color: var(--accent-mint); border-color: rgba(45, 212, 191, 0.4);">SHIPPED</div>
-            <div class="step-title">Microservices</div>
-            <div class="step-desc">4 decoupled services (Auth, Flight, Booking, Notification) with JWT inter-service authentication.</div>
+          <div class="roadmap-step" style="border: 1px solid rgba(45, 212, 191, 0.3); background: rgba(18, 22, 34, 0.7); border-radius: 12px; padding: 1.5rem; text-align: left;">
+            <div class="step-badge" style="background: rgba(45, 212, 191, 0.15); color: var(--accent-mint); border: 1px solid rgba(45, 212, 191, 0.4); display: inline-block; margin-bottom: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">IN PROGRESS</div>
+            <div class="step-title" style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: #fff;">Cloud Container Infrastructure</div>
+            <div class="step-desc" style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5;">Mastering managed AWS container runtimes — deploying resilient microservices across <strong>Amazon EKS</strong>, <strong>AWS ECS (Fargate)</strong>, container registries via <strong>ECR</strong>, and distributed multi-AZ shared persistent storage using <strong>AWS EFS</strong>.</div>
           </div>
 
-          <div class="roadmap-step">
-            <div class="step-badge" style="background: rgba(45, 212, 191, 0.15); color: var(--accent-mint); border-color: rgba(45, 212, 191, 0.4);">SHIPPED</div>
-            <div class="step-title">Apache Kafka</div>
-            <div class="step-desc">Asynchronous event-driven notification flow decoupling booking transactions.</div>
+          <div class="roadmap-step" style="border: 1px solid rgba(168, 85, 247, 0.3); background: rgba(18, 22, 34, 0.7); border-radius: 12px; padding: 1.5rem; text-align: left;">
+            <div class="step-badge" style="background: rgba(168, 85, 247, 0.15); color: var(--accent-violet); border: 1px solid rgba(168, 85, 247, 0.4); display: inline-block; margin-bottom: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">ACTIVE FOCUS</div>
+            <div class="step-title" style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: #fff;">DevSecOps &amp; Security Scanning</div>
+            <div class="step-desc" style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5;">Embedding security directly into CI/CD pipelines — vulnerability scanning container images and filesystems with <strong>Trivy</strong>, static code analysis with <strong>SonarQube</strong>, and enforcing non-root least-privilege Docker runtime policies.</div>
           </div>
 
-          <div class="roadmap-step">
-            <div class="step-badge" style="background: rgba(45, 212, 191, 0.15); color: var(--accent-mint); border-color: rgba(45, 212, 191, 0.4);">SHIPPED</div>
-            <div class="step-title">CI/CD &amp; Docker</div>
-            <div class="step-desc">Multi-stage Docker builds and automated GitHub Actions CI/CD pipelines.</div>
-          </div>
-
-          <div class="roadmap-step">
-            <div class="step-badge" style="background: rgba(45, 212, 191, 0.15); color: var(--accent-mint); border-color: rgba(45, 212, 191, 0.4);">SHIPPED</div>
-            <div class="step-title">Terraform &amp; Ansible</div>
-            <div class="step-desc">Modular AWS VPC, subnet, SG, and EC2 provisioning with idempotent Ansible playbooks.</div>
-          </div>
-
-          <div class="roadmap-step">
-            <div class="step-badge" style="background: rgba(45, 212, 191, 0.15); color: var(--accent-mint); border-color: rgba(45, 212, 191, 0.4);">SHIPPED</div>
-            <div class="step-title">Observability</div>
-            <div class="step-desc">Prometheus scraping, custom Grafana dashboards (JVM/CPU/HTTP), and CloudWatch EC2 monitoring.</div>
-          </div>
-
-          <div class="roadmap-step">
-            <div class="step-badge" style="background: rgba(45, 212, 191, 0.15); color: var(--accent-mint); border-color: rgba(45, 212, 191, 0.4);">SHIPPED</div>
-            <div class="step-title">Kubernetes &amp; Helm 3</div>
-            <div class="step-desc">Pods, Deployments, ReplicaSets, Services, Ingress, ConfigMaps, Secrets, Volumes, and Helm packaging.</div>
-          </div>
-
-          <div class="roadmap-step">
-            <div class="step-badge" style="background: rgba(45, 212, 191, 0.15); color: var(--accent-mint); border-color: rgba(45, 212, 191, 0.4);">SHIPPED</div>
-            <div class="step-title">Argo CD (GitOps)</div>
-            <div class="step-desc">Continuous delivery operator synchronizing cluster state from Git repositories and Docker Hub.</div>
-          </div>
-
-          <div class="roadmap-step">
-            <div class="step-badge">NEXT MILESTONE</div>
-            <div class="step-title">AWS ECS / Fargate</div>
-            <div class="step-desc">Production container orchestration, task definitions, and managed cloud databases.</div>
-          </div>
-          </div>
-
-          <div class="roadmap-step">
-            <div class="step-badge">CORE FOCUS</div>
-            <div class="step-title">System Design</div>
-            <div class="step-desc">Partitioning, CAP theorem trade-offs, and high-availability architecture.</div>
+          <div class="roadmap-step" style="border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(18, 22, 34, 0.7); border-radius: 12px; padding: 1.5rem; text-align: left;">
+            <div class="step-badge" style="background: rgba(255, 255, 255, 0.1); color: #cbd5e1; border: 1px solid rgba(255, 255, 255, 0.2); display: inline-block; margin-bottom: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">CORE COMPETENCY</div>
+            <div class="step-title" style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: #fff;">Kubernetes SRE &amp; Observability</div>
+            <div class="step-desc" style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5;">Hands-on cluster troubleshooting across 19 production failure scenarios (OOMKilled, PLEG, NetworkPolicy, GitOps drift) backed by <strong>Prometheus metrics</strong>, <strong>Grafana alerts</strong>, and autonomous self-healing operators.</div>
           </div>
 
         </div>
