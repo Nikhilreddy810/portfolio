@@ -44,18 +44,6 @@ It details my engineering background, production track record, systems architect
 
 ---
 
-## 🏆 Honors, Certifications & Milestones
-
-* 📜 **Oracle Cloud Infrastructure (OCI) Foundations Associate** (Oracle)
-* 🌐 **CCNA: Switching, Routing, and Wireless Essentials** (Cisco Networking Academy)
-* ☁️ **DevOps & Cloud Engineering Masterclass** (Professional Certification)
-* 💡 **Design Spark Challenge 2026** (RTIH 48-Hour Hackathon backend delivery)
-* 💼 **Campus Offers Extended:** Axlero Solutions • Infotact Solutions • Axonbloom Talent
-* 🎓 **B.Tech in ECE:** Sri Venkateswara College of Engineering, Tirupati (CGPA: 8.5 / 10 • Class of 2026)
-* 🧠 **100+ LeetCode DSA Problems Solved:** Trees, Graphs, Dynamic Programming & Concurrency
-
----
-
 ## 🎯 Currently Building & Active Focus
 
 * ☁️ **Cloud Container Infrastructure:** Managed AWS runtimes with Amazon EKS, ECS (Fargate), ECR, and shared persistent storage via AWS EFS.
