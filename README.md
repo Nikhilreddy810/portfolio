@@ -1,155 +1,73 @@
 <div align="center">
 
-```text
-███╗   ██╗██╗██╗  ██╗██╗  ██╗██╗██╗     ██████╗ ███████╗██████╗ ██████╗ ██╗   ██╗
-████╗  ██║██║██║ //  ██║  ██║██║██║     ██╔══██╗██╔════╝██╔══██╗██╔══██╗╚██╗ ██╔╝
-██╔██╗ ██║██║█████╗  ███████║██║██║     ██████╔╝█████╗  ██║  ██║██║  ██║ ╚████╔╝ 
-██║╚██╗██║██║██╔═██╗ ██╔══██║██║██║     ██╔══██╗██╔══╝  ██║  ██║██║  ██║  ╚██╔╝  
-██║ ╚████║██║██║  ██╗██║  ██║██║███████╗██║  ██║███████╗██████╔╝██████╔╝   ██║   
-╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚═════╝ ╚═════╝    ╚═╝   
-```
+# 🌐 Nikhil Reddy Levaku — Software Engineering Portfolio
 
-# Nikhil Reddy Levaku
+### DevOps-Focused Backend Engineer • Cloud Infrastructure • Distributed Systems
 
-### Java Backend Developer • Distributed Systems • Spring Boot Architecture
-
-`Tirupati, India` • [Portfolio](https://nikhilreddy810.github.io/portfolio/) • [LinkedIn](https://linkedin.com) • [Email](mailto:levakunikhilreddy8@gmail.com)
+[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-virid-omega-5v2432jbg2.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nikhilreddylevaku/)
+[![Resume](https://img.shields.io/badge/Resume_PDF-4285F4?style=for-the-badge&logo=googledocs&logoColor=white)](https://portfolio-virid-omega-5v2432jbg2.vercel.app/resume.pdf)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Nikhilreddy810)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:levakunikhilreddy8@gmail.com)
 
 </div>
 
 ---
 
-## / about
+## 📌 Overview
 
-I build high-concurrency backend services, transactional workflows, and distributed microservice architectures using Core Java, Spring Boot, Spring Security, and PostgreSQL.
+This repository hosts the source code for my personal engineering portfolio deployed live at **[portfolio-virid-omega-5v2432jbg2.vercel.app](https://portfolio-virid-omega-5v2432jbg2.vercel.app/)**.
 
-Currently focused on:
-
-- **DeepLure Research** — Shipping 100+ production REST APIs across B2B & on-demand service platforms
-- **High Concurrency & Database Scale** — Idempotency keys, optimistic/pessimistic locking, and Redis caching cutting DB load ~40%
-- **Upcoming Engineering Tenures** — Java Developer Intern at Axlero Solutions & Associate L1 at Infotact Solutions
-- **Algorithms & Problem Solving** — 100+ Data Structures & Algorithms problems solved on LeetCode
-
-My goal is to architect scalable, resilient backend infrastructure powering millions of transactional requests.
+It details my engineering background, production track record, systems architecture projects, verified industry selections, and cloud roadmaps.
 
 ---
 
-## / ecosystem
+## 🚀 Flagship Systems & Projects
 
-<table>
-<tr>
-
-<td width="25%" valign="top">
-
-### DeepLure
-
-**Production Microservices**
-
-100+ production REST APIs in Spring Boot covering auth, orders, payments (Razorpay), and WebSocket ticketing.
-
-</td>
-
-<td width="25%" valign="top">
-
-### Flight Booking
-
-**Distributed Engine**
-
-Concurrency-safe seat allocation with transactional rollback, Redis caching, Docker containerization, and Swagger UI.
-
-</td>
-
-<td width="25%" valign="top">
-
-### Identity Service
-
-**Enterprise Auth & DB**
-
-Normalized 6-table relational MySQL schema, Hibernate/JPA entity mappings, and Postman-documented CRUD services.
-
-</td>
-
-<td width="25%" valign="top">
-
-### Design Spark LMS
-
-**RTIH 48-hr Hackathon**
-
-End-to-end Spring Boot backend for Learning Management System built at Ratan Tata Innovation Hub marathon.
-
-</td>
-
-</tr>
-</table>
+| Project | Domain / Stack | Key Technical Outcomes |
+|:---|:---|:---|
+| **[KubeHeal](https://github.com/Nikhilreddy810/KubeHeal)** | `Python` `FastAPI` `Kubernetes API` `Helm 3` `Argo CD` | Autonomous SRE Operator intercepting APIServer pod events, preventing crash loops, and generating automated RCA reports. |
+| **[Flight Booking Microservices](https://github.com/Nikhilreddy810/Flight_Booking)** | `Java 21` `Spring Boot 3` `Kafka` `Redis` `PostgreSQL` `Terraform` | 4-service decoupled platform with pessimistic row locking (`PESSIMISTIC_WRITE`), Kafka event streaming, and full Terraform IaC provisioning. |
+| **DeepLure Research Platform** | `Spring Boot` `PostgreSQL` `Redis` `Razorpay` `AWS S3` | Shipped **100+ production REST APIs** across B2B marketplace; integrated idempotent Razorpay webhooks; cut DB load by **~40%** via Redis. |
+| **[User Management](https://github.com/Nikhilreddy810/User_Management)** | `Spring Boot` `Hibernate/JPA` `MySQL` `REST` | 6-table normalized relational schema, criteria-based dynamic querying, and RFC-7807 standardized problem details. |
 
 ---
 
-## / tech stack
+## 🧰 Technical Competencies
 
-<p align="center">
-<img src="https://skillicons.dev/icons?i=java,spring,postgres,mysql,redis,docker,postman,git,github,linux" />
-</p>
-
----
-
-## / github analytics
-
-<div align="center">
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=Nikhilreddy810&show_icons=true&theme=github_dark&hide_border=true&count_private=true"/>
-
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nikhilreddy810&layout=compact&theme=github_dark&hide_border=true"/>
-
-</div>
-
-<div align="center">
-
-<img width="95%" src="https://github-readme-streak-stats.herokuapp.com/?user=Nikhilreddy810&theme=github-dark-blue&hide_border=true"/>
-
-</div>
+* **Languages & Core:** Java 21, Python 3.12, SQL, Bash
+* **Backend Architecture:** Spring Boot 3, Spring Security (JWT & RBAC), Hibernate/JPA, FastAPI, RESTful APIs
+* **Databases & Streaming:** PostgreSQL, MySQL, Redis (Caching & Worker Queues), Apache Kafka, RabbitMQ, Flyway
+* **Cloud & DevOps:** AWS (EC2, VPC, ALB, S3, IAM), Kubernetes, Helm 3, Docker & Compose, Terraform (IaC), Ansible, Chef, Nginx
+* **CI/CD & Observability:** Jenkins, GitHub Actions, Argo CD, Prometheus, Grafana, AWS CloudWatch, SonarQube
+* **Verification & Testing:** Linux, Git, Postman, JUnit 5, Mockito, Maven, Gradle
 
 ---
 
-## / mission log
+## 🏆 Honors, Certifications & Milestones
 
-```text
-[2022] Began B.Tech in Electronics & Communication at SVCE (CGPA: 8.5/10)
-
-[2024] Architected User Management System with 6-table normalized schema & JPA
-
-[2025] Completed Data Analytics Internship at SmartBridge; Built 3 Tableau Dashboards
-
-[2025] Achieved Oracle Cloud Infrastructure (OCI) Foundations Associate Certification
-
-[2026] Built Flight Booking System with concurrency-safe transactional rollbacks
-
-[2026] Shipped 100+ production REST APIs at DeepLure Research with Redis & Spring Boot
-
-[2026] Received Java Developer selections from Axlero Solutions & Infotact Solutions
-
-[????] Architecting fault-tolerant distributed systems powering global platforms
-```
+* 📜 **Oracle Cloud Infrastructure (OCI) Foundations Associate** (Oracle)
+* 🌐 **CCNA: Switching, Routing, and Wireless Essentials** (Cisco Networking Academy)
+* ☁️ **DevOps & Cloud Engineering Masterclass** (Professional Certification)
+* 💡 **Design Spark Challenge 2026** (RTIH 48-Hour Hackathon backend delivery)
+* 💼 **Campus Offers Extended:** Axlero Solutions • Infotact Solutions • Axonbloom Talent
+* 🎓 **B.Tech in ECE:** Sri Venkateswara College of Engineering, Tirupati (CGPA: 8.5 / 10 • Class of 2026)
+* 🧠 **100+ LeetCode DSA Problems Solved:** Trees, Graphs, Dynamic Programming & Concurrency
 
 ---
 
-## / connect
+## 🎯 Currently Building & Active Focus
 
-```text
-Portfolio  → https://nikhilreddy810.github.io/portfolio/
-
-LinkedIn   → https://linkedin.com
-
-GitHub     → https://github.com/Nikhilreddy810
-
-Email      → levakunikhilreddy8@gmail.com
-```
+* ☁️ **Cloud Container Infrastructure:** Managed AWS runtimes with Amazon EKS, ECS (Fargate), ECR, and shared persistent storage via AWS EFS.
+* 🛡️ **DevSecOps & Image Hardening:** Trivy container vulnerability scanning, SonarQube quality gates, and non-root Docker runtime policies.
+* 🤖 **Autonomous SRE & Observability:** Real-time Kubernetes event streaming, automated failure triage, and Prometheus/Grafana monitoring.
 
 ---
 
-<div align="center">
+## 👨‍💻 Author & Connect
 
-### Architect. Build. Optimize. Scale.
-
-<img src="https://komarev.com/ghpvc/?username=Nikhilreddy810&style=for-the-badge" />
-
-</div>
+**Nikhil Reddy Levaku**  
+* 🌐 **Portfolio:** [portfolio-virid-omega-5v2432jbg2.vercel.app](https://portfolio-virid-omega-5v2432jbg2.vercel.app/)
+* 💼 **LinkedIn:** [linkedin.com/in/nikhilreddylevaku](https://www.linkedin.com/in/nikhilreddylevaku/)
+* 💻 **GitHub:** [@Nikhilreddy810](https://github.com/Nikhilreddy810)
+* 📧 **Email:** [levakunikhilreddy8@gmail.com](mailto:levakunikhilreddy8@gmail.com)
