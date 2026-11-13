@@ -2,23 +2,70 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. Mobile Menu Drawer Toggle
+  // 1. Scroll-Progress Indicator
+  const scrollProgressBar = document.getElementById('scrollProgressBar');
+  function updateScrollProgress() {
+    if (!scrollProgressBar) return;
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+    scrollProgressBar.style.width = `${Math.min(Math.max(progress, 0), 100)}%`;
+  }
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  updateScrollProgress();
+
+  // 2. Accessible Mobile Menu Drawer Toggle
   const mobileToggle = document.getElementById('mobileToggle');
   const mobileDrawer = document.getElementById('mobileDrawer');
   
   if (mobileToggle && mobileDrawer) {
     mobileToggle.addEventListener('click', () => {
-      mobileDrawer.classList.toggle('open');
+      const isOpen = mobileDrawer.classList.toggle('open');
+      mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
     document.querySelectorAll('.mobile-nav-item').forEach(link => {
       link.addEventListener('click', () => {
         mobileDrawer.classList.remove('open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
       });
     });
   }
 
-  // 2. Active Nav Link Spy on Scroll
+  // 3. Subtle Pointer-Following Highlights on Cards
+  const highlightCards = document.querySelectorAll(
+    '.ubaida-exp-card, .ubaida-project-card, .ubaida-skill-box, .offer-compact-card, .roadmap-step, .principle-card, .cert-compact-item, .schematic-card'
+  );
+  highlightCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+
+  // 4. Reveal-on-Scroll Animations
+  const revealTargets = document.querySelectorAll(
+    '.section, .ubaida-exp-card, .ubaida-project-card, .ubaida-skill-box, .offer-compact-card, .roadmap-step, .schematic-card, .hero-metrics-strip'
+  );
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+    revealTargets.forEach(el => {
+      el.classList.add('reveal-on-scroll');
+      revealObserver.observe(el);
+    });
+  }
+
+  // 5. Active Nav Link Spy on Scroll
   const sections = document.querySelectorAll('section[id]');
   const desktopNavLinks = document.querySelectorAll('.nav-anchor');
 
