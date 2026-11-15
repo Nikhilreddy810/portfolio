@@ -132,111 +132,28 @@
           </div>
         </div>
 
-        <!-- Animated Code → Test → Ship Workflow Schematic -->
-        <div class="hero-visual hero-schematic-wrap">
-          <div class="schematic-card" id="schematicCard">
-            <div class="schematic-ambient-glow" aria-hidden="true"></div>
+        <!-- Ubaida Style Arch Framed Portrait -->
+        <div class="hero-visual ubaida-hero-center">
+          <div class="portrait-stage" id="portraitStage">
+            <!-- Subtle Aura behind the portrait -->
+            <div class="portrait-ambient-halo" aria-hidden="true"></div>
 
-            <!-- Schematic Header -->
-            <div class="schematic-header">
-              <div class="schematic-dots">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-              </div>
-              <div class="schematic-title">
-                <span class="schematic-mono-label">PIPELINE SCHEMATIC</span>
-                <span class="schematic-tag">AUTOMATED CI/CD</span>
-              </div>
-              <div class="schematic-branch">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
-                <span>main</span>
-              </div>
+            <div class="portrait-frame ubaida-arch-frame" id="portraitFrame">
+              <img 
+                src="profile.jpg" 
+                alt="Nikhil Reddy Levaku" 
+                class="portrait-img ubaida-portrait-img"
+              />
+              <div class="portrait-base-gradient" aria-hidden="true"></div>
             </div>
 
-            <!-- Pipeline Stages: Code -> Test -> Ship -->
-            <div class="schematic-stages">
-              
-              <!-- STAGE 1: CODE -->
-              <div class="stage-node stage-code">
-                <div class="stage-badge">01 // CODE</div>
-                <div class="stage-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                </div>
-                <div class="stage-info">
-                  <div class="stage-title">Java 21 &amp; Spring Boot 3</div>
-                  <div class="stage-desc">REST APIs • Clean Architecture</div>
-                </div>
-                <div class="stage-status status-pass">
-                  <span class="status-dot"></span>
-                  <span>Committed</span>
-                </div>
+            <!-- Floating Social / Quick Status Pills -->
+            <div class="portrait-status-banner">
+              <div class="status-badge-live">
+                <span class="status-live-dot"></span>
+                <span>AVAILABLE FOR HIRE</span>
               </div>
-
-              <!-- Animated Connector 1 -->
-              <div class="stage-connector">
-                <div class="connector-line">
-                  <span class="connector-pulse"></span>
-                </div>
-                <div class="connector-arrow">➔</div>
-              </div>
-
-              <!-- STAGE 2: TEST -->
-              <div class="stage-node stage-test">
-                <div class="stage-badge">02 // TEST</div>
-                <div class="stage-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <div class="stage-info">
-                  <div class="stage-title">Quality Gates &amp; Audit</div>
-                  <div class="stage-desc">JUnit 5 • SonarQube • Trivy</div>
-                </div>
-                <div class="stage-status status-pass">
-                  <span class="status-dot"></span>
-                  <span>Passed 100%</span>
-                </div>
-              </div>
-
-              <!-- Animated Connector 2 -->
-              <div class="stage-connector">
-                <div class="connector-line">
-                  <span class="connector-pulse pulse-delay"></span>
-                </div>
-                <div class="connector-arrow">➔</div>
-              </div>
-
-              <!-- STAGE 3: SHIP -->
-              <div class="stage-node stage-ship">
-                <div class="stage-badge">03 // SHIP</div>
-                <div class="stage-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>
-                </div>
-                <div class="stage-info">
-                  <div class="stage-title">Cloud GitOps Deployment</div>
-                  <div class="stage-desc">Docker • Helm 3 • Argo CD</div>
-                </div>
-                <div class="stage-status status-live">
-                  <span class="status-dot pulse"></span>
-                  <span>Deployed Live</span>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Schematic Bottom Bar with Mini Author & Invariants -->
-            <div class="schematic-footer">
-              <div class="schematic-author-mini">
-                <img src="profile.jpg" alt="Nikhil Reddy" class="schematic-avatar" />
-                <span class="schematic-author-name">Nikhil Reddy</span>
-              </div>
-              <div class="schematic-meta-pill">
-                <span class="pill-indicator-dot lime"></span>
-                <span>Zero-Downtime GitOps</span>
-              </div>
-              <div class="schematic-meta-pill">
-                <span class="pill-indicator-dot"></span>
-                <span>Autonomous SRE</span>
-              </div>
+              <div class="status-badge-sub">DevOps &amp; Cloud Engineer</div>
             </div>
           </div>
         </div>
@@ -336,6 +253,115 @@
           <p class="principle-text">
             Containerization with Docker &amp; Docker Compose, automated GitHub Actions CI/CD pipelines to AWS EC2, and Linux/AWS infrastructure administration.
           </p>
+        </div>
+      </div>
+
+      <!-- Animated Code → Test → Ship Workflow Schematic -->
+      <div class="summary-schematic-wrap" style="margin-top: 2.5rem; display: flex; justify-content: center;">
+        <div class="schematic-card" id="schematicCard" style="max-width: 600px; width: 100%;">
+          <div class="schematic-ambient-glow" aria-hidden="true"></div>
+
+          <!-- Schematic Header -->
+          <div class="schematic-header">
+            <div class="schematic-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="schematic-title">
+              <span class="schematic-mono-label">PIPELINE SCHEMATIC</span>
+              <span class="schematic-tag">AUTOMATED CI/CD</span>
+            </div>
+            <div class="schematic-branch">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+              <span>main</span>
+            </div>
+          </div>
+
+          <!-- Pipeline Stages: Code -> Test -> Ship -->
+          <div class="schematic-stages">
+            
+            <!-- STAGE 1: CODE -->
+            <div class="stage-node stage-code">
+              <div class="stage-badge">01 // CODE</div>
+              <div class="stage-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div class="stage-info">
+                <div class="stage-title">Java 21 &amp; Spring Boot 3</div>
+                <div class="stage-desc">REST APIs • Clean Architecture</div>
+              </div>
+              <div class="stage-status status-pass">
+                <span class="status-dot"></span>
+                <span>Committed</span>
+              </div>
+            </div>
+
+            <!-- Animated Connector 1 -->
+            <div class="stage-connector">
+              <div class="connector-line">
+                <span class="connector-pulse"></span>
+              </div>
+              <div class="connector-arrow">➔</div>
+            </div>
+
+            <!-- STAGE 2: TEST -->
+            <div class="stage-node stage-test">
+              <div class="stage-badge">02 // TEST</div>
+              <div class="stage-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="stage-info">
+                <div class="stage-title">Quality Gates &amp; Audit</div>
+                <div class="stage-desc">JUnit 5 • SonarQube • Trivy</div>
+              </div>
+              <div class="stage-status status-pass">
+                <span class="status-dot"></span>
+                <span>Passed 100%</span>
+              </div>
+            </div>
+
+            <!-- Animated Connector 2 -->
+            <div class="stage-connector">
+              <div class="connector-line">
+                <span class="connector-pulse pulse-delay"></span>
+              </div>
+              <div class="connector-arrow">➔</div>
+            </div>
+
+            <!-- STAGE 3: SHIP -->
+            <div class="stage-node stage-ship">
+              <div class="stage-badge">03 // SHIP</div>
+              <div class="stage-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>
+              </div>
+              <div class="stage-info">
+                <div class="stage-title">Cloud GitOps Deployment</div>
+                <div class="stage-desc">Docker • Helm 3 • Argo CD</div>
+              </div>
+              <div class="stage-status status-live">
+                <span class="status-dot pulse"></span>
+                <span>Deployed Live</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Schematic Bottom Bar with Mini Author & Invariants -->
+          <div class="schematic-footer">
+            <div class="schematic-author-mini">
+              <img src="profile.jpg" alt="Nikhil Reddy" class="schematic-avatar" />
+              <span class="schematic-author-name">Nikhil Reddy</span>
+            </div>
+            <div class="schematic-meta-pill">
+              <span class="pill-indicator-dot lime"></span>
+              <span>Zero-Downtime GitOps</span>
+            </div>
+            <div class="schematic-meta-pill">
+              <span class="pill-indicator-dot"></span>
+              <span>Autonomous SRE</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
