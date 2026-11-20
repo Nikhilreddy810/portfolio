@@ -1765,6 +1765,36 @@ body {
   color: #EFD6AC;
 }
 
+.step-badge.shipped {
+  color: #10B981;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.step-bullets {
+  margin: 0.5rem 0 0 1.1rem;
+  padding: 0;
+  list-style-type: disc;
+}
+
+.step-bullets li {
+  margin-bottom: 0.35rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: rgba(239, 214, 172, 0.85);
+}
+
+.step-bullets code {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: #C44900;
+  background: rgba(4, 21, 31, 0.7);
+  border: 1px solid rgba(24, 58, 55, 0.6);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
 /* ========================================================
    OFFERS RECEIVED (Factual & Compact)
    ======================================================== */

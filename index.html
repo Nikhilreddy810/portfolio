@@ -707,12 +707,16 @@
             <h3>Cloud &amp; DevOps</h3>
           </div>
           <div class="skill-pill-wrap">
+            <span class="skill-pill">Amazon EKS</span>
+            <span class="skill-pill">AWS ECS (Fargate Task Definitions &amp; Services)</span>
+            <span class="skill-pill">Amazon ECR</span>
+            <span class="skill-pill">AWS EFS (ReadWriteMany — RWX)</span>
             <span class="skill-pill">Kubernetes</span>
             <span class="skill-pill">Docker &amp; Compose</span>
             <span class="skill-pill">Helm 3</span>
             <span class="skill-pill">Argo CD (GitOps)</span>
             <span class="skill-pill">Terraform (IaC)</span>
-            <span class="skill-pill">AWS (EC2, VPC, S3)</span>
+            <span class="skill-pill">AWS (VPC, ALB, EC2, S3, IAM)</span>
             <span class="skill-pill">GitHub Actions CI/CD</span>
             <span class="skill-pill">Linux &amp; Bash</span>
           </div>
@@ -749,16 +753,19 @@
           </div>
         </div>
 
-        <!-- Category 4: Observability & Tools -->
+        <!-- Category 4: Observability & SRE -->
         <div class="skill-category-block ubaida-skill-box">
           <div class="skill-category-header">
             <span class="cat-accent-dot mint"></span>
-            <h3>Observability &amp; Tools</h3>
+            <h3>Observability &amp; SRE</h3>
           </div>
           <div class="skill-pill-wrap">
-            <span class="skill-pill">Prometheus</span>
-            <span class="skill-pill">Grafana</span>
-            <span class="skill-pill">CloudWatch</span>
+            <span class="skill-pill">Kube-APIServer HTTP/2 Streaming (watch.Watch)</span>
+            <span class="skill-pill">Exit Code Forensics (Exit 137 OOM)</span>
+            <span class="skill-pill">Automated RCA Generation</span>
+            <span class="skill-pill">Prometheus Metrics</span>
+            <span class="skill-pill">Grafana Dashboards</span>
+            <span class="skill-pill">AWS CloudWatch</span>
             <span class="skill-pill">Postman</span>
             <span class="skill-pill">Git &amp; GitHub</span>
             <span class="skill-pill">Nginx</span>
@@ -782,9 +789,17 @@
                 <div class="roadmap-flow">
           
           <div class="roadmap-step">
-            <div class="step-badge">IN PROGRESS</div>
+            <div class="step-badge shipped">SHIPPED / VERIFIED HANDS-ON</div>
             <div class="step-title">Cloud Container Infrastructure</div>
-            <div class="step-desc">Mastering managed AWS container runtimes — deploying resilient microservices across <strong>Amazon EKS</strong>, <strong>AWS ECS (Fargate)</strong>, container registries via <strong>ECR</strong>, and distributed multi-AZ shared persistent storage using <strong>AWS EFS</strong>.</div>
+            <div class="step-desc">
+              Verified hands-on AWS container runtime architecture:
+              <ul class="step-bullets">
+                <li><strong>Amazon ECR:</strong> Authenticated via IAM tokens, vulnerability scanning on push (<code>scanOnPush=true</code>), and automated image digest tagging.</li>
+                <li><strong>AWS ECS (Fargate):</strong> Serverless task definitions with <code>awsvpc</code> networking, <code>ecsTaskExecutionRole</code> IAM security, and CloudWatch log streaming without managing EC2 servers.</li>
+                <li><strong>Amazon EKS:</strong> Multi-node cluster orchestration pulling private images directly from ECR.</li>
+                <li><strong>AWS EFS:</strong> Multi-AZ persistent shared storage with EFS CSI Driver (ReadWriteMany — RWX) preventing EBS single-AZ multi-attach locks.</li>
+              </ul>
+            </div>
           </div>
 
           <div class="roadmap-step">

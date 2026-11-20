@@ -38,17 +38,17 @@ It details my engineering background, production track record, systems architect
 * **Languages & Core:** Java 21, Python 3.12, SQL, Bash
 * **Backend Architecture:** Spring Boot 3, Spring Security (JWT & RBAC), Hibernate/JPA, FastAPI, RESTful APIs
 * **Databases & Streaming:** PostgreSQL, MySQL, Redis (Caching & Worker Queues), Apache Kafka, RabbitMQ, Flyway
-* **Cloud & DevOps:** AWS (EC2, VPC, ALB, S3, IAM), Kubernetes, Helm 3, Docker & Compose, Terraform (IaC), Ansible, Chef, Nginx
-* **CI/CD & Observability:** Jenkins, GitHub Actions, Argo CD, Prometheus, Grafana, AWS CloudWatch, SonarQube
+* **Cloud & DevOps:** AWS (Amazon EKS, ECS Fargate, ECR, EFS RWX, VPC, ALB, EC2, S3, IAM), Kubernetes, Helm 3, Argo CD, Docker & Compose, Terraform (IaC), Ansible, Chef, Nginx
+* **CI/CD & Observability:** Kube-APIServer Event Streaming (watch.Watch), Exit Code Forensics (Exit 137 OOM), Automated RCA, Jenkins, GitHub Actions, Prometheus, Grafana, AWS CloudWatch, SonarQube
 * **Verification & Testing:** Linux, Git, Postman, JUnit 5, Mockito, Maven, Gradle
 
 ---
 
 ## 🎯 Currently Building & Active Focus
 
-* ☁️ **Cloud Container Infrastructure:** Managed AWS runtimes with Amazon EKS, ECS (Fargate), ECR, and shared persistent storage via AWS EFS.
+* 🚀 **Cloud Container Infrastructure [SHIPPED / VERIFIED HANDS-ON]:** Verified production AWS container pipeline — Amazon ECR (`scanOnPush=true`), serverless AWS ECS (Fargate) with `awsvpc` & IAM roles, Amazon EKS multi-node orchestration, and AWS EFS multi-AZ persistent shared storage (`ReadWriteMany`).
 * 🛡️ **DevSecOps & Image Hardening:** Trivy container vulnerability scanning, SonarQube quality gates, and non-root Docker runtime policies.
-* 🤖 **Autonomous SRE & Observability:** Real-time Kubernetes event streaming, automated failure triage, and Prometheus/Grafana monitoring.
+* 🤖 **Autonomous SRE & Observability:** Real-time Kubernetes event streaming (watch.Watch), automated failure triage, and Prometheus/Grafana monitoring.
 
 ---
 
