@@ -1795,6 +1795,37 @@ body {
   border-radius: 4px;
 }
 
+.resume-track-selector {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.track-btn {
+  background: rgba(24, 58, 55, 0.4);
+  color: #EFD6AC;
+  border: 1px solid #183A37;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.track-btn:hover {
+  border-color: #C44900;
+  background: rgba(196, 73, 0, 0.15);
+}
+
+.track-btn.active {
+  background: #C44900;
+  color: #EFD6AC;
+  border-color: #C44900;
+}
+
 /* ========================================================
    OFFERS RECEIVED (Factual & Compact)
    ======================================================== */

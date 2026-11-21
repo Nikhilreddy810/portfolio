@@ -164,6 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalDownloadBtn = document.getElementById('modalDownloadBtn');
   const modalPdfFrame = document.getElementById('modalPdfFrame');
   const closeDocModalBtn = document.getElementById('closeDocModalBtn');
+  const resumeTrackSelector = document.getElementById('resumeTrackSelector');
+  const trackBtns = document.querySelectorAll('.track-btn');
 
   function openModalDocument(pdfUrl, title, tag, downloadFilename) {
     if (modalPdfFrame) modalPdfFrame.src = pdfUrl;
@@ -173,11 +175,45 @@ document.addEventListener('DOMContentLoaded', () => {
       modalDownloadBtn.href = pdfUrl;
       modalDownloadBtn.download = downloadFilename || title;
     }
+
+    if (resumeTrackSelector) {
+      if (pdfUrl.includes('resume') || pdfUrl.includes('Resume')) {
+        resumeTrackSelector.style.display = 'flex';
+        trackBtns.forEach(btn => {
+          if (btn.getAttribute('data-src') === pdfUrl) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+      } else {
+        resumeTrackSelector.style.display = 'none';
+      }
+    }
+
     if (docModal) {
       docModal.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
   }
+
+  // Handle resume track switcher
+  trackBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      trackBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const src = btn.getAttribute('data-src');
+      const title = btn.getAttribute('data-title');
+      const tag = btn.getAttribute('data-tag');
+      if (modalPdfFrame) modalPdfFrame.src = src;
+      if (modalDocTitle) modalDocTitle.textContent = title;
+      if (modalDocTag) modalDocTag.textContent = tag;
+      if (modalDownloadBtn) {
+        modalDownloadBtn.href = src;
+        modalDownloadBtn.download = title;
+      }
+    });
+  });
 
   function closeModalDocument() {
     if (docModal) {
